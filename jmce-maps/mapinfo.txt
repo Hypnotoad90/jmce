@@ -1,0 +1,505 @@
+episode "JPX01"
+{
+ name = "Jumpix"
+}
+
+map JPX01 "Badlands"
+{
+ music = "D_STLOSE"
+ next = "JPX02"
+ sky1 = "STSKY9", 0.1
+ par = 35
+ intermusic = "JPXDIFVE"
+}
+
+Map JPX02 "Raiden"
+{
+ music = "J_ORCHID"
+ next = "JPX03"
+ par = 20
+ intermusic = "JPXDIFVE"
+}
+
+map JPX03 "Occupied Waters"
+{
+ music = "D_JP_BEC"
+ next = "JPX04"
+ secretnext = "JPXSEC3"
+ sky1 = "STSKY5", 0.1
+ par = 47
+ intermusic = "JPXDIFVE"
+}
+
+map JPX04 "Chem VI"
+{
+ music = "J_RRR5"
+ next = "JPX05"
+ sky1 = "hi-sky1", 0.1
+ par = 80
+ intermusic = "JPXDIFVE"
+}
+
+map JPX05 "Haunted Hall"
+{
+ music = "J_NIGHT"
+ next = "JPX06"
+ par = 52
+ intermusic = "JPXDIFVE"
+}
+
+map JPX06 "Mountain Jump"
+{
+ music = "D_CARGO"
+ next = "JPX07"
+ sky1 = "SKY1"
+ par = 60
+ intermusic = "JPXDIFEA"
+}
+
+map JPX07 "Across The Canyon and Into the Caves"
+{
+ music = "D_BRAMBL"
+ next = "JPX08"
+ par = 120
+ intermusic = "JPXDIFEA"
+}
+
+map JPX08 "Nukage"
+{
+ music = "D_MESSAG"
+ next = "JPX09"
+ par = 150
+ intermusic = "JPXDIFEA"
+}
+
+map JPX09 "Space Race"
+{
+ music = "J_SPACE"
+ next = "JPX10"
+ sky1 = "STSKY8", 1
+ par = 120
+ intermusic = "JPXDIFEA"
+}
+
+map JPX10 "The Mill"
+{
+ music = "J_MILL"
+ next = "JPX11"
+ secretnext = "JPXSEC2"
+ sky1 = "hi-sky1", 0.1
+ par = 120
+ intermusic = "JPXDIFEA"
+}
+
+map JPX11 "Darkest Chasm"
+{
+ music = "D_VICTOR"
+ next = "JPX12"
+ par = 100
+ intermusic = "JPXDIFMO"
+}
+
+map JPX12 "Tunnel Trouble"
+{
+ music = "D_TUNNEL"
+ next = "JPX13"
+ sky1 = "VOID"
+ par = 120
+ intermusic = "JPXDIFMO"
+}
+
+map JPX13 "Crusaders Corridor"
+{
+ music = "N_SMTH"
+ next = "JPX14"
+ sky1 = "STSKY9", 0.1
+ par = 180
+ intermusic = "JPXDIFMO"
+}
+
+map JPX14 "Hot-Head Bop"
+{
+ music = "D_HHB"
+ next = "JPX15"
+ par = 90
+ intermusic = "JPXDIFMO"
+}
+
+map JPX15 "Jumpenstein"
+{
+ music = "D_WOLF"
+ next = "JPX16"
+ par = 70
+ intermusic = "JPXDIFMO"
+}
+
+map JPX16 "Fire Field"
+{
+ music = "J_FFIELD"
+ next = "JPX17"
+ sky1 = "STSKY4"
+ par = 110
+ intermusic = "JPXDIFMO"
+}
+
+map JPX17 "Ruins"
+{
+ music = "D_DUKE"
+ next = "JPX18"
+ sky1 = "STSKY10", 0.1
+ par = 152
+ intermusic = "JPXDIFMO"
+}
+
+map JPX18 "The Sixth Dimension"
+{
+ music = "D_AREA51"
+ next = "JPX19"
+ sky1 = "STSKY8", 0.1
+ par = 180
+ intermusic = "JPXDIFMO"
+}
+
+map JPX19 "Path of Peril"
+{
+ music = "D_POP"
+ next = "JPX20"
+ sky1 = "STSKY10", 0.1
+ par = 205
+ intermusic = "JPXDIFHA"
+}
+
+map JPX20 "Computer Lab"
+{
+ music = "D_IMPIUS"
+ next = "JPX21"
+ sky1 = "STSKY10", 0.1
+ par = 176
+ intermusic = "JPXDIFHA"
+}
+
+map JPX21 "Entering Hell"
+{
+ next = "JPX22"
+ music = "D_EHELL"
+ par = 177
+ intermusic = "JPXDIFHA"
+}
+
+map JPX22 "Veins"
+{
+ music = "D_ECO"
+ next = "JPX23"
+ par = 165
+ intermusic = "JPXDIFHA"
+}
+
+map JPX23 "Cave"
+{
+ music = "D_HX"
+ next = "JPX24"
+ sky1 = "hi-sky1", 0.1
+ par = 226
+ intermusic = "JPXDIFHA"
+}
+
+map JPX24 "Castle"
+{
+ music = "J_RICO"
+ next = "JPX25"
+ sky1 = "SKY3"
+ par = 355
+ intermusic = "JPXDIFVH"
+}
+
+map JPX25 "[EDK] Fortress"
+{
+ music = "D_EDK"
+ next = "JPX26"
+ sky1 = "SKYFOG0"
+ par = 220
+ intermusic = "JPXDIFVH"
+}
+
+map JPX26 "Pain and Agony"
+{
+ music = "D_FORGOT"
+ next = "JPX27"
+ par = 165
+ intermusic = "JPXDIFVH"
+}
+
+map JPX27 "The Nightmare"
+{
+ music = "D_GARDEN"
+ next = "JPX28"
+ secretnext = "JPXSEC"
+ sky1 = "DIM1"
+ sky2 = "DIM2"
+ par = 345
+ intermusic = "JPXDIFVH"
+}
+
+map JPX28 "Depths of Darkness"
+{
+ music = "J_PATCHS"
+ next = "JPX29"
+ sky1 = "STSKY14", 0.1
+ par = 225
+ intermusic = "JPXDIFVH"
+}
+
+
+map JPX29 "New Mojave"
+{
+ next = "JPX30"
+ sky1 = "STSKY14", 0.1
+ par = 98
+ intermusic = "JPXDIFVH"
+}
+
+map JPX30 "Itaipu"
+{
+ next = "JPX31"
+ par = 600
+ intermusic = "JPXDIFVH"
+}
+
+map JPX31 "A Winter Dream"
+{
+ music = "D_ICEWOR"
+ next = "JPX32"
+ sky1 = "SKY1", 0
+ fade = "88 88 88"
+ par = 150
+ intermusic = "JPXDIFVH"
+}
+
+map JPX32 "First Strike"
+{
+ music = "J_FS"
+ next = "JPX33"
+ sky1 = "DIM1"
+ par = 229
+ intermusic = "JPXDIFVH"
+}
+
+map JPXSEC "Happy Dreams"
+{
+ music = "J_SECMAP"
+ next = "JPX28"
+ sky1 = "SKYB"
+ par = 105
+ intermusic = "JPXDIFVH"
+}
+
+map JPXSEC2 "Colors"
+{
+ music = "J_BEEGEE"
+ next = "JPX11"
+ sky1 = "SKY", 0
+ intermusic = "J_BEEGEE"
+ exitpic = "DISCOINT"
+ par = 60
+ enterpic = "DISCOINT"
+}
+
+map JPXSEC3 "Tribal Unity"
+{
+ music = "J_TRIBAL"
+ next = "JPX04"
+ sky1 = "STSKY1", 1
+ par = 30
+ intermusic = "JPXDIFVE"
+}
+
+map BASS "Bass"
+{
+ music = "D_BASS"
+ next = "BASS"
+ sky1 = "VOID", 0
+ par = 30
+}
+
+episode "JPX33"
+{
+ name = "Jumpix II"
+}
+
+map JPX33 "Lago Ypacarai"
+{
+ music = "J_MINOR"
+ next = "JPX34"
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 73
+}
+
+map JPX34 "ELTSAC SSG"
+{
+ music = "J_8MAP"
+ next = "JPX35"
+ sky1 = "STSKY10"
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 37
+}
+
+map JPX35 "Iron Bricks"
+{
+ music = "J_CASTIL"
+ next = "JPX36"
+ sky1 = "STSKY1"
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 101
+}
+
+map JPX36 "Elemental"
+{
+ music = "D_TRAPS2"
+ next = "JPX37"
+ sky1 = "SKYFOG0", 0.1
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 148
+}
+
+map JPX37 "Mother Nature's Home"
+{
+ music = "J_9MAP"
+ secretnext = "JPXIISEC"
+ next = "JPX38"
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 159
+}
+
+map JPX38 "Eternal"
+{
+ music = "J_ETERN"
+ next = "JPX39"
+ sky1 = "STSKY7"
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 192
+}
+
+map JPX39 "The Strongest Spirit"
+{
+ music = "J_7MAP"
+ next = "JPX40"
+ sky1 = "STSKY3"
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 240
+}
+
+map JPX40 "Cave"
+{
+ music = "J_CAVE"
+ next = "JPX41"
+ sky1 = "STSKY8", 1
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 54
+}
+
+map JPX41 "The Laboratory"
+{
+ music = "J_THELAB"
+ next = "JPX42"
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 75
+}
+
+map JPX42 "Mansion"
+{
+ music = "J_MNSION"
+ next = "JPX2BDEM"
+ sky1 = "STSKY7"
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 166
+}
+
+map JPXIISEC "Feudal Age"
+{
+ music = "J_PV4"
+ next = "JPX38"
+ sky1 = "STSKY2"
+ intermusic = "JPXIIINT"
+ exitpic = "JPX2APIC"
+ par = 120
+}
+
+map JPX2BDEM "Library"
+{
+  next = "JPX2BDEM"
+}
+
+map JPX49 "Industrial Machinery"
+{
+ music = "D_VICERA"
+ next = "JPX50"
+ sky1 = "STSKY2"
+ intermusic = "JPX2CINT"
+ par = 83
+}
+
+map JPX50 "ZteelWorx"
+{
+ music = "PTBLRF"
+ next = "JPX51"
+ sky1 = "STSKY5"
+ sky2 = "STSKY9"
+ intermusic = "JPX2CINT"
+ par = 167
+}
+
+map JPX51 "Planet Odd"
+{
+ music = "MUSPLODD"
+ next = "JPX52"
+ sky1 = "STSKY14"
+ intermusic = "JPX2CINT"
+ par = 154
+}
+
+map JPX52 "Twinkle Snow"
+{
+ music = "PTTWSNOW"
+ next = "JPX53"
+ sky1 = "BSKY1", 0.02
+ intermusic = "JPX2CINT"
+ par = 182
+}
+
+map JPX53 "Dammit"
+{
+ music = "KOKOMO"
+ next = "JPX54"
+ sky1 = "BSKY1"
+ intermusic = "JPX2CINT"
+ par = 436
+}
+
+map JPX54 "Siege of He Fei Castle"
+{
+ music = "D_SIEGE"
+ next = "JPX55"
+ sky1 = "STSKY9", 0.1
+ intermusic = "D_INTERD"
+ exitpic = "ZHUGE4"
+ par = 143
+}
+
+map JPX55 "UAC Base"
+{
+ music = "D_UACB"
+ next = "JPX33"
+ sky1 = "STSKY9"
+ intermusic = "JPX2CINT"
+ par = 95
+}

@@ -1,0 +1,860 @@
+Actor thepuppet : DoomPlayer 25002
+{
+   translation "112:127=208:223", "112:127=96:111"
+   Obituary "%o was melted by \cmT\cuH\cje \cmPu\cupp\cjet\cf's plasma rifle."
+   health 2500
+   Game Doom
+   DamageFactor "FriendlyFire", 0
+   DamageFactor "RocketExplosion1", 0
+   DamageFactor "RocketExplosion2", 0
+   DamageFactor "RocketExplosion3", 0
+   DamageFactor "Railgun", 0
+   DamageFactor "BFGSplash", 0
+   PainSound "*pain"
+   DeathSound "*death"
+   MeleeRange 256
+   //Additional flags for the monster AI.
+   MONSTER
+   +QUICKTORETALIATE
+   +MISSILEMORE
+   +MISSILEEVENMORE
+   +CANPUSHWALLS
+   +CANUSEWALLS
+   -FRIENDLY
+   States
+   {
+   Spawn:
+      TNT1 A 0 //Dummy frame needed.
+      TNT1 A 0 //ACS. Don't forget the chainsaw marine.
+   PreIdle:
+      TNT1 A 0 A_ChangeFlag ("PUSHABLE", 1)
+   Idle:
+      TNT1 A 0 A_JumpIf (momx > 0, "XMomCheck")
+      TNT1 A 0 A_JumpIf (momx < 0, "XMomCheck")
+      TNT1 A 0 A_JumpIf (momy > 0, "YMomCheck")
+      TNT1 A 0 A_JumpIf (momy < 0, "YMomCheck")
+      PLAY A 1 A_LookEx (0, 0, 4096, 1200, 90, "PreSee")
+      TNT1 A 0 A_CheckSight ("PreWander")
+      Goto Idle
+   XMomCheck:
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY A 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY A 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY A 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY A 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY B 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY B 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY B 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY B 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY C 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY C 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY C 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY C 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY D 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY D 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY D 1
+      TNT1 A 0 A_JumpIf (momx == 0, "Idle")
+      PLAY D 1
+      TNT1 A 0 A_LookEx (0, 0, 4096, 1200, 90, "PreSee")
+      Goto XMomCheck
+   YMomCheck:
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY A 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY A 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY A 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY A 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY B 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY B 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY B 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY B 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY C 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY C 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY C 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY C 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY D 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY D 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY D 1
+      TNT1 A 0 A_JumpIf (momy == 0, "Idle")
+      PLAY D 1
+      TNT1 A 0 A_LookEx (0, 0, 4096, 1200, 90, "PreSee")
+      Goto YMomCheck
+   CheckIfPlayerInSight:
+      TNT1 A 0 A_TakeInventory ("NoPlayerInSightTimer", 16)
+      TNT1 A 0 A_CheckSight ("PreIdle")
+      Goto See2
+   PreSee:
+      TNT1 A 0 A_ChangeFlag ("PUSHABLE", 0)
+   See:
+      TNT1 A 0 A_TakeInventory ("NoPlayerInSightTimer", 16)
+   See2:
+      TNT1 A 0 A_Jump (128, 1)
+      Goto See3+6
+      TNT1 A 0
+      Goto See4+6
+   See3:
+      TNT1 A 0 A_Jump (random(128, 256), 2)
+      TNT1 A 0 A_GiveInventory ("NoPlayerInSightTimer", 1)
+      TNT1 A 0 A_JumpIfInventory ("NoPlayerInSightTimer", 16, "CheckIfPlayerInSight")
+      TNT1 A 0 A_Jump (random(128, 256), 2)
+      TNT1 A 0 A_ClearTarget
+      TNT1 A 0 A_Jump (random(128, 256), 1)
+      Goto See4+6
+      TNT1 A 0 A_Chase
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      Goto See3
+   See4:
+      TNT1 A 0 A_Jump (random(128, 256), 2)
+      TNT1 A 0 A_GiveInventory ("NoPlayerInSightTimer", 1)
+      TNT1 A 0 A_JumpIfInventory ("NoPlayerInSightTimer", 16, "CheckIfPlayerInSight")
+      TNT1 A 0 A_Jump (random(128, 256), 2)
+      TNT1 A 0 A_ClearTarget
+      TNT1 A 0 A_Jump (random(128, 256), 1)
+      Goto See3+6
+      TNT1 A 0 A_Chase
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Chase
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      Goto See4
+   PreWander:
+      TNT1 A 0 A_ChangeFlag ("PUSHABLE", 0)   
+   Wander:
+      TNT1 A 0 A_Jump (128, 1)
+      Goto Wander2+1
+      TNT1 A 0
+      Goto Wander3+1
+   Wander2:
+      TNT1 A 0 A_Jump (random(128, 256), 1)
+      Goto Wander3+1
+      TNT1 A 0 A_LookEx (0, 0, 4096, 1200, 90, "See")
+      TNT1 A 0 A_Wander
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-25.7, 1, 0, 0)
+      Goto Wander2
+   Wander3:
+      TNT1 A 0 A_Jump (random(128, 256), 1)
+      Goto Wander2+1
+      TNT1 A 0 A_LookEx (0, 0, 4096, 1200, 90, "See")
+      TNT1 A 0 A_Wander
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY A 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY B 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY C 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      TNT1 A 0 A_Wander
+      PLAY D 1 A_Recoil (-0.8668116)
+      TNT1 A 0 ThrustThing (angle*256/360-230.3, 1, 0, 0)
+      Goto Wander3
+   Pain:
+      TNT1 A 0 A_ChangeFlag ("PUSHABLE", 0)
+   Pain2:
+      TNT1 A 0 A_Jump (128, 1)
+      Goto Pain3
+      TNT1 A 0
+      Goto Pain4
+   Pain3:
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      TNT1 A 0 A_Pain
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      Goto See
+   Pain4:
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      TNT1 A 0 A_Pain
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY G 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      Goto See
+   Death:
+      PLAY H 10
+      PLAY I 10 A_Scream
+      PLAY J 10 A_NoBlocking
+      PLAY KLM 10
+      TNT1 A 0 A_SpawnItemEx ("DeadMarine", 0, 0, 0, 0, 0, 0, 0, 1)
+      stop
+   XDeath:
+      PLAY O 5
+      PLAY P 5 A_XScream
+      PLAY Q 5 A_NoBlocking
+      PLAY RSTUV 5
+      TNT1 A 0 A_SpawnItemEx ("GibbedMarine", 0, 0, 0, 0, 0, 0, 0, 1)
+      stop
+   Melee:
+      TNT1 A 0 A_Jump (128, 1)
+      Goto Melee2+1
+      TNT1 A 0
+      Goto Melee3+1
+   Melee2:
+      TNT1 A 0 A_Jump (random(128, 256), 1)
+      Goto Melee3+1
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-102.3, 1, 0, 0)
+      TNT1 A 0 A_Jump (random(128, 256), 1)
+      Goto Melee2
+      TNT1 A 0 A_SpidRefire
+      Goto Missile
+   Melee3:
+      TNT1 A 0 A_Jump (random(128, 256), 1)
+      Goto Melee2+1
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (0.88125)
+      TNT1 A 0 ThrustThing (angle*256/360-153.7, 1, 0, 0)
+      TNT1 A 0 A_Jump (random(128, 256), 1)
+      Goto Melee3
+      TNT1 A 0 A_SpidRefire
+   Missile:
+      TNT1 A 0 A_Jump (128, 1)
+      Goto Missile2+1
+      TNT1 A 0
+      Goto Missile3+1
+   Missile2:
+      TNT1 A 0 A_Jump (random(224, 256), 1)
+      Goto Missile3+1
+      TNT1 A 0 A_FaceTarget
+      TNT1 A 0 A_CustomMissile ("NewPlasmaBall", 32, 0, 0, 0)
+      TNT1 A 0 NoiseAlert (0, 0)
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_Jump (random(64, 256), 2)
+      TNT1 A 0 A_SpidRefire
+      TNT1 A 0 A_Jump (random(0, 8), 1)
+      Goto Missile2
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_Jump (random(128, 256), 74)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+      TNT1 A 0 A_SpidRefire
+      Goto Missile2
+      TNT1 A 0 A_SpidRefire
+      Goto Missile2
+   Missile3:
+      TNT1 A 0 A_Jump (random(224, 256), 1)
+      Goto Missile2+1
+      TNT1 A 0 A_FaceTarget
+      TNT1 A 0 A_CustomMissile ("NewPlasmaBall", 32, 0, 0, 0)
+      TNT1 A 0 NoiseAlert (0, 0)
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_Jump (random(64, 256), 2)
+      TNT1 A 0 A_SpidRefire
+      TNT1 A 0 A_Jump (random(0, 8), 1)
+      Goto Missile3
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY E 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_Jump (random(128, 256), 74)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY A 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY B 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY C 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_FaceTarget
+      PLAY D 1 A_Recoil (-0.61476)
+      TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+      TNT1 A 0 A_SpidRefire
+      Goto Missile3
+      TNT1 A 0 A_SpidRefire
+      Goto Missile3
+   }
+}
+
+Actor NewPlasmaBall : PlasmaBall
+{
+
+  DamageType "FriendlyFire"
+}

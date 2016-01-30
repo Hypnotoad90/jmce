@@ -1,0 +1,99 @@
+//===========================================================================
+
+//ELEMENTAL//
+
+texture CGCANI00
+    allowdecals
+    pic CGCANI00 tics 1.5
+    pic CGCANI01 tics 1.5
+    pic CGCANI02 tics 1.5
+    pic CGCANI03 tics 1.5
+    pic CGCANI04 tics 1.5
+    pic CGCANI05 tics 1.5
+    pic CGCANI06 tics 1.5
+    pic CGCANI07 tics 1.5
+    
+switch CGSWC00A on sound Switch1 pic CGSWC00B tics 0
+switch CGSWC00B off sound Switch2 pic CGSWC00A tics 0
+
+switch CGSWC01A on sound Switch1 pic CGSWC01B tics 0
+switch CGSWC01B off sound Switch2 pic CGSWC01A tics 0
+
+switch CGSWC02A on sound Switch1 pic CGSWC02B tics 0
+switch CGSWC02B off sound Switch2 pic CGSWC02A tics 0
+
+switch CGSWC03A on sound Switch1 pic CGSWC03B tics 0
+switch CGSWC03B off sound Switch2 pic CGSWC03A tics 0
+
+warp2 flat SEWAGE3
+warp2 flat WATER
+
+//===========================================================================
+
+//ETERNAL//
+
+warp2 flat NUKAGE6
+warp2 flat NUKEGE1
+
+//===========================================================================
+
+//Mansion//
+
+warp2 texture PIRFLAG 0.5
+
+//===========================================================================
+
+
+
+warp2 flat LIQUID1
+warp2 flat LIQUID5
+//===JPX13===
+
+Switch INQGLS1
+switch INQGLS1 on sound DSBGLASS pic INQGLS2 tics 0
+switch INQGLS2 off sound DSBGLASS pic INQGLS1 tics 0
+animateddoor DORIRS01
+   opensound DoorOpenAirlock
+   closesound DoorCloseAirlock
+   pic DORIRS01 
+   pic DORIRS02 
+   pic DORIRS03 
+   pic DORIRS04 
+   pic DORIRS05 
+   pic DORIRS06 
+   pic DORIRS07 
+   pic DORIRS08
+
+//===JPX17===
+
+warp2 flat DNXWAT01
+
+texture DNXWFL01
+    pic DNXWFL01 rand 5 12
+    pic DNXWFL02 rand 5 12
+    pic DNXWFL03 rand 5 12
+    pic DNXWFL04 rand 5 12
+
+switch SW_1_UP on sound DNSW02ON pic SW_1_DN tics 1
+switch SW_1_DN off sound DNSW02OF pic SW_1_UP tics 1
+
+warp flat DNXSLM01
+
+//===COLORS===
+texture SPEED
+    pic YELLA tics 35
+    pic GREEN tics 35
+    pic SPEED tics 35
+
+texture DED
+    pic DED tics 35
+    pic PURP tics 35
+    pic ORANGE tics 35
+
+texture WEE
+    pic DED tics 35
+    pic ORANGE tics 35
+    pic YELLA tics 35
+    pic GREEN tics 35
+    pic SPEED tics 35
+    pic PURP tics 35

@@ -1,0 +1,379 @@
+// ===================
+// Ammunition
+// ===================
+
+// Ammo Clip
+remap CLIPA0 CLIPA0_H
+
+// Backpack
+remap BPAKA0 BPAKA0_H
+
+// Box of Ammo
+remap AMMOA0 AMMOA0_H
+
+// Box of Rockets
+remap BROKA0 BROKA0_H
+
+// Box of Shells
+remap SBOXA0 SBOXA0_H
+
+// Cell Charge
+remap CELLA0 CELLA0_H
+
+// Cell Charge Pack
+
+
+// Rocket
+remap ROCKA0 ROCKA0_H
+
+// Shotgun Shells
+remap SHELA0 SHELA0_H
+
+
+// ===================
+// Decoration
+// ===================
+
+
+// ===================
+// Health and Armor
+// ===================
+
+// Armor Bonus
+remap BON2A0 BON2A0_H
+remap BON2B0 BON2B0_H
+remap BON2C0 BON2C0_H
+remap BON2D0 BON2D0_H
+
+// Blue Armor
+remap ARM2A0 ARM2A0_H
+remap ARM2B0 ARM2B0_H
+
+// Green Armor
+remap ARM1A0 ARM1A0_H
+remap ARM1B0 ARM1B0_H
+
+// Health Bonus
+remap BON1A0 BON1A0_H
+remap BON1B0 BON1B0_H
+remap BON1C0 BON1C0_H
+remap BON1D0 BON1D0_H
+
+// Max Armor Bonus
+remap BON3A0 BON3A0_H
+remap BON3B0 BON3B0_H
+remap BON3C0 BON3C0_H
+remap BON3D0 BON3D0_H
+
+// Max Health Bonus
+remap BON4A0 BON4A0_H
+remap BON4B0 BON4B0_H
+remap BON4C0 BON4C0_H
+remap BON4D0 BON4D0_H
+
+// Medikit
+remap MEDIA0 MEDIA0_H
+
+// Red Armor
+remap ARM3A0 ARM3A0_H
+remap ARM3B0 ARM3B0_H
+
+// Stimpack
+
+
+
+// ===================
+// Keys
+// ===================
+
+// Blue Skull
+remap BSKUA0 BSKUA0_H
+remap BSKUB0 BSKUB0_H
+
+// Red Skull
+remap RSKUA0 RSKUA0_H
+remap RSKUB0 RSKUB0_H
+
+// Yellow Skull
+remap YSKUA0 YSKUA0_H
+remap YSKUB0 YSKUB0_H
+
+
+// ===================
+// Light Sources
+// ===================
+
+// Candelabra
+remap CBRAA0 CBRAA0_H
+
+// Candle
+remap CANDA0 CANDA0_H
+
+// Candle (blue)
+remap CANBA0 CANBA0_H
+
+// Candle (red)
+remap CANRA0 CANRA0_H
+
+// Floor Lamp
+remap COLUA0 YCOLA0_H
+
+// Floor Lamp (blue)
+remap BCOLA0 BCOLA0_H
+
+// Floor Lamp (red)
+remap RCOLA0 RCOLA0_H
+
+// Short Blue Torch
+remap SMBTA0 SMBTA0_H
+remap SMBTB0 SMBTB0_H
+remap SMBTC0 SMBTC0_H
+remap SMBTD0 SMBTD0_H
+
+// Short Green Torch
+remap SMGTA0 SMGTA0_H
+remap SMGTB0 SMGTB0_H
+remap SMGTC0 SMGTC0_H
+remap SMGTD0 SMGTD0_H
+
+// Short Red Torch
+remap SMRTA0 SMRTA0_H
+remap SMRTB0 SMRTB0_H
+remap SMRTC0 SMRTC0_H
+remap SMRTD0 SMRTD0_H
+
+// Short Tech Floor Lamp
+remap TLP2A0 TLP2A0_H
+remap TLP2B0 TLP2B0_H
+remap TLP2C0 TLP2C0_H
+remap TLP2D0 TLP2D0_H
+
+// Short Tech Floor Lamp (red)
+remap TLP4A0 TLP4A0_H
+remap TLP4B0 TLP4B0_H
+remap TLP4C0 TLP4C0_H
+remap TLP4D0 TLP4D0_H
+
+// Short White Torch
+remap SMWTA0 SMWTA0_H
+remap SMWTB0 SMWTB0_H
+remap SMWTC0 SMWTC0_H
+remap SMWTD0 SMWTD0_H
+
+// Short Yellow Torch
+remap SMYTA0 SMYTA0_H
+remap SMYTB0 SMYTB0_H
+remap SMYTC0 SMYTC0_H
+remap SMYTD0 SMYTD0_H
+
+// Tall Blue Torch
+remap TBLUA0 TBLUA0_H
+remap TBLUB0 TBLUB0_H
+remap TBLUC0 TBLUC0_H
+remap TBLUD0 TBLUD0_H
+
+// Tall Green Torch
+remap TGRNA0 TGRNA0_H
+remap TGRNB0 TGRNB0_H
+remap TGRNC0 TGRNC0_H
+remap TGRND0 TGRND0_H
+
+// Tall Red Torch
+remap TREDA0 TREDA0_H
+remap TREDB0 TREDB0_H
+remap TREDC0 TREDC0_H
+remap TREDD0 TREDD0_H
+
+// Tall Tech Floor Lamp
+remap TLMPA0 TLMPA0_H
+remap TLMPB0 TLMPB0_H
+remap TLMPC0 TLMPC0_H
+remap TLMPD0 TLMPD0_H
+
+// Tall Tech Floor Lamp (red)
+remap TLP3A0 TLP3A0_H
+remap TLP3B0 TLP3B0_H
+remap TLP3C0 TLP3C0_H
+remap TLP3D0 TLP3D0_H
+
+// Tall Yellow Torch
+remap TYELA0 TYELA0_H
+remap TYELB0 TYELB0_H
+remap TYELC0 TYELC0_H
+remap TYELD0 TYELD0_H
+
+// ===================
+// Powerups
+// ===================
+
+// Berserk
+remap PSTRA0 PSTRA0_H
+
+
+// Computer Map
+
+
+// Doomsphere
+remap DOOMA0 DOOMA0_H
+remap DOOMB0 DOOMB0_H
+remap DOOMC0 DOOMC0_H
+remap DOOMD0 DOOMD0_H
+
+// Guardsphere
+remap GARDA0 GARDA0_H
+remap GARDB0 GARDB0_H
+remap GARDC0 GARDC0_H
+remap GARDD0 GARDD0_H
+
+// Invisibility
+
+
+//Terminator Orb
+remap ARNOA0 ARNOA0_H
+remap ARNOB0 ARNOB0_H
+remap ARNOC0 ARNOC0_H
+remap ARNOD0 ARNOD0_H
+
+
+// Invulnerability
+remap PINVA0 PINVA0_H
+remap PINVB0 PINVB0_H
+remap PINVC0 PINVC0_H
+remap PINVD0 PINVD0_H
+
+// Lite Amplification Goggles
+remap INFRA0 INFRA0_H
+remap INFRB0 INFRB0_H
+
+
+// Mega Sphere
+//remap MEGAA0 MEGAA0_H
+
+
+// Radiation Suit
+
+// Soulsphere
+remap SOULA0 SOULA0_H
+remap SOULB0 SOULB0_H
+remap SOULC0 SOULC0_H
+remap SOULD0 SOULD0_H
+
+
+// Time Freeze
+remap TIMEA0 TIMEA0_H
+remap TIMEB0 TIMEB0_H
+remap TIMEC0 TIMEC0_H
+remap TIMED0 TIMED0_H
+
+
+// Turbosphere
+
+
+
+// ===================
+// Runes
+// ===================
+
+// Drain
+remap DRARA0 DRARA0_H
+remap DRARB0 DRARB0_H
+remap DRARC0 DRARC0_H
+remap DRARD0 DRARD0_H
+
+// Haste
+
+
+// High Jump
+
+
+// Prosperity
+remap PRSRA0 PRSRA0_H
+remap PRSRB0 PRSRB0_H
+remap PRSRC0 PRSRC0_H
+remap PRSRD0 PRSRD0_H
+
+// Rage
+remap RAGRA0 RAGRA0_H
+remap RAGRB0 RAGRB0_H
+remap RAGRC0 RAGRC0_H
+remap RAGRD0 RAGRD0_H
+remap RAGRE0 RAGRE0_H
+remap RAGRF0 RAGRF0_H
+remap RAGRG0 RAGRG0_H
+remap RAGRH0 RAGRH0_H
+
+// Reflection
+remap REFRA0 REFRA0_H
+remap REFRB0 REFRB0_H
+
+// Regeneration
+remap REGRA0 REGRA0_H
+remap REGRB0 REGRB0_H
+
+// Resistance
+remap RESRA0 RESRA0_H
+remap RESRB0 RESRB0_H
+remap RESRC0 RESRC0_H
+remap RESRD0 RESRD0_H
+remap RESRE0 RESRE0_H
+remap RESRF0 RESRF0_H
+remap RESRG0 RESRG0_H
+remap RESRH0 RESRH0_H
+
+// Spread
+remap SPRRA0 SPRRA0_H
+remap SPRRB0 SPRRB0_H
+remap SPRRC0 SPRRC0_H
+remap SPRRD0 SPRRD0_H
+
+// Strength
+remap STRRA0 STRRA0_H
+remap STRRB0 STRRB0_H
+remap STRRC0 STRRC0_H
+remap STRRD0 STRRD0_H
+remap STRRE0 STRRE0_H
+
+
+// ===================
+// Weapons
+// ===================
+
+// BFG 9k
+remap BFUGA0 BFUGA0_H
+
+// BFG 10k
+remap BFG2A0 BFG2A0_H
+
+// Chaingun
+remap MGUNA0 MGUNA0_H
+
+// Grenade Launcher
+remap GLAUA0 GLAUA0_H
+
+// Minigun
+remap MNGNA0 MNGNA0_H
+
+// Plasma Rifle
+remap PLASA0 PLASA0_H
+
+// Railgun
+remap RAILA0 RAILA0_H
+
+// Rocket Launcher
+remap LAUNA0 LAUNA0_H
+
+// Shotgun
+remap SHOTA0 SHOTA0_H
+
+// Super Shotgun
+remap SGN2A0 SGN2A0_H
+
+
+// ===================
+// Unused
+// ===================
+
+remap TRAKA0 TRAKA0_H
+remap TRAKB0 TRAKB0_H
+remap TRAKC0 TRAKC0_H
+remap TRAKD0 TRAKD0_H

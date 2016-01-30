@@ -1,0 +1,118 @@
+ACTOR JPX_Phobos 25006
+{
+  	translation "112:127=5:8"
+	SpawnID 207
+    	Health 999999
+   	Radius 16
+    	Height 64
+    	Speed 15
+	Mass 200
+    	PainChance 10
+    	MONSTER
+ 	+FLOORCLIP
+  	+FRIENDLY
+  	-SHOOTABLE
+    	AttackSound "weapons/sshotf"
+    	PainSound "player/male/pain100_1"
+    	DeathSound "player/male/death1"
+    	Obituary "%o was killed."
+    	DropItem SuperShotgun
+    	Decal BulletChip
+    	States
+    	{
+	Spawn:
+		PHOB AB 10 A_Look
+		Loop
+    	See:
+        	PHOB AAAABBBBCCCCDDDD 1 A_Chase
+        	Loop
+    	Missile:
+        	PHOB E 2 A_FaceTarget
+        	PHOB E 5 A_FaceTarget
+        	PHOB E 0 A_PlaySound ("weapons/sshotf")
+        	PHOB F 7 Bright A_CustomBulletAttack (11, 7, 15, 5, "BulletPuff")
+        	PHOB E 14
+        	PHOB E 14 A_PlaySound ("weapons/sshoto")
+        	PHOB E 13 A_PlaySound ("weapons/sshotl")
+        	PHOB E 11 A_PlaySound ("weapons/sshotc")
+		Goto See
+    	Pain:
+        	PHOB G 3
+        	PHOB G 3 A_Pain
+        	Goto See
+    	Death:
+        	PHOB H 5
+        	PHOB I 5 A_Scream
+        	PHOB J 5 A_Fall
+        	PHOB K 5
+        	PHOB L 5
+        	PHOB M 5
+        	PHOB N -1
+		Stop
+    	XDeath:
+        	PHOB O 5
+        	PHOB P 5 A_XScream
+        	PHOB Q 5 A_Fall
+        	PHOB RSTUV 5
+        	PHOB W -1
+        	Stop
+    	Raise:
+        	PHOB MLKJIH 5
+        	Goto See
+    	}
+}
+
+
+actor JPX_Synas : JPX_Phobos 25007
+{
+ translation "112:127=184:191"
+ MONSTER
+ +FLOORCLIP
+ +FRIENDLY
+ -SHOOTABLE
+ states
+ {
+ Spawn:
+   SYNA A 1 A_Look2
+   loop
+ See:
+   SYNA ABCD 8 A_Wander
+   loop
+ }
+}
+
+actor JPX_Strife : JPX_Phobos 25008
+{
+ translation "112:127=9:12"
+  MONSTER
+  +FLOORCLIP
+  +FRIENDLY
+  -SHOOTABLE
+  states
+  {
+  Spawn:
+    GSOL A 1 A_Look2
+    loop
+  See:
+    GSOL ABCD 8 A_Wander
+    loop
+  }
+}
+
+actor JPX_Minielle : JPX_Phobos 25009
+{
+ translation "112:127=80:95", "9:12=96:99"
+  MONSTER
+  +FLOORCLIP
+  +FRIENDLY
+  -SHOOTABLE
+  states
+  {
+  Spawn:
+    MINI A 1 A_Look2
+    loop
+  See:
+    MINI ABCD 8 A_Wander
+    loop
+  }
+}

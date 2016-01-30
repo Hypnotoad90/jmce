@@ -1,0 +1,133 @@
+//Chem VI//
+l_start l_start
+l_start2 l_start2
+l_gogogo l_gogogo
+l_lastla l_lastla
+l_nd l_nd
+l_ouch1 l_ouch1
+l_ouch2 l_ouch2
+l_ouch3 l_ouch3
+l_ouch4 l_ouch4
+l_rd l_rd
+l_st l_st
+
+//Crusaders Corridor//
+
+MWHIR    mwhir
+DSRB2PN  dsrb2pn
+DSCHAIN  dschain
+DSTEND   dstend
+DSEXPLOD dsexplod
+DSPHOT2  dsphot2
+DSPLASM2 dsplasm2
+DSRB2DTH dsrb2dth
+DSRLAUN2 dsrlaun2
+MSEE     msee
+DSAIRLCK dsairlck
+DSBGLASS dsbglass
+
+//6th Dimension//
+
+DSBOSPN DSBOSPN
+DSBOSDTH DSBOSDTH
+
+//The Nightmare//
+
+//Powerup
+
+Shrinksphere/Shrink		DSSHRINK
+Shrinksphere/UnShrink		DSLARGE
+
+//Mini Player
+
+$playersound	mini	male	*death		dsmdeth
+$playersound	mini	male	*xdeath		dsmdiehi
+$playersound	mini	male	*gibbed		dsslop
+$playersound	mini	male	*pain100	dsmpain
+$playersounddup	mini	male	*pain75		*pain100
+$playersounddup	mini	male	*pain50		*pain100
+$playersounddup	mini	male	*pain25		*pain100
+$playersound	mini	male	*grunt		dsmoof
+$playersounddup	mini	male	*land		*grunt
+$playersound	mini	male	*jump		dsjump
+$playersound	mini	male	*fist		dspunch
+$playersound	mini	male	*usefail	dsmoof
+
+Pickups/TechArmor	TCHARMUS
+
+//Ambient sounds (water, lava, wind) 
+
+WATERFLO1 WATERFLO
+$ambient 2 WATERFLO1 point continuous 0.4
+$volume WATERFLO1 0.4
+
+FSTWATER2 FSTWATER
+$ambient 3 FSTWATER2 point continuous 0.4
+$volume FSTWATER2 0.4
+
+BROOK BROOK1
+$ambient 4 BROOK point continuous 0.4
+$volume BROOK 0.4
+
+LAVA LAVA2
+$ambient 5 LAVA point continuous 0.6
+$volume LAVA 0.6
+
+WIND3 WIND3
+$ambient 6 WIND3 point continuous 1.0
+
+//Happy Dreams//
+
+monster/incsit                dsincsit
+monster/incdth                dsincdth
+monster/incexp                dsincexp
+monster/incact                dsincact
+monster/incatk                dsincatk
+monster/inchit                dsinchit
+monster/hadsit                dshadsit
+monster/haddth                dshaddth
+monster/hadexp                dshadexp
+monster/hadtel                dshadtel
+monster/hadwlk                dshadwlk
+
+//==========================================================
+
+//ELEMENTAL//
+
+items/salvation	DSALVATE
+
+Pot/Break      POTBRK
+
+//==========================================================
+
+//Eternal//
+
+ForceBarrier/On		DSFRCON
+ForceBarrier/Off	DSFRCOFF
+ForceBarrier/Loop	DSFRCLOP
+
+DSZAPHT1	DSZAPHT1
+DSZAPHT2	DSZAPHT2
+DSZAPHT3	DSZAPHT3
+
+
+$random ForceBarrier/Hit	{ DSZAPHT1 DSZAPHT2 DSZAPHT3 }
+$limit ForceBarrier/Hit	0
+
+weapons/fatshot		XMMANSHT
+weapons/fathit		XMMANXPL
+
+//==========================================================
+
+//Music volume//
+
+$musicvolume J_MNSION 100
+$musicvolume J_THELAB 0.5
+$musicvolume J_8MAP 1.8
+$musicvolume J_PV4 1.8
+
+//==========================================================
+
+// Used in JPX53 (Dammit)
+GENER1 GENER1
+GENER2 GENER2

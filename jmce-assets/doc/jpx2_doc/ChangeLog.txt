@@ -1,0 +1,42 @@
+====================================================
+A3
+====================================================
+This is just a maintenance/bugfix release with no new maps or significant changes.
+
+-Changed: New map info message to follow the change in new Jumpix release
+-Fixed: Clear inventory script changed to ENTER
+-Added: File with information about all maps - map name, author, name of used music
+-Added: Changelog and Readme files
+-Changed: Reduced par times for most maps, to make par time more challenging
+-Fixed: Removed clearplayerclasses from keyconf
+-Fixed: Resolved ambient sound conflicts, sound 1 is not used
+
+====================================================
+- Changes or Fixes for the Following maps
+
+Elemental (JPX36)
+====================================================
+-Fixed: The shortcut where you can reach exit by jumping from a window
+-Changed: New music, replacing standard Doom2 midi song
+
+Mother Nature's Home (JPX37)
+====================================================
+-Fixed: Yellow and red switches now use ACS_LockedExecute, so they stay pressed
+
+The Laboratory (JPX41)
+====================================================
+-Changed: The void sector in exit part where the nukage falls now kills
+-Fixed: Decreased music volume because it was too loud
+
+Mansion (JPX42)
+====================================================
+-Fixed: The exit door can be opened only with three keycards, red skull won't work
+-Fixed: Yellow skull is now reachable without need of stepping on a crouched player
+
+Feudal Age (JPXIISEC)
+====================================================
+-Fixed: The deep water in the center of the map teleporting when it shouldn't
+
+Library (JPX2BDEM) Integrated into pk3
+====================================================
+-Fixed: The shootable switch in route 2 can now be shot only from the proper side

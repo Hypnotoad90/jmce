@@ -1,0 +1,490 @@
+====================================================
+14.01
+====================================================
+-Added: Record holder name now displays in map info message
+-Added: New skins: Tails, Daisy, Massmouth, naziskins
+-Fixed: Resolved ambient sound conflicts, sound 1 is not used
+
+====================================================
+- Changes or Fixes for the Following maps
+
+Mountain Jump (JPX06)
+====================================================
+-Changed: Reverted to previous map version due to complaints about harder gamelpay
+
+Tunnel Trouble (JPX12)
+====================================================
+-Changed: The sludge texture to Hexen swamp texture
+
+Fire Field (JPX16)
+====================================================
+-Changed: Par time reduced to 1:50
+
+New Mojave (JPX29)
+====================================================
+-Fixed: The shortcut when players walked on invisible wall and crossed finish line
+ of second part, skipping first two laps this way
+
+First Strike (JPX32)
+====================================================
+-Fixed: Missing impassible walls to ambient sectors surrounding the part with
+ collapsing floor in the beginning
+
+Bass (BASS) Integrated into Jumpix as a bonus map
+====================================================
+
+
+====================================================
+13.12
+====================================================
+-New maps: New Mojave (JPX29) by AC3
+           First Strike (JPX32) by Frank
+           Colors (JPXSEC2) by Minielle - Back to Jumpix
+
+-Map changes: Haunted Hall (JPX05) - Revamped by AC3, difficulty changed to Very Easy
+              Itaipu (JPX30) - Latest version, but still incomplete     
+
+-Changed: Reorganized the PK3 structure, cleaned up repeated/conflicting resources
+-Changed: New map info message. Now uses external ACS library
+-Fixed: Clear inventory script changed to ENTER, added into maps where it was missing 
+-Changed: Sorted all maps by difficulty properly, causing many map number changes
+-Added: File with information about all maps - map name, author, name of used music
+-Added: Attached some Skulltag skins because some characters use their sprites
+
+====================================================
+- Changes or Fixes for the Following maps
+
+Haunted Hall (JPX05)
+====================================================
+-Changed: Repainted the whole map.
+-Changed: Difficulty assigned from Easy to Very Easy.
+
+Mountain Jump (JPX06)
+====================================================
+-Changed: Design of the map, now is open and looks like a real mountain
+
+Nukage (JPX08)
+====================================================
+-Fixed: Secret door leading straight to exit, if you spam use at a specific point 
+        you can break the exit room
+-Fixed: Green keycard now uses its lock, buttons use ACS_LockedExecute
+
+The Mill (JPX10)
+====================================================
+-Added: Secret Exit.
+
+Darkest Chasm (JPX11)
+====================================================
+-Fixed: The switch at the start can no longer be activated from the bottom.
+-Fixed: Possibly erroneus sectors at the exit.
+
+Crusaders Corridor (JPX13)
+====================================================
+-Fixed: The "You have 30 secs..." Print message. Now should print only for the activator. 
+-Fixed: The Crusarder's health now displays in the lower part of screen.
+-Fixed: ScriptTrigger replaced with SetActivator
+
+Jumpenstein (JPX15)
+====================================================
+-Changed: Lowered the excessively high par time from 3:00 to 1:10
+
+The Sixth Dimension (JPX18)
+====================================================
+-Changed: Made the boxes moving down and up it the last section before exit lower down totally
+ and teleportable and increased delay time to do it. So increases the difficulty a bit.
+
+Computer Lab (JPX20)
+====================================================
+-Fixed: The pillars lowering in the dark section when the player reach the checkpoint.
+-Fixed: If more players hit switches at exactly same time, the pillars leading to Cyberdemon
+        won't raise multiple times.
+
+Nightmare (JPX27)
+====================================================
+-Fixed: Optimized the map by removing unnecessary sectors and joining many sectors.
+-Fixed: A big shortcut, managed by long jump over water from the first water part 
+
+New Mojave (JPX32) NEW MAP!!!
+====================================================
+
+Itaipu (JPX30)
+====================================================
+-Changed: Latest version by AC3, much longer than trial, but still incomplete.
+
+First Strike (JPX32) NEW MAP!!!
+====================================================
+
+Happy Dreams (JPXSEC)
+====================================================
+-Fixed: Optimized the map by removing unnecessary sectors and joining many sectors.
+-Fixed: Green skull key now displays green in HUD.
+
+Colors (JPXSEC2) Back to Jumpix
+====================================================
+
+
+
+====================================================
+11.04
+====================================================
+-Changed the map information. Now has to display
+Author, Map number and Difficulty.
+
+**Known Bugs**
+-Client side scripts doesnt work properly when the
+player activates then "DISCONNECTS" at time.
+
+====================================================
+- Changes or Fixes for the Following maps
+
+The Mill (JPX10)
+====================================================
+-Improved the ambient detail.
+-Added new stuffs.
+
+Comp Lab (JPX16)
+====================================================
+-Fixed the teleport malfunction caused by multiple 
+waggling floors.
+-The ceiling at the red card part is now dark.
+
+The Sixth Dimension (JPX20)
+====================================================
+-Simplified the opening dimensions in one script.
+-Fixed the ambient sounds at the 6th dimension.
+
+**Known Bugs**
+-In the sixth dimension you can see the player in
+the next section through the line horizon.
+
+
+Castle (JPX24)
+====================================================
+-Fixed the malfunction teleport in the first torch part.
+
+Pain and Agony (JPX26)
+====================================================
+-Fixed the invisible bridges lowered at the exit section.
+
+
+
+
+====================================================
+11.03 --Fix--
+====================================================
+-Fixed the error sector loading caused by flood of
+portals (Upper/Lower sector things).
+-Deleted the jpx29 lump in the mapVeins.wad.
+-Fixed the non repeteable action in jpx28.
+
+====================================================
+11.03
+====================================================
+- General Changes or Fixes
+====================================================
+-Set 3d mid textures instead of bridges things in some
+places in some maps.
+-Added Todo Info, to see our plans for further releases.
+
+====================================================
+- Changes or Fixes for the Following maps
+
+Chem VI (JPX04)
+====================================================
+-Fixed the weird linedef error in soft mode.
+
+Across the Canyons and into the Caves (JPX07)
+====================================================
+-Improved the details.
+-5% harder.
+
+Space Race (JPX09)
+====================================================
+-Made the penultimate and the last section visible
+in both sides.
+
+Comp Lab (JPX16)
+====================================================
+-Improved the code, when you press the switches, at
+the 4 switch room, you'll get teleported where are the
+unpressed switches, if you fall down, you'll don't get
+teleported at the pressed switch area by random.
+
+Veins (JPX28) NEW MAP!!!
+====================================================
+
+Itaipu (JPX30) TRIAL VERSION!!!
+====================================================
+
+A Winter Dream (JPX31)
+====================================================
+-Moved slot from jpx28 to jpx31.
+
+====================================================
+11.01
+====================================================
+- General Changes or Fixes
+====================================================
+-Reordered all maps by difficulty.
+-Added intermission music.
+-Changed the liquid textures: "WFWATER1 to HYWATER"
+"NUKAGE1 to HYNUKE"
+
+====================================================
+- Changes or Fixes for the Following maps
+
+Chem VI (JPX04)
+====================================================
+-Added a duel secret.
+-Reduced laps to 3.
+-30% easier.
+
+The Mill (JPX10)
+====================================================
+-Added announces when the doors are opened.
+-Amplied the exit room. (Only removed the impassable area)
+
+Computer Lab (JPX16)
+====================================================
+-Fixed the light change sectors.
+-Fixed the Switches print screen.
+
+Cave (JPX23)
+====================================================
+-Removed the annoying fog.
+-Changed the sky.
+
+
+====================================================
+10.12
+====================================================
+- General Changes or Fixes
+====================================================
+-Added Caleb Skin.
+-Removed Swamp map.
+
+====================================================
+- Changes or Fixes for the Following maps
+
+Crusaders Corridor (JPX04)
+====================================================
+-Fixed the "30 seconds" print in all players.
+-Fixed a sector it's sort of connected to another
+ som that infanitly long textrue problem.
+
+Depths of Darkness (JPX07)
+====================================================
+-Fixed the main helpers reseted when the player is
+crossing to the checkpoint.
+
+Comp LAB (JPX08)
+====================================================
+-Fixed some missing textures.
+
+Entering Hell (JPX11)
+====================================================
+-Fixed a great shortcut teleport at the exit.
+
+Fire Field (JPX23) "Back to JumPix"
+====================================================
+-Fixed the conflict on textures.
+
+Space Race (JPX24)
+====================================================
+-Choosen a new music.
+
+Cave (JPX25)
+====================================================
+-Reduced the (orange) fog area, now are more visible
+in software.
+
+Castel (JPX29) "New Map!"
+====================================================
+
+Happy Dreams! (Secret Map)
+====================================================
+-Changed framerate from 30 to 50. (Reduced LAG fps)
+-Added Green Skull key.
+
+
+====================================================
+10.11
+====================================================
+- General Changes or Fixes
+====================================================
+-Fixed the titlemap when the player joins.
+-Removed speedrun times.
+-Implemented the "Luk" program now compatible with
+JumPix.
+-Fixed the triggers in some maps.
+
+====================================================
+- Changes or Fixes for the Following maps
+
+Chem VI (JPX02)
+====================================================
+-Updated the Circuit Game ACS.
+
+The Mill (JPX03)
+====================================================
+-Removed the playlist of JpxSongs because the mp3
+pack is so high size and consumes a lot of RAM.
+
+Path of Peril (JPX06)
+====================================================
+-Fixed missing textures.
+-Improved the details.
+
+Entering Hell (JPX11)
+====================================================
+-Fixed some missing textures.
+
+Across the Canyon and Into the Caves (JPX12)
+====================================================
+-Fixed the waterfall movements.
+-Arranged the skybox texture.
+-Filename is now renamed from "mapslyor12.wad" to
+"mapAtCaitC.wad"
+
+Mountain Jump (JPX19) "Back to JumPix"
+====================================================
+-Removed the line horizon in the edges.
+
+Swamp (JPX23) "New"
+====================================================
+
+The Nightmare (JPX27)
+====================================================
+-Implemented secret switches.
+
+Fire Field (Removed for maintenance)
+====================================================
+-Fixing the duplicate textures, caused a conflict in
+other maps.
+-Improving Details
+
+====================================================
+10.10
+====================================================
+
+====================================================
+- Changes or Fixes for the Following maps
+
+Haunted Hall (JPX01)
+====================================================
+-Most possible alignment of the textures.
+
+The Mill (JPX03)
+====================================================
+-Fixed misalignment textures.
+-Updated Changemus songs by "JpxSongs.pk3"
+
+Badlands (JPX10)
+====================================================
+-Fixed the time of Earthquake.
+
+Entering Hell (JPX11)
+====================================================
+-Improved details.
+-Fixed some scroll linedefs.
+-Fixed missing textures and misaligned ones.
+
+Nukage (JPX14)
+====================================================
+-Fixed High Jump rune glitch.
+
+Jumpenstein (JPX15)
+====================================================
+-Fixed missing teleports.
+
+Ruins (JPX17)
+====================================================
+-Added some extra teleports.
+
+Tunnel Trouble (JPX21)
+====================================================
+-Changed Noobside area. The speedrun time is kept.
+
+Space Race (JPX24)
+====================================================
+-Has now defined a song.
+-Fixed a missing sector tag.
+-Fixed some missing teleports.
+
+Raiden (JPX26)
+====================================================
+-Removed an "Instant Death" action in some sectors.
+
+The Nightmare (JPX27)
+====================================================
+-Changed the map name to color Black. (Difficulty)
+-Fixed instant-death sectors in the start.
+-Removed the double secret in the exit part, where you
+can pick up the Rage Rune.
+
+Aiur850's Nightmare (JPX28) NEW
+====================================================
+
+Fire Field (JPX29) "Back to Jumpix"
+====================================================
+-Changed all the ambient details.
+
+
+
+
+
+====================================================
+10.09
+====================================================
+- General Changes or Fixes
+*Removed the "clearepisodes" from MAPINFO.
+*Improved "Strife Guy II" skin quality.
+
+====================================================
+- Changes or Fixes for the Following maps
+Haunted Hall (JPX01)
+====================================================
+-Improved the ambient details.
+-5% more harder.
+-Fixed some texture issues.
+
+The Mill (JPX03)
+====================================================
+-Changed the White Nukage texture
+
+Pain and Agony (JPX09)
+====================================================
+-Fixed the misplaced Bridge Things at the exit area.
+
+Badlands (JPX10)
+====================================================
+-Fixed the time in the earthquake and rearanged the skybox.
+
+Jumpenstein (JPX15)
+====================================================
+-Now been detailed.
+
+Dimensions (JPX16)
+====================================================
+-Fixed badly scripted ending in sixth dimension.
+
+A Winter Dream (JPX22)
+====================================================
+-Changed back for the original version.
+
+Tunnel Trouble (JPX23)
+====================================================
+-Fixed delayed script.
+
+Space Race (JPX24) NEW
+====================================================
+
+Cave (JPX25) NEW
+====================================================
+
+Raiden (JPX26) NEW
+====================================================
+
+The Nightmare (JPX27) NEW
+====================================================
+

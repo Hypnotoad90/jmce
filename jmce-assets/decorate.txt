@@ -1,0 +1,1541 @@
+//======================================================================
+
+//ELEMENTAL//
+
+actor Salvationsphere : CustomInventory 32579
+{
+  Inventory.PickupMessage "Salvationsphere!"
+  Inventory.Amount 1
+  Inventory.MaxAmount 1
+  Inventory.PickupSound "misc/p_pkup"
+  Inventory.UseSound "items/salvation"
+  Inventory.Icon ARTISALV
+  Renderstyle Add
+  +INVENTORY.FANCYPICKUPSOUND
+  +INVBAR
+  +COUNTITEM
+  +FLOATBOB
+  states
+  {
+  Spawn:
+	SALV ABCDE 3 Bright
+	loop
+  Use:
+ 	TNT1 A 0 A_GiveInventory("Soulsphere")
+	TNT1 A 0 A_GiveInventory("Salvate")
+	Stop
+  }
+}
+
+//Alternate Salvation
+
+actor Salvate : ArtiTeleport
+{
+  +INVENTORY.AUTOACTIVATE
+  +INVENTORY.ALWAYSPICKUP
+}
+
+Actor BreakableVase1 32580
+{
+  Radius 10
+  Height 48
+  Health 20
+  +Solid
+  +shootable
+  +noblood
+  +dontgib
+  +noicedeath
+  DeathSound "Pot/Break"
+  States
+  {
+  Spawn:
+    EGIP A -1
+    Stop
+  Death:
+    NULL A 0 A_Scream
+    EGIK B 6
+    EGIK A 6
+    Wait
+  }
+}
+
+Actor BreakableVase2 32581
+{
+  Radius 10
+  Height 40
+  Health 20
+  +Solid
+  +shootable
+  +noblood
+  +dontgib
+  +noicedeath
+  DeathSound "Pot/Break"
+  States
+  {
+  Spawn:
+    EGIP B -1
+    Stop
+  Death:
+    NULL A 0 A_Scream
+    EGIK C 6
+    EGIK D 6
+    Wait
+  }
+}
+
+Actor BreakableVase3 32582
+{
+  Radius 10
+  Height 28
+  Health 20
+  +Solid
+  +shootable
+  +noblood
+  +dontgib
+  +noicedeath
+  DeathSound "Pot/Break"
+  States
+  {
+  Spawn:
+    EGIP C -1
+    Stop
+  Death:
+    NULL A 0 A_Scream
+    EGIK F 6
+    EGIK E 6
+    Wait
+  }
+}
+
+Actor BreakableVase4 32583
+{
+  Radius 10
+  Height 32
+  Health 20
+  +Solid
+  +shootable
+  +noblood
+  +dontgib
+  +noicedeath
+  DeathSound "Pot/Break"
+  States
+  {
+  Spawn:
+    EGIP F -1
+    Stop
+  Death:
+    NULL A 0 A_Scream
+    EGIK G 6
+    Wait
+  }
+}
+
+Actor Vase1 32584
+{
+  Radius 10
+  Height 48
+  +Solid
+  States
+  {
+  Spawn:
+    EGIP A -1
+    Stop
+  }
+}
+
+Actor Vase2 32585
+{
+  Radius 10
+  Height 40
+  +Solid
+  States
+  {
+  Spawn:
+    EGIP B -1
+    Stop
+  }
+}
+
+Actor Vase3 32586
+{
+  Radius 10
+  Height 28
+  +Solid
+  States
+  {
+  Spawn:
+    EGIP C -1
+    Stop
+  }
+}
+  
+    
+Actor Vase4 32587
+{
+  Radius 5
+  Height 16
+  +Solid
+  States
+  {
+  Spawn:
+    EGIP D -1
+    Stop
+  }
+}
+
+Actor Vase5 32588
+{
+  Radius 6
+  Height 12
+  +Solid
+  States
+  {
+  Spawn:
+    EGIP E -1
+    Stop
+  }
+}
+
+
+Actor Vase6 32589
+{
+  Radius 10
+  Height 32
+  +Solid
+  States
+  {
+  Spawn:
+    EGIP F -1
+    Stop
+  }
+}
+
+// -------------------//
+// --UAC Pulse Rifle--//
+//--------------------//
+
+actor PulseRifle : weapon 32578
+{
+  Inventory.PickupMessage "You've found the Pulse Rifle!"
+  Obituary "%o was fried by %k's Pulse Rifle."
+  Weapon.AmmoType1 "Cell"
+  Weapon.AmmoUse1 1
+  Weapon.AmmoGive 20
+  Decal "ArachnotronScorch"
+  weapon.slotnumber 6
+  States
+  {
+  Spawn:
+    PULS A -1
+    stop
+  Ready:
+      PULS B 1 A_WeaponReady
+      loop
+  Deselect:
+      PULS B 1 A_Lower
+      loop
+  Select:
+      PULS B 1 A_Raise
+      loop
+  Fire:
+      PULS C 2 bright
+      PULS D 2 Bright A_FireCustomMissile("ArachnotronPlasma",0,1)
+      PULS C 2 bright
+      PULS B 2
+      PULS B 0 A_ReFire
+      Goto Ready
+  }
+}
+
+ACTOR PlasmaBolterShot1
+{
+   Radius 3
+   Height 4
+   Speed 30
+   Damage 10
+   Scale 0.75
+   PROJECTILE
+   +STRIFEDAMAGE
+   DamageType Lightning
+   DeathSound "weapons/plasmax"
+   RenderStyle Add
+   States
+   {
+   Spawn:
+      PLSS ABABAB 2 Bright A_CustomMissile("PlasmaBolterShot1Trail",0,0,0,0)
+      Goto Spawn+1
+   Death:
+      PLSE ABCDE 4 bright
+      Stop
+   }
+}
+
+ACTOR PlasmaBolterShot1Trail
+{   
+   Radius 0
+   Height 1
+   Damage 0
+   Speed 0
+   Scale 0.5
+   PROJECTILE
+   RENDERSTYLE ADD
+   ALPHA 0.50
+   States
+   {
+   Spawn:
+      BOLT ABCDEFG 2 Bright
+      Stop 
+   }
+}
+
+Actor BerserkSphere : CustomInventory 14122
+{
+  Game Doom
+  +COUNTITEM
+  +INVENTORY.AUTOACTIVATE
+  +INVENTORY.ALWAYSPICKUP
+  +INVENTORY.FANCYPICKUPSOUND
+  Inventory.PickupMessage "Berserk Supercharge!"
+  Inventory.PickupSound "misc/p_pkup"
+  States
+  {
+  Spawn:
+    BERS ABCDCB 6 Bright
+    Loop
+  Pickup:
+    TNT1 A 0 A_GiveInventory("PowerStrength")
+	TNT1 A 0 A_GiveInventory("BerserkSphereHealth")
+    TNT1 A 0 A_SelectWeapon("Fist")
+    Stop
+  }
+}
+
+Actor BerserkSphereHealth : Health
+{
+  -COUNTITEM
+  +INVENTORY.AUTOACTIVATE
+  +INVENTORY.ALWAYSPICKUP
+  Inventory.Amount 100
+  Inventory.MaxAmount 200
+  Inventory.PickupMessage ""
+  Inventory.PickupSound ""
+  States
+  {
+  Spawn:
+    TNT1 A -1
+    Loop
+  }
+}
+
+//======================================================================
+
+//9map//
+
+actor TREE1 28458
+{
+  height 128
+  radius 64
+  +SOLID
+  states
+  {
+  Spawn:
+  JPT1 A -1
+  Stop
+  }
+}
+actor TREE2 28459
+{
+  height 128
+  radius 64
+  +SOLID
+  states
+  {
+  Spawn:
+  JPT2 A -1
+  Stop
+  }
+}
+
+ACTOR BigMushroomRed 10400
+{
+  Radius 16
+  Height 48
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM A -1
+    Stop
+  }
+}
+
+ACTOR BigMushroomGreen 10401
+{
+  Radius 16
+  Height 48
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM B -1
+    Stop
+  }
+}
+
+ACTOR BigMushroomBrown 10402
+{
+  Radius 16
+  Height 48
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM C -1
+    Stop
+  }
+}
+
+ACTOR SmallMushroomRed 10403
+{
+  Radius 16
+  Height 24
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM D -1
+    Stop
+  }
+}
+
+ACTOR SmallMushroomGreen 10404
+{
+  Radius 16
+  Height 24
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM E -1
+    Stop
+  }
+}
+
+ACTOR SmallMushroomBrown 10405
+{
+  Radius 16
+  Height 24
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM F -1
+    Stop
+  }
+}
+
+ACTOR SmallTree1 10700
+{
+  Radius 16
+  Height 96
+  +SOLID
+  States
+  {
+  Spawn:
+    TREN A -1
+    Stop
+  }
+}
+
+ACTOR SmallTree2 10701
+{
+  Radius 16
+  Height 64
+  +SOLID
+  States
+  {
+  Spawn:
+    TREN B -1
+    Stop
+  }
+}
+
+ACTOR SmallBush1 10702
+{
+  Radius 16
+  Height 24
+  +SOLID
+  States
+  {
+  Spawn:
+    BUSN A -1
+    Stop
+  }
+}
+
+ACTOR SmallBush2 10703
+{
+  Radius 16
+  Height 40
+  +SOLID
+  States
+  {
+  Spawn:
+    BUSN B -1
+    Stop
+  }
+}
+
+ACTOR SmallWinterTree1 10704
+{
+  Radius 16
+  Height 72
+  +SOLID
+  States
+  {
+  Spawn:
+    TRWN A -1
+    Stop
+  }
+}
+
+ACTOR SmallWinterTree2 10705
+{
+  Radius 16
+  Height 88
+  +SOLID
+  States
+  {
+  Spawn:
+    TRWN B -1
+    Stop
+  }
+}
+
+actor FlightSphere : PowerupGiver 32601
+{
+	Game Doom
+	inventory.pickupmessage "You feel lighter."
+	inventory.maxamount 0
+	powerup.duration -60
+	powerup.color "FF 00 FF", 0.1
+	powerup.type Flight
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	States
+	{
+	Spawn:
+		FLYT ABCD 6 Bright
+		Loop
+	}
+}
+
+
+//======================================================================
+
+//ETERNAL//
+
+actor ShieldPart
+{
+  Radius 8
+  Height 8
+  Scale 0.5
+  RenderStyle None
+  Alpha 0.25
+  Bloodtype "ShieldHit"
+  +SHOOTABLE
+  +NOGRAVITY
+  +NOTELEPORT
+  +NODAMAGE
+  +DONTRIP
+  +NOBLOODDECALS
+  +FLOORCLIP
+  //+REFLECTIVE
+  +GHOST	//Give projectiles that you wish to pass through the shield THRUGHOST flag
+  States
+  {
+  Spawn:
+    HEXA A 2 bright
+    stop
+  Death:
+    TNT1 A 2
+    stop
+  }
+}
+
+actor ShieldPartVisual
+{
+  Radius 8
+  Height 8
+  Scale 0.5
+  RenderStyle Add	//Fuzzy looks great in software mode
+  Alpha 0.25
+  +NOINTERACTION
+  +CLIENTSIDEONLY
+  +FLOORCLIP
+  States
+  {
+  Spawn:
+    HEXA A 2 bright
+    stop
+  Death:
+    TNT1 A 2
+    stop
+  }
+}
+
+actor ShieldSpawner
+{
+  Radius 1
+  Height 1
+  +NOGRAVITY
+  +NOINTERACTION
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1
+    TNT1 A 0 A_SpawnItemEx ("ShieldSpawner4up", 0, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldSpawner5up", 24, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldSpawner5up", -24, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldSpawner4up", 48, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldSpawner4up", -48, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldSpawner3up", 72, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldSpawner3up", -72, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldSpawner2up", 96, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldSpawner2up", -96, 0, 0, 0, 0, 0, 0, 32)
+    stop
+  }
+}
+
+actor ShieldSpawner5up
+{
+  Radius 1
+  Height 1
+  +NOGRAVITY
+  +NOINTERACTION
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 16, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 32, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 48, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 64, 0, 0, 0, 0, 32)
+    //TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 0, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 16, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 32, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 48, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 64, 0, 0, 0, 0, 32)
+    stop
+  }
+}
+
+actor ShieldSpawner4up
+{
+  Radius 1
+  Height 1
+  +NOGRAVITY
+  +NOINTERACTION
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 8, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 24, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 40, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 56, 0, 0, 0, 0, 32)
+    //TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 8, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 24, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 40, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 56, 0, 0, 0, 0, 32)
+    stop
+  }
+}
+
+actor ShieldSpawner3up
+{
+  Radius 1
+  Height 1
+  +NOGRAVITY
+  +NOINTERACTION
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 16, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 32, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 48, 0, 0, 0, 0, 32)
+    //TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 16, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 32, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 48, 0, 0, 0, 0, 32)
+    stop
+  }
+}
+
+
+actor ShieldSpawner2up
+{
+  Radius 1
+  Height 1
+  +NOGRAVITY
+  +NOINTERACTION
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 24, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPart", 0, 0, 40, 0, 0, 0, 0, 32)
+    //TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 24, 0, 0, 0, 0, 32)
+    TNT1 A 0 A_SpawnItemEx ("ShieldPartVisual", 0, 0, 40, 0, 0, 0, 0, 32)
+    stop
+  }
+}
+
+actor ShieldHit
+{
+  Radius 1
+  Height 1
+  Scale 0.5
+  Renderstyle Add
+  +NOGRAVITY
+  +NOINTERACTION
+  States
+  {
+  Spawn:
+    FHIT A 0 bright
+    FHIT A 1 bright A_Stop
+    FHIT A 0 bright A_PlaySound ("ForceBarrier/Hit")
+    FHIT BCDEFGH 1 bright
+    stop
+  }
+}
+
+actor ShieldGun : DoomWeapon 32412
+{
+  Weapon.AmmoUse 1
+  Weapon.AmmoGive 40
+  Weapon.AmmoType "Cell"
+  Inventory.PickupMessage "You got the shield gun!"
+
+  States
+  {
+  Ready:
+    HEXH A 1 A_WeaponReady
+    Loop
+  Fire:
+    HEXH A 32 A_PlayWeaponSound ("ForceBarrier/On")
+  Hold:
+    HEXH A 1 bright A_SpawnItemEx ("ShieldSpawner", 0, 96, 0, 0, 0, 0, -270, 32)
+    HEXH A 0 bright A_PlaySoundEx ("ForceBarrier/Loop", "SoundSlot5", 1)
+    HEXH AAAAAAA 1 bright A_SpawnItemEx ("ShieldSpawner", 0, 96, 0, 0, 0, 0, -270, 32)
+    HEXH A 0 bright A_FireCustomMissile ("AmmoCounter")
+    HEXH A 0 A_Refire
+    HEXH A 0 A_StopSoundEx ("SoundSlot5")
+    HEXH A 32 A_PlayWeaponSound ("ForceBarrier/Off")
+    goto Ready
+  Deselect:
+    HEXH A 1 A_Lower
+    HEXH A 0 A_StopSoundEx ("SoundSlot5")
+    Loop
+  Select:
+    HEXH A 1 A_Raise
+    Loop
+  Spawn:
+    HEXP A -1
+    stop
+  }
+}
+
+actor AmmoCounter
+{
+  +NOINTERACTION
+  +CLIENTSIDEONLY
+  
+  States
+  {
+  Spawn:
+    TNT1 A 1
+    stop
+  }
+}
+
+actor MancubusArm : Weapon 32413
+{
+  Weapon.SelectionOrder 2600
+  Weapon.AmmoUse 1
+  Weapon.AmmoGive 20
+  Weapon.AmmoType "DemonBlood"
+  Inventory.PickupMessage "You got the mancubus arm!"
+  States
+  {
+  Ready:
+    MARG A 1 A_WeaponReady
+    Loop
+  Deselect:
+    MARG A 1 A_Lower
+    Loop
+  Select:
+    MARG A 1 A_Raise
+    Loop
+  Fire:
+    MARG B 0 A_FireCustomMissile("MancubusShot")
+    TNT1 A 8 A_GunFlash
+    MARG B 10 
+    Goto Ready
+  Flash:
+    MARF A 3 Bright A_Light1
+    MARF B 5 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    FARM A -1
+    Stop
+  }
+}
+
+actor DualMancubusArm : Weapon 32414
+{
+  Weapon.SelectionOrder 2650
+  Weapon.AmmoUse 1
+  Weapon.AmmoGive 20
+  Weapon.AmmoType "DemonBlood"
+  Inventory.PickupMessage "You got the mancubus arm!"
+  States
+  {
+  Ready:
+    MARM A 1 A_WeaponReady
+    Loop
+  Deselect:
+    MARM A 1 A_Lower
+    Loop
+  Select:
+    MARM A 1 A_Raise
+    Loop
+  Fire:
+    MARM B 0 A_FireCustomMissile("MancubusShot",0,1,-15)
+    MARM B 0 A_FireCustomMissile("MancubusShot",0,1,15)
+    TNT1 A 8 A_GunFlash
+    MARM D 5
+    MARM E 5 
+    Goto Ready
+  Flash:
+    MARM B 3 Bright A_Light1
+    MARM C 5 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    FARM A -1
+    Stop
+  }
+}
+
+ACTOR DemonBlood : Ammo 32416
+{
+  Game Doom
+  SpawnID 75
+  Inventory.PickupMessage "Picked up a vail of Demon Blood."
+  Inventory.Amount 20
+  Inventory.MaxAmount 300
+  Ammo.BackpackAmount 20
+  Ammo.BackpackMaxAmount 600
+  Inventory.Icon "BVALA0"
+  States
+  {
+  Spawn:
+    BVAL ABCDCB 6
+    loop
+  }
+}
+
+ACTOR MancubusArmGenerator : CustomInventory
+{ 
+   +FLOORCLIP
+   +AUTOACTIVATE
+   Inventory.MaxAmount 2 
+   Inventory.PickupSound "misc/w_pkup" 
+   Inventory.PickupMessage "You got the Mancubus Arm!" 
+   States 
+   { 
+   Spawn: 
+      FARM A -1 
+      loop 
+   Pickup: 
+      TNT1 A 0 A_JumpIfInventory("DualMancubusArm", 1, 8) 
+      TNT1 A 0 A_JumpIfInventory("MancubusArm", 1, 4) 
+      TNT1 A 0 A_JumpIfInventory("MancubusArmGenerator", 2, 6) 
+      TNT1 A 0 A_GiveInventory("MancubusArm", 1) 
+      TNT1 A 0 A_SelectWeapon("MancubusArm") 
+      Stop 
+      TNT1 A 0 A_TakeInventory("MancubusArm", 1) 
+      TNT1 A 0 A_GiveInventory("DualMancubusArm", 1) 
+      TNT1 A 0 A_SelectWeapon("DualMancubusArm") 
+      Stop 
+      TNT1 A 0 A_TakeInventory("MancubusArmGenerator", 1) 
+      TNT1 A 0 A_GiveInventory("Blood", 20) 
+      Stop 
+   } 
+}
+
+actor MancubusShot
+{
+  Game Doom
+  SpawnID 153
+  Radius 6
+  Height 8
+  Speed 20
+  Damage 8
+  Projectile 
+  +RANDOMIZE
+  RenderStyle Add
+  Alpha 1
+  SeeSound "weapons/fatshot"
+  DeathSound "weapons/fathit"
+  decal "BigScorch"
+  States
+  {
+  Spawn:
+    MANS AB 4 bright
+    loop
+  Death:
+    MANS C 8 bright
+    MANS D 6 bright
+    MANS E 4 bright
+    stop
+  }
+}
+
+Actor ArmorSet : CustomInventory 32415
+{
+  +Inventory.AlwaysPickup
+  Inventory.Icon "APACA0"
+  Inventory.Pickupmessage "You found your self an armor set, lucky you."
+  Inventory.PickupSound "misc/i_pkup"
+  States
+  {
+  Spawn:
+    APAC A -1
+	APAC B -1 
+    loop
+  Pickup:
+    TNT1 A 0 A_GiveInventory ("Shell", 16)
+    TNT1 A 0 A_GiveInventory ("Clip", 40)
+	TNT1 A 0 A_GiveInventory ("UacArmor") //<-- You need to change the armor to match on what type of armor you have, if its custom.
+	stop                                 // If you your armor is named Uber Armor put that actor name were the UacArmor name is.
+  }                                     // So it would look like this.  ("UberArmor").
+} 
+
+//Uac Armor
+
+Actor UacArmor : BasicArmorPickup
+{
+  Inventory.Pickupmessage "Picked up a UAC Chestplate."
+  Inventory.Icon "ARM1A0"
+  Armor.Savepercent 50
+  Armor.Saveamount 150
+  States
+  {
+  Spawn:
+    ARM1 A 0
+    ARM1 B 0 bright
+    loop
+  }
+}
+
+//JPX2BDEM
+
+Actor DevilishBust 30001
+{
+	+SOLID
+	Radius 8
+	Height 32
+
+	States
+	{
+	Spawn:
+		BUST A -1
+		Stop
+	}
+}
+
+Actor DevilishBustPillar : ZVasePillar 30002
+{
+	Height 64
+
+	States
+	{
+	Spawn:
+		BUST B -1
+		Stop
+	}
+}
+
+
+
+//Haunted Hall//
+
+ACTOR SkullTree1 6454
+{
+	Radius 48
+	Height 157
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		TRES A -1
+		Stop
+	}
+}
+
+//Crusaders Corridor//
+
+Actor NESader 31000
+{
+  //Game doom strife
+  spawnid 250
+  Health 5000
+  reactiontime 4
+  painchance 16
+  speed 28
+  radius 32
+  Height 64
+  Mass 800
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  +NOBLOOD
+  +NOICEDEATH
+  +DONTMORPH
+  MONSTER
+  seesound "MSEE"
+  attacksound "DSRLAUN2"
+  painsound "DSRB2PN"
+  deathsound "DSRB2DTH"
+  activesound "MWHIR"
+  obituary "%o got horrifically clobbered by a crusader!"
+  minmissilechance 32
+  states
+  {
+  spawn:
+   ROB2 A 4 A_Look
+   loop
+  See:
+   ROB2 AABBCCDD 3 A_Chase
+   Loop
+  Missile:
+   ROB2 E 1 A_JumpIfCloser(250, "grenadethrow") //if he was closer to his target than 250 units, he would jump to the grenade throw state
+   ROB2 E 3 A_Jump (128, "Hook") // with this jump, the first number , 128, is the chance out of 256 that the jump would be ferformed. so half the time he would jump to the hook state, and half the time he would ignore it and keep doin down this state.
+   ROB2 F 1 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("BLASER", 24, -16,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("BLASER", 24, -12,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("BLASER", 24, -20,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("BLASER", 24, -24,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("BLASER", 24, -12,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("BLASER", 24, -16,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("BLASER", 24, -24,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("BLASER", 24, -20,0)
+   goto see
+  Grenadethrow:
+   ROB2 F 1 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("Helinade",24, -16,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("Helinade",24, -8,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("Helinade",24, -12,0)
+   ROB2 F 0 A_FaceTarget
+   ROB2 F 4 A_CustomMissile("Helinade",24, -4,0)
+   goto see
+  Hook:
+   ROB2 F 0 A_FaceTarget
+   ROB2 E 1 A_CustomMissile("GrapplingHook",24,-16,0)
+   goto see
+  Pain:
+   ROB2 D 1 A_Pain
+   Goto See
+  Death:
+   // We need to give the killer a special item.
+   TNT1 A 1 A_GiveToTarget( "BossKill", 1 )
+   TNT1 A 1 acs_Execute( 600, 0 )
+   ROB2 G 3 A_Scream
+   ROB2 H 5 A_TossGib
+   ROB2 I 4 Bright A_TossGib
+   ROB2 J 4 Bright A_Explode(64,64,1)
+   ROB2 K 4 Bright A_Fall
+   ROB2 L 4 A_Explode(64,64,1)
+   ROB2 MN 4 A_TossGib
+   ROB2 O 4 A_Explode(64,64,1)
+   ROB2 P -1
+   Stop
+  }
+}
+
+// Just an empty item:
+actor BossKill : Inventory 15523 {}
+
+actor GrapplingHook : LoreShot
+{
+  spawnid 251
+  seesound "DSCHAIN"
+  deathsound "DSTEND"
+  states
+  {
+  Spawn:
+    OCLW A 2 bright
+    loop
+  Death:
+    OCLW A 6
+    stop
+  }
+}
+actor Helinade
+{
+radius 6
+height 8
+damage 15
+speed 30
+bouncefactor 0.5
+bouncecount 3
+seesound "DSPHOT2"
+deathsound "DSEXPLOD"
+PROJECTILE
+states
+{
+Spawn:
+UBAM AB 4 bright
+loop
+Death:
+BAL1 CDE 6 bright
+stop
+}
+}
+
+actor BLASER
+{
+radius 6
+height 8
+damage 8
+speed 20
+seesound "DSPLASM2"
+deathsound "DSPLASM2"
+PROJECTILE
+states
+{
+Spawn:
+APLS AB 4 bright
+loop
+Death:
+APBX ABCDE 6 bright
+stop
+}
+}
+
+//Pain and Agony//
+
+ACTOR BigBridge 30557
+{
+  +SOLID
+  +NOGRAVITY
+  +NOLIFTDROP
+  +ACTLIKEBRIDGE
+  Radius 1440
+  Height 2
+  RenderStyle None
+}
+
+ACTOR BigBridge2 30558
+{
+  +SOLID
+  +NOGRAVITY
+  +NOLIFTDROP
+  +ACTLIKEBRIDGE
+  Radius 564
+  Height 2
+  RenderStyle None
+}
+
+//The Nightmare//
+
+Actor TechArmor : CustomInventory 10808
+{
+  Inventory.Amount 1
+  Inventory.PickupSound "misc/p_pkup"
+  Inventory.DefMaxAmount
+  Inventory.PickupMessage "Tech Armor"
+  Inventory.Icon ARM4B0
+  +Inventory.InvBar
+  +FloorClip
+  States
+  {
+  Spawn:
+    ARM4 A -1
+    Loop
+  Use:
+    TNT1 A 0 A_JumpIfInventory("Cell", 100, "Succeed")
+    TNT1 A 0 A_Print("Not enough energy cells")
+    TNT1 A 0 A_GiveInventory("TechArmor", 1)
+    Stop
+  Succeed:
+    TNT1 A 0 A_PlaySoundEx("Pickups/TechArmor", "SoundSlot7", 0)
+    TNT1 A 0 A_TakeInventory("Cell", 100)
+    TNT1 A 0 A_GiveInventory("TechArmorProtection", 300)
+    Stop
+  }
+}
+
+Actor TechArmorProtection : BasicArmorPickup
+{
+  Inventory.Icon "ARM4A0"
+  Armor.SaveAmount 300
+  Armor.SavePercent 100
+  States
+  {
+  Spawn:
+    TNT1 A 1
+    Fail
+  }
+}
+
+ACTOR ShrinkSphere : PowerupGiver 12365
+{
+  Inventory.PickupMessage "Shrinksphere!"  
+  Powerup.Type Shrink
+  Powerup.Duration -30
+  +COUNTITEM
+  +INVENTORY.AUTOACTIVATE
+  +INVENTORY.ALWAYSPICKUP
+  +INVENTORY.BIGPOWERUP
+  Inventory.MaxAmount 0
+
+  States
+  {
+  Spawn:
+    MINS ABCDCB 6 Bright
+    loop
+  }
+}
+
+ACTOR PowerShrink : PowerMorph
+{
+  PowerMorph.PlayerClass "MiniPlayer"
+  PowerMorph.MorphFlash "ShrinkFlash"
+  PowerMorph.UnMorphFlash "UnShrinkFlash"
+}
+
+ACTOR MiniPlayer : DoomPlayer
+{
+  Radius 4
+  Height 14
+  Scale 0.25
+  Player.ViewHeight 10
+  Player.SoundClass "mini"
+  -PICKUP
+}
+
+ACTOR ShrinkFlash
+{
+  +NOINTERACTION
+  
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1 A_PlaySoundEx ("ShrinkSphere/Shrink", "SoundSlot5")
+    TNT1 A 0 A_PlaySoundEx ("misc/p_pkup", "SoundSlot6")
+    TNT1 A 0 A_SpawnItem ("ShrinkFX1")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX2")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX3")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX4")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX5")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX6")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX7")
+    stop
+  }
+}
+
+ACTOR UnShrinkFlash
+{
+  +NOINTERACTION
+  
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1 A_PlaySound ("ShrinkSphere/UnShrink")
+    TNT1 A 0 A_SpawnItem ("ShrinkFX7")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX6")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX5")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX4")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX3")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX2")
+    TNT1 A 1 A_SpawnItem ("ShrinkFX1")
+    stop
+  }
+}
+
+ACTOR ShrinkFX1
+{
+  +NOINTERACTION
+  Scale 0.9
+  
+  States
+  {
+  Spawn:
+    PLAY A 1 A_FadeOut (0.25)
+    loop
+  }
+}
+
+ACTOR ShrinkFX2
+{
+  +NOINTERACTION
+  Scale 0.8
+  
+  States
+  {
+  Spawn:
+    PLAY A 1 A_FadeOut (0.25)
+    loop
+  }
+}
+
+ACTOR ShrinkFX3
+{
+  +NOINTERACTION
+  Scale 0.7
+  
+  States
+  {
+  Spawn:
+    PLAY A 1 A_FadeOut (0.25)
+    loop
+  }
+}
+
+ACTOR ShrinkFX4
+{
+  +NOINTERACTION
+  Scale 0.6
+  
+  States
+  {
+  Spawn:
+    PLAY A 1 A_FadeOut (0.25)
+    loop
+  }
+}
+
+ACTOR ShrinkFX5
+{
+  +NOINTERACTION
+  Scale 0.5
+  
+  States
+  {
+  Spawn:
+    PLAY A 1 A_FadeOut (0.25)
+    loop
+  }
+}
+
+ACTOR ShrinkFX6
+{
+  +NOINTERACTION
+  Scale 0.4
+  
+  States
+  {
+  Spawn:
+    PLAY A 1 A_FadeOut (0.25)
+    loop
+  }
+}
+
+ACTOR ShrinkFX7
+{
+  +NOINTERACTION
+  Scale 0.3
+  
+  States
+  {
+  Spawn:
+    PLAY A 1 A_FadeOut (0.25)
+    loop
+  }
+}
+
+//Happy Dreams//
+
+#include "actors/incarnate.txt"
+
+//==JPX30==
+
+#include "actors/ac3.txt"
+#include "actors/ac3bot.txt"
+#include "actors/puppet.txt"
+#include "actors/advisor.txt"
+#include "actors/secondary.txt"
+
+//==KEYS==
+
+#include "actors/keys.txt"
+
+// Used in JPX51 (Planet Odd)
+
+actor CrashedRocket 14551 {
+   +SOLID
+   radius 96
+   height 96
+   
+   States {
+      Spawn:
+         PSCR A -1
+         STOP
+   }
+}
+
+actor Oddball_1 14552 {
+   +SOLID
+   radius 24
+   height 96
+   
+   States {
+      Spawn:
+         PSO1 A -1
+         STOP
+   }
+}
+
+actor Oddball_2 14553 {
+   +SOLID
+   radius 28
+   height 112
+   
+   States {
+      Spawn:
+         PSO2 A -1
+         STOP
+   }
+}
+
+actor WeerdoMobile 14560 {
+   +SOLID
+   +FLOATBOB
+   radius 96
+   height 128
+   
+   States {
+      Spawn:
+         PSWB A -1
+         STOP
+   }
+}
+
+
+// Used in JPX52 (Twinkle Snow)
+
+actor ptSkiingSign 13871 {
+   +SOLID
+   radius 8
+   height 96
+   
+   states {
+      spawn:
+         PTSS A -1
+         stop
+   }
+}
+
+
+// Used in JPX49 (Industrial Machinery)
+
+ACTOR BaseNazi1
+{
+	Height 56
+	+SOLID
+	States	
+	{
+		Spawn:
+		WLF1 A -1
+		stop
+	}
+}
+
+ACTOR BaseNazi2
+{
+	Height 56
+	+SOLID
+	States	
+	{
+		Spawn:
+		WLF2 A -1
+		stop
+	}
+}
+
+ACTOR Warionazi : BaseNazi2 15001
+{
+	translation "112:127=160:167"
+}
+
+ACTOR Fritsnazi : BaseNazi2 15002
+{
+	translation "112:127=89:109"
+}
+
+ACTOR Kongmingnazi : BaseNazi1 15003
+{
+}
+
+ACTOR Kiwinazi : BaseNazi1 15004
+{
+	translation "114:115=160:160", "116:125=160:165", "126:127=165:166"
+}
+
+ACTOR Icedragonnazi : BaseNazi1 15005
+{
+        translation "114:115=192:192", "116:125=193:197", "126:127=197:198"
+}
+
+ACTOR wirtualnoscnazi : BaseNazi1 15006
+{
+	translation "114:127=198:207"
+}
+
+ACTOR knopnazi : BaseNazi1 15007
+{
+	translation "114:115=251:251", "117:126=252:254", "127:127=254:254"
+}
+
+ACTOR Vanessanazi 15008
+{
+	Height 56
+	+SOLID
+	States	
+	{
+		Spawn:
+		VANA A -1
+		stop
+	}
+}
+
+ACTOR DukeBabe 15009
+{
+	Height 100
+	+SOLID
+	States	
+	{
+		Spawn:
+		BABE ABCDE 7
+	}
+}

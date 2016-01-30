@@ -1,0 +1,12 @@
+//============================================
+
+//ETERNAL//
+
+weaponsection "shieldgun"
+addslotdefault 7 ShieldGun
+
+weaponsection "Mancubus Arm"
+addslotdefault 8 MancubusArm
+addslotdefault 8 DualMancubusArm
+
+//============================================
