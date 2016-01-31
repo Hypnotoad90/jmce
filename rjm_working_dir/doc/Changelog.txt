@@ -14,24 +14,34 @@ NAME KEY:
  [SB] - AOSP
  [FL] - FateLord
 
+Retromaze v1j
+==============================
+ * Major rework of RJMOLD02. [SB]
+   - Use teleport floors.
+   - Fix the points.
+   
+   If you are a server host, it is recommended you remove any records
+   for this map from your database.
+ * libretro.acs source code is much prettier [SB]
+ * Clean up the PK3, removing anything unused [SB]
+   
 Retromaze v1i
 ==============================
- * RJM04 is now RJM03
- * Master Blaster Platformer is now called Blaster Master Platformer
- * Use NSF and VGM format music where applicable.
+ * Master Blaster Platformer is now called Blaster Master Platformer [SB]
+ * Use NSF and VGM format music where applicable. [SB]
    This means much higher audio quality, and much
    lower file size
- + RJMOLD02 - The Eagle
- * Add RHYWATER, RHYNUKE and RWQLAVA textures so we can use glow without
+ + RJMOLD02 - The Eagle [SB]
+ * Add RHYWATER, RHYNUKE and RWQLAVA textures so we can use glow without [SB]
    conflicting with other mods.
- * Replaced all instances of "AOSP" with "Sean" in RMapInfo calls.
+ * Replaced all instances of "AOSP" with "Sean" in RMapInfo calls. [SB]
 
  RJM01 - Back to the Basics (Doomfiend)
-    * Fixed a mistake where a line has script 209, not 210, meaning
+    * Fixed a mistake where a line has script 209, not 210, meaning [SB]
 	  you teleported when you entered the revenant trap.
 	  
  RJMOLD02 - The Eagle (Aerial)
-	* Redone textures
+	* Redone textures [SB]
 
 Retromaze v1h
 ==============================

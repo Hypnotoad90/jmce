@@ -32,7 +32,7 @@
 	//======== BLAST TO THE PAST
 	map RJM02 "Blast to the Past" {
 		music = "D_PACMAN"
-		next = "RJM03"
+		next = "RJM04"
 		interpic = "RJMINT02"
 		intermusic = "R_DKCINT"
 
@@ -44,40 +44,20 @@
 	map RJM04 "Sendo Reaper's Resting Place" {
 		music = "GS2CAVE"
 		sky1 = "STSKY14", 0.2
+		
+		next = "RJMOLD01"
 
 		interpic = "RJMINT04"
 		intermusic = "R_DKCINT"
 
 		par = 180
 	}
-	
-	// unfinished.
-	map RJM05 "AOSP's Factory" {
-		music = "R_MKBOW"
-		next = "RJM04"
-		interpic = "RJMINT03"
-		intermusic = "R_DKCINT"
-
-		lightning
-
-		smoothlighting
-	}
-
-// ==============================================
-//  SECRET MAPS
-// ==============================================
-	map RJMSEC01 "Sonic's Disco Land" {
-		next = "RJM02"
-		music = "R_SSEC1"
-		sky1 = "GFZSKY", 0.05
-	}
-
 // ==============================================
 //  OLD MAPS
 // ==============================================
 	//======== BLASTER MASTER PLATFORMER
 	map RJMOLD01 "Blaster Master Platformer" {
-		next = "RJM07"
+		next = "RJMOLD02"
 		music = "MASTER:1"
 		sky1 = "STSKY14", 0.1
 		interpic = "RJMINO01"
@@ -97,14 +77,4 @@
 
 		allowrespawn
 		nocrouch
-	}
-	
-// ==============================================
-//  OTHER MAPS
-// ==============================================
-	map RJMDEMO1 "Retromaze" {
-		music = "R_NULL"
-		sky1 = "SKYFOG0", 0.2
-
-		intermusic = "R_DKCINT"
 	}

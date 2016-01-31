@@ -21,11 +21,6 @@ warp flat ABLOOD09
 warp flat mbwater
 warp flat SMBWAT2
 
-//This doesn't even work.
-Texture	Optional	RJM03I1 	Range	RJM03I4		Tics 4
-
-Flat	Optional	DISCOD1 	Range	DISCOD4		Rand 8 35
-
 warp2 flat HYWATERS
 warp2 flat HYNUKES
 warp2 flat RHYWATERS

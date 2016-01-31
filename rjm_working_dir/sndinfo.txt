@@ -57,21 +57,7 @@ weapons/boltfi dsboltfi
 weapons/firex4 dsfirex4
 weapons/scorch dsscorch
 
-retromaze/ring DSGTRING
-
-retromaze/eggman/warn1 DSBEWAR1
-retromaze/eggman/warn2 DSBEWAR2
-retromaze/eggman/warn3 DSBEWAR3
-retromaze/eggman/warn4 DSBEWAR4
-
 retromaze/gfz/wf1 dsamwtr1
-
-$random retromaze/eggman/warn {
-	retromaze/eggman/warn1
-	retromaze/eggman/warn2
-	retromaze/eggman/warn3
-	retromaze/eggman/warn4
-}
 
 //////////////////
 // SPLASHES

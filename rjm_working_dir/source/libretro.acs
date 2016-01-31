@@ -22,21 +22,24 @@
 
 // Retromaze version.
 // This is the same as the one in the PK3 filename.
-str Rver = "v1i";
+str Rver = "v1j";
 
 // Version of this libretro.acs.
 str RscriptVersion = "v1b";
 
-function str RVersion (void) {
+function str RVersion (void) 
+{
         return Rver;
 }
 
-function str RSVersion (void) {
+function str RSVersion (void) 
+{
         return RscriptVersion;
 }
 
 /* // DEBUG STUFF
-Script 801 OPEN CLIENTSIDE{
+Script 801 OPEN CLIENTSIDE
+{
 	bool centre = ( GetCvar("con_centernotify") > 0 );
 	int x = 1.5;
 	if(centre){ x = 0; }
@@ -46,7 +49,8 @@ Script 801 OPEN CLIENTSIDE{
 }
 */
 
-function void RMapInfo (str name, str author, int difficulty, str fixer, int id){
+function void RMapInfo (str name, str author, int difficulty, str fixer, int id)
+{
     SetFont("BIGFONT");
     HudMessage(s: "\cj", s: name;
                 HUDMSG_FADEINOUT | HUDMSG_LOG, id + 0, CR_WHITE, 1.5, 0.7, 5 << 16);
@@ -54,29 +58,33 @@ function void RMapInfo (str name, str author, int difficulty, str fixer, int id)
     HudMessage(s: "\cjby: ", s: author;
                 HUDMSG_FADEINOUT | HUDMSG_LOG, id + 1, CR_WHITE, 1.5, 0.71, 5 << 16);
 
-        if(! RNoFixer(fixer)) {
-                HudMessage(s: "\cjUpdates and fixes by ", s:fixer;
-                                        HUDMSG_FADEINOUT | HUDMSG_LOG, id + 2, CR_WHITE, 1.5, 0.72, 5 << 16);
-                HudMessage(s: "\cjDifficulty: ", s: RDifficultyString(difficulty);
-                                        HUDMSG_FADEINOUT | HUDMSG_LOG, id + 3, CR_WHITE, 1.5, 0.73, 5 << 16);
-        }else{
-                HudMessage(s: "\cjDifficulty: ", s: RDifficultyString(difficulty);
-                                        HUDMSG_FADEINOUT | HUDMSG_LOG, id + 2, CR_WHITE, 1.5, 0.72, 5 << 16);
-        }
+	if (!RNoFixer(fixer)) 
+	{
+			HudMessage(s: "\cjUpdates and fixes by ", s:fixer;
+									HUDMSG_FADEINOUT | HUDMSG_LOG, id + 2, CR_WHITE, 1.5, 0.72, 5 << 16);
+			HudMessage(s: "\cjDifficulty: ", s: RDifficultyString(difficulty);
+									HUDMSG_FADEINOUT | HUDMSG_LOG, id + 3, CR_WHITE, 1.5, 0.73, 5 << 16);
+	}
+	else
+	{
+			HudMessage(s: "\cjDifficulty: ", s: RDifficultyString(difficulty);
+									HUDMSG_FADEINOUT | HUDMSG_LOG, id + 2, CR_WHITE, 1.5, 0.72, 5 << 16);
+	}
 }
 
-function str RDifficultyString (int d){
-        str ret = "";
-        if(d == RD_VERYEASY){ ret = "\cdVery Easy"; }
-        else if(d == RD_EASY){ ret = "\cqEasy"; }
-        else if(d == RD_MODERATE){ ret = "\ciModerate"; }
-        else if(d == RD_HARD){ ret = "\cgHard"; }
-        else if(d == RD_VERYHARD){ ret = "\crVery Hard"; }
-        else if(d == RD_VARYING){ ret = "\cnVarying"; }
-        else { ret = "\cmUnset"; }
-        return ret;
+function str RDifficultyString (int d)
+{
+        if (d == RD_VERYEASY)		return "\cdVery Easy"; 
+        if (d == RD_EASY)			return "\cqEasy"; 
+        if (d == RD_MODERATE)		return "\ciModerate"; 
+        if (d == RD_HARD)			return "\cgHard"; 
+        if (d == RD_VERYHARD)		return "\crVery Hard"; 
+        if (d == RD_VARYING)		return "\cnVarying"; 
+		
+        return "\cmUnset";
 }
 
-function int RNoFixer (str fixer) {
-    return ( StrCmp(fixer, "0") );
+function int RNoFixer (str fixer) 
+{
+    return ( StrCmp(fixer, "0") == 0 );
 }
