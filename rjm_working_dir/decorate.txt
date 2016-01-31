@@ -1,5 +1,0 @@
-#include "actors/splashes.dec"
-
-#include "actors/hugecyberdemon.dec"
-#include "actors/deathknight.dec"
-#include "actors/eagle.dec"
