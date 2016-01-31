@@ -1,0 +1,188 @@
+actor DrEggman 29499{
+	Monster
+	+NOGRAVITY
+	+FLOAT
+	
+	+SOLID
+	+SHOOTABLE
+	
+	Health 1
+	Damage 30
+	Speed 25
+	
+	Radius 40
+	Height 50
+	Obituary "%o was obilerated by Dr. Eggman."
+	
+	States{
+		Spawn:
+			EGGM A 10 A_Look
+			Loop
+		See:
+			EGGM A 0 A_Jump(32, "Warn")
+			EGGM AAAA 3 A_Chase
+			Loop
+		Missile:
+			TNT1 A 0 A_Jump(192, "Missile.MachineGun")
+			EGGM BCDFG 3 A_FaceTarget
+			EGGM HHHHHH 3 BRIGHT A_CustomMissile("RevenantTracer")
+			Goto See
+		Missile.MachineGun:
+			EGGM LMNPQ 3 A_FaceTarget
+			EGGM R 0 Bright A_PlaySound("weapons/chngun", CHAN_BODY, 127, false)
+			EGGM R 3 Bright A_CustomBulletAttack(3, 3, 2, 5)
+			EGGM R 0 Bright A_PlaySound("weapons/chngun", CHAN_BODY, 127, false)
+			EGGM R 3 Bright A_CustomBulletAttack(3, 3, 2, 5)
+			EGGM R 0 Bright A_PlaySound("weapons/chngun", CHAN_BODY, 127, false)
+			EGGM R 3 Bright A_CustomBulletAttack(3, 3, 2, 5)
+			EGGM R 0 Bright A_PlaySound("weapons/chngun", CHAN_BODY, 127, false)
+			EGGM R 3 Bright A_CustomBulletAttack(3, 3, 2, 5)
+			EGGM R 0 Bright A_PlaySound("weapons/chngun", CHAN_BODY, 127, false)
+			EGGM R 3 Bright A_CustomBulletAttack(3, 3, 2, 5)
+			EGGM R 0 Bright A_PlaySound("weapons/chngun", CHAN_BODY, 127, false)
+			EGGM R 3 Bright A_CustomBulletAttack(3, 3, 2, 5)
+			Goto See
+		Warn:
+			EGGM A 1 A_PlaySound("retromaze/eggman/warn", CHAN_BODY, 127, false)
+			Goto See
+		Death:
+			EGGM A 1 A_FadeOut(0.05)
+			Loop
+	}
+}
+
+actor GFZRing : Inventory 29500{
+	Radius 16
+	Height 32
+	
+	+NOGRAVITY
+	Inventory.Amount 1
+	Inventory.MaxAmount 0x7FFFFFFE
+	Inventory.PickupSound "retromaze/ring"
+	Inventory.PickupMessage "You got a \cfring\c-!"
+	
+	//$Category RetroMaze Pickups
+	//$Sprite RINGA0
+	//$Title Green Flower Zone Ring
+	
+	States{
+		Spawn:
+			RING ABCDEFGHIJKLMNOPQRSTUVWX 1
+			Loop
+	}
+}
+
+actor RingItem : Inventory{
+	Inventory.Amount 1
+	Inventory.MaxAmount 999
+	Inventory.PickupSound "retromaze/ring"
+	Inventory.PickupMessage "You got a \cfring\c-!"
+	
+	//$Category RetroMaze Pickups
+	//$Sprite RINGA0
+	//$Title Green Flower Zone Ring
+	
+	States{
+		Spawn:
+			RING ABCDEFGHIJKLMNOPQRSTUVWX 1
+			Loop
+	}
+}
+
+actor GFZSpringY 29501{
+	//$Category RetroMaze Decoration
+	//$Sprite SRBSC0
+	//$Title Spring (Yellow)
+	
+	States{
+		Spawn:
+			SRBS C -1
+			Stop
+	}
+}
+
+actor GFZSpringR 29502{
+	//$Category RetroMaze Decoration
+	//$Sprite SRBSB0
+	//$Title Spring (Red)
+	
+	States{
+		Spawn:
+			SRBS B -1
+			Stop
+	}
+}
+
+actor GFZSpringB 29503{
+	//$Category RetroMaze Decoration
+	//$Sprite SRBSA0
+	//$Title Spring (Blue)
+	
+	States{
+		Spawn:
+			SRBS A -1
+			Stop
+	}
+}
+
+actor Flower1 29504{
+	//$Category RetroMaze Decoration
+	//$Sprite FWR1A0
+	//$Title Flower 1
+	
+	States{
+		Spawn:
+			FWR1 AB 8
+			Loop
+	}
+}
+
+actor Flower2 29505{
+	//$Category RetroMaze Decoration
+	//$Sprite FWR2A0
+	//$Title Flower 2
+	
+	States{
+		Spawn:
+			FWR2 AB 16
+			Loop
+	}
+}
+
+actor GFZWaterfallSound : RjmSnd 29006{
+	States{
+		Spawn:
+			TNT1 A 0 A_Jump(256, "Spawn.Sound1")
+			Stop
+		Spawn.Sound1:
+			TNT1 A -1 A_PlaySound("rjm/gfz/wf1", CHAN_BODY, 256, true)
+			Stop
+	}
+}
+
+actor DiscoBall 29007{
+	Radius 24
+	Height 58
+	
+	+NOGRAVITY
+	+SOLID
+	
+	States{
+		Spawn:
+			DBAL ABCDEF 8 Bright
+			Loop
+	}
+}
+actor DiscoBallStatic 29008{
+	Radius 24
+	Height 58
+	
+	+NOGRAVITY
+	+SOLID
+	
+	States{
+		Spawn:
+			DBAL A -1 Bright
+			Stop
+	}
+}

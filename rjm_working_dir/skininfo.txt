@@ -1,0 +1,29 @@
+{
+	name = "8-Bit Mario"
+	sprite = RMMA
+	dstaunt = mariorif
+	dsjump = mjump
+	dsplpain = mpain
+	dsnoway = mnoway
+	dsoof = mland
+	dspunch = mpain
+	dspldeth = death
+}
+
+{
+	name = "Doomfiend"
+	sprite = INUY
+	dsnoway = 64oof
+	dsland = 64oof
+	usefail = 64oof
+	dstaunt = dftaunt
+	falling = dfdie
+	pain10 = pain100
+	pain75 = pain75
+	pain50 = pain50
+	pain25 = pain25
+	dsdeath = dfdie
+	dsxdeath = dfdie
+	gender = male
+	hidden = false
+}

@@ -1,0 +1,31 @@
+#include actors/deathknight.gl
+#include actors/drc.gl
+
+glow {
+	flats {
+		rwqlava
+		mbwater
+		
+		rlava1
+		rlava2
+		rlava3
+		rlava4
+		rlava5
+		rlava6
+		rlava7
+		rlava8
+
+		srblava1
+		srblava2
+		srblava3
+		srblava4
+
+		gfzwtr
+		
+		// hywater // <-- hypnotoad complains about this :c
+		rhywater
+		hywaters
+		rhynuke
+		hynukes
+	}
+} 

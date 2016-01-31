@@ -1,0 +1,7 @@
+#include "actors/splashes.dec"
+
+#include "actors/hugecyberdemon.dec"
+#include "actors/deathknight.dec"
+#include "actors/greenflower.dec"
+#include "actors/drc.dec"
+#include "actors/eagle.dec"

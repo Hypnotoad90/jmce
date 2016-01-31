@@ -1,0 +1,25 @@
+RetroMaze - a project by FateLord and AOSP
+
+Credits:
+	Nintendo: 				for their Mario textures, sounds and music
+	Sega: 					for their Sonic music and textures
+	Nintendo: 				for their Donkey Kong music
+	Nintendo: 				for their Megaman X textures
+	Rockman: 				for his remastered Megaman X intro song
+	Nintendo: 				for their Metroid textures
+	Doomfiend: 				JM3, and a majority of it's maps
+	Tormentor667: 			for his Blood Resource Pack
+	Monolith Productions: 	for Blood
+	Chopkinsca: 			textures from Phocas Island 2
+	Skulltag team: 			Without Skulltag, JM3 wouldn't exist.
+	Zandronum team: 		Without Zandronum, RetroMaze wouldn't exist!
+	FateLord: 				for taking over JM3 and leading RetroMaze,
+							and updating maps
+	AOSP:					Updating RJM01, RJM02, RJM04, and RJM06
+							making RJM03 and RJMSEC01
+	Enjay:					For the liquid splashes
+
+	You, for playing RetroMaze (or at least being bothered to read the
+	credits)
+	Anyone else I might have forgotten
+	Thank you all!

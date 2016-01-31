@@ -1,0 +1,98 @@
+// Big Ass Cyber
+ACTOR fiendscyberdemon : cyberdemon 30060
+{
+	Health 10000
+	Mass 2000
+	Radius 100
+	Height 360
+	Speed 20
+	PainChance 25
+	Scale 3.0
+	MONSTER
+	+BOSS
+	+NORADIUSDMG
+	+DROPOFF
+	SeeSound "cyber/sight"
+	DeathSound "cyber/death"
+	ActiveSound "cyber/active"
+	Obituary "%o was no match for \cgDoom\cmfiend\c-'s cyberdemon."
+	States
+	{
+	Spawn:
+		CYBR A 1 A_Look
+		CYBR AB 10 A_Look
+		Goto Spawn+2
+	See:
+		CYBR A 3 A_Hoof
+		CYBR ABBCC 3 A_Chase
+		CYBR D 3 A_Metal
+		CYBR D 3 A_Chase
+		Loop
+	Missile:
+           	CYBR E 5 A_FaceTarget
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, -30)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, 20)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, -10)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, 0)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, 10)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, -20)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, 30)
+			CYBR F 0 A_Jump(92, "See")
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, -30)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, 20)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, -10)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, 0)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, 10)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, -20)
+           	CYBR F 3 A_CustomMissile ("Rocket", 150, -150, 30)
+           	CYBR I 3 A_SpidRefire
+           	Goto Missile+1
+  	Death:
+    		CYBR H 10
+    		CYBR I 10 A_Scream
+    		CYBR JKL 10
+    		CYBR M 10 A_NoBlocking
+   		CYBR NO 10
+   		CYBR P -1 A_BossDeath
+	}
+}
+
+// Map67 Stuff
+
+actor RjmSnd{
+	//$Category RetroMaze Sounds
+	//$Sprite TNT1A0
+	+NOGRAVITY
+	+NOINTERACTION
+	Height 16
+	Radius 8
+
+	States{
+		Death:
+			TNT1 A 0 A_StopSound(CHAN_BODY)
+			Stop
+	}
+}
+
+actor RjmSndGravity : RjmSnd{
+	-NOGRAVITY
+}
+
+actor WaterfallRandomSnd : RjmSnd 29000{
+	States{
+		Spawn:
+			TNT1 A 0 A_Jump(128, "Spawn.Sound1")
+			TNT1 A 0 A_Jump(128, "Spawn.Sound2")
+			TNT1 A 0 A_Jump(256, "Spawn.Sound3")
+			Stop
+		Spawn.Sound1:
+			TNT1 A -1 A_PlaySound("rjm/waterfall1", CHAN_BODY, 256, true)
+			Stop
+		Spawn.Sound2:
+			TNT1 A -1 A_PlaySound("rjm/waterfall2", CHAN_BODY, 256, true)
+			Stop
+		Spawn.Sound3:
+			TNT1 A -1 A_PlaySound("rjm/waterfall3", CHAN_BODY, 256, true)
+			Stop
+	}
+}

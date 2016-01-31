@@ -1,0 +1,33 @@
+texture QUESFL1
+pic 1 tics 4
+pic 2 tics 4
+
+texture QUESFL2
+pic 1 tics 4
+pic 2 tics 4
+
+texture AXEBR1
+pic 1 tics 4
+pic 2 tics 4
+pic 3 tics 4
+pic 2 tics 4
+
+texture s1z2a1
+pic 1 tics 3
+pic 2 tics 3
+
+warp2 flat iceh20
+warp flat ABLOOD09
+warp flat mbwater
+warp flat SMBWAT2
+
+//This doesn't even work.
+Texture	Optional	RJM03I1 	Range	RJM03I4		Tics 4
+
+Flat	Optional	DISCOD1 	Range	DISCOD4		Rand 8 35
+
+warp2 flat HYWATERS
+warp2 flat HYNUKES
+warp2 flat RHYWATERS
+warp2 flat RHYNUKES
+warp flat rwqlava

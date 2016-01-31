@@ -1,0 +1,232 @@
+  _____      _
+ |  __ \    | |
+ | |__) |___| |_ _ __ ___  _ __ ___   __ _ _______
+ |  _  // _ \ __| '__/ _ \| '_ ` _ \ / _` |_  / _ \
+ | | \ \  __/ |_| | | (_) | | | | | | (_| |/ /  __/
+ |_|  \_\___|\__|_|  \___/|_| |_| |_|\__,_/___\___|
+
+KEY:
+ + Addition
+ * Fix / Update
+ - Removal
+
+NAME KEY:
+ [SB] - AOSP
+ [FL] - FateLord
+
+Retromaze v1i
+==============================
+ * RJM04 is now RJM03
+ * Master Blaster Platformer is now called Blaster Master Platformer
+ * Use NSF and VGM format music where applicable.
+   This means much higher audio quality, and much
+   lower file size
+ + RJMOLD02 - The Eagle
+ * Add RHYWATER, RHYNUKE and RWQLAVA textures so we can use glow without
+   conflicting with other mods.
+ * Replaced all instances of "AOSP" with "Sean" in RMapInfo calls.
+
+ RJM01 - Back to the Basics (Doomfiend)
+    * Fixed a mistake where a line has script 209, not 210, meaning
+	  you teleported when you entered the revenant trap.
+	  
+ RJMOLD02 - The Eagle (Aerial)
+	* Redone textures
+
+Retromaze v1h
+==============================
+ + Create libretro.acs, which houses functions
+   like the map info display [SB]
+ * Reorganised the PK3 slightly [SB]
+ + A title map (called `a` right now because
+   it sucks badly) [SB]
+ * New R_DKCINT [SB]
+
+ RJM01 - Back to the Basics (Doomfiend)
+	* Use libretro.acs functions [SB]
+	+ "Dyanamic" teleports [SB]
+	+ Better interpic [SB]
+	* Boss weakened. [SB]
+
+ RJM02 - Blast to the Past (Metalhead)
+	* Player FINALLY given a Fist [SB]
+	* Use libretro.acs functions [SB]
+
+ RJM04 - SendoReaper's Resting Place (Doomfiend)
+	* Doors open in 20 seconds rather than 1 minute [SB]
+	* Use libretro.acs functions [SB]
+	+ Add interpic [SB]
+
+ RJMOLD01 - Master Blaster Platformer (Doomfiend)
+	* Boss teleport is now dynamic. [SB]
+	* Last checkpoint is now script [SB]
+	* Boss weakened. [SB]
+	* Fix a bunch of misaligned texture at the start
+	  of Area 3 [SB]
+	* New textures for liquids.
+	* Use libretro.acs functions [SB]
+
+ There's probably a whole bunch more of
+ changes but right now, I'm more focused
+ on finishing it!
+
+   Patch 1
+   ==============================
+    - Remove HYWATER glow from GLDEFS [SB]
+
+Retromaze v1g
+==============================
+ * Bug fixes. Mostly fixes texture conflicts [SB]
+   with other mods (thanks Hypnotoad!)
+
+   Patch 1
+   ==============================
+    + New D_DKC [SB]
+
+   Patch 2
+   ==============================
+    + Doomfiend's Cyberdemon weakened slightly. [SB]
+
+   Patch 3
+   ==============================
+    + New intermission music. [SB]
+
+   Patch 4
+   ==============================
+    * Fix HOM on RJM01. [SB]
+
+Retromaze v1f
+==============================
+ * Fixed texture conflicts
+
+ RJMOLD01 (was RJM06) - Master Blaster Platformer (Doomfiend)
+	* Fix JM scripts [SB]
+	* Other fixes [SB]
+ RJM01 - Back to the Basics (Doomfiend)
+	* Fixed HOM [SB]
+
+Retromaze v1e (Grandvoid release)
+==============================
+ RJM06 (NEW!) - Master Blaster Platformer (Doomfiend)
+	+ Map info display on join. [SB]
+	+ JM2 scripts [SB]
+	+ Telefloors. [SB]
+	* Music now OGG. [SB]
+	* Fixed checkpoint teleports [SB]
+	* Minor updates to Deathknight scripts. [SB]
+	* Grammatical fixes. [SB]
+	* Some other stuff. [SB]
+
+Retromaze v1e
+==============================
+ + Added Doomfiend and Mario skins
+
+ RJM01 - Back To The Basics (Doomfiend)
+	+ Many missing teleports [FL]
+	* Changed all the cutscenes from doomfiend's aliases to Fiend [FL]
+	+ When a skull is placed in 4-1, it is announced [FL]
+	+ line in dkc area, blocks annoying sounds of rockets [FL]
+	+ line that blocks revenents from escaping, making it very difficult to reach the yellow skull [FL]
+	+ a bit of detail in the megaman x area [FL]
+	- removed a pillar in metroid area #2 [FL]
+
+RetroMaze v1d
+==============================
+ RJM01 - Back to the Basics (Doomfiend)
+	* JM map info not shown anymore. [SB]
+	* Arrows at the start are raised slightly [SB]
+
+ RJM02 - Blast to the Past (MetalHead)
+	* Texture alignment fixes [SB]
+	* Player is given a fist [SB]
+
+RetroMaze v1c
+==============================
+ RJM01 - Back to the Basics (Doomfiend)
+	+ New map info display on join. [SB]
+
+ RJM04 - SendoReaper's Resting Place (Doomfiend)
+	+ Going past the cyberdemon teleports back [SB]
+	  if all 3 keys aren't collected
+
+RetroMaze v1b
+==============================
+ RJM01 - Back to the Basics (Doomfiend)
+	- removed a few remaining instant death floors [FL]
+	* increased flow in some areas [FL]
+	* made the red card door stay open when opened [FL]
+	* reverted a few textures that were changed in v3e [FL]
+	* fixed a missing teleport floor that also didnt have an instakill floor [FL]
+	* improved a little bit of flow in World 1-1 [FL]
+	* Fiendscyberdemon Script works, back to it's original format [FL]
+	* added a few teleport floor checkpoints [FL]
+	* fixed some music bugs regarding teleportation [FL]
+	+ rewrote the last cutscene [FL]
+	+ Arrows at start that point to W1-1 or the checkpoints,
+	  depending on whether checkpoints are available [SB]
+	* Checkpoint gate lowers quicker [SB]
+	+ The skull key block sectors (?) lower when the key is picked up [SB]
+	* Fixed a bug where when a client disconnects, the music [SB]
+	   changes to B_MARIO
+	+ FINALLY added teleports [FL]
+	* modified a few textures and gameplay throughout the map. [FL]
+	* door in Metroid Prime Kraid area part 2 is now open to begin with. [FL]
+	* when fiendcyber is killed, an exit is raised, and the level is not exited automatically. [FL]
+	* only one fiendcyber is in the entire map. only one is needed to be killed to exit. [FL]
+	* Fixed these: [SB]
+	   <Hypnotoad>apparently you replaced some song with a modular version, but according to Fatelord "when you respawn a different song is played
+	   <Hypnotoad>there's also apparently another music bug which replaces the music in interrogator AOSP
+	   <Hypnotoad>AOSP: finally, I think the pk3 shouldn't include the ranker/jm2 script libraries
+	   <edward-san>actually, AOSP, when you load map65 or respawn after dying, you must jump to raise the floor inside the tube
+	- Removed music/GS2CAVE and music/D_BOSS.spc, as they seem to be JM3/RJM leftovers [SB]
+	+ Added this changelog. [SB/FL]
+	* Other fixes here and there [SB]
+	* Entire map now uses even lighting [SB]
+	* Grammatical fixes [SB]
+	* Map now UDMF [SB]
+	* Uses new MAPINFO format [SB]
+	+ Pipes now use "Actor enters sector" triggers [SB]
+	* Fixed a bug in the bowser world where [SB]
+	  spectating after triggering the finish
+	  would cause the map to get stuck.
+	+ New interpic [SB]
+	* Intermus is now D_DKC [SB]
+	+ Most Mario Overworld-like maps use [SB]
+	  B_MARIO as the music. This is the
+	  SMB W1-1 music.
+	* The dark (night?) W2-1 uses the [SB]
+	  old D_W1-1 music.
+	+ The map itself also uses B_MARIO as the music. [SB]
+	* W2-1 is also darkened. [SB]
+	* W1-3 has a blue tint. [SB]
+	* W4-1's orange skull key gate now actually needs [SB]
+	  an orange skull key so you can pass.
+	* Music files that were WMA now use Ogg Vorbis. [SB]
+	  This increased the size a little, but it's worth
+	  it so players on Linux, Mac OS X, a toaster, etc
+	  can hear the music.
+	* Some other fixes [SB]
+
+ RJM02 - Blast to the Past (MetalHead)
+	+ Checkpointing system [SB]
+	+ JM2 scripts [SB]
+	  ... That's about it.
+
+ RJM04 - SendoReaper's Resting Place (Doomfiend)
+	+ JM2 scripts [SB]
+	+ Liquids have reflections. [SB]
+	  How reflective they are depends on
+	  the liquid.
+	* Darkened the map. [SB]
+	+ Candles are used for light [SB]
+	+ Map brightens up if player is using [SB]
+	  software or has dynamic lights off.
+	+ Forest top is now a 3D floor [SB]
+	* Gramatical fixes [SB]
+	* Redone the whole cyberdemon script [SB]
+	+ Easter egg [SB]
+	+ Waterfall sounds [SB]
+	* Scripts reorganised [SB]
+	+ Key doors open after a minute. [SB]
+	* Fixed some stuff [SB]
+	+ Lava area's floor waggles [SB]

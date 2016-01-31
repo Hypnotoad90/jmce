@@ -1,0 +1,82 @@
+#include "zcommon.acs"
+#library "libretro"
+
+//  _____      _
+// |  __ \    | |
+// | |__) |___| |_ _ __ ___  _ __ ___   __ _ _______
+// |  _  // _ \ __| '__/ _ \| '_ ` _ \ / _` |_  / _ \
+// | | \ \  __/ |_| | | (_) | | | | | | (_| |/ /  __/
+// |_|  \_\___|\__|_|  \___/|_| |_| |_|\__,_/___\___|
+//
+
+#libdefine RD_VERYEASY 0
+#libdefine RD_EASY 1
+#libdefine RD_MODERATE 2
+#libdefine RD_HARD 3
+#libdefine RD_VERYHARD 4
+#libdefine RD_VARYING 5
+
+#libdefine RA_AOSP "\c[m4]A\c[c2]O\c[m4]S\c[c2]P\cj"
+#libdefine RA_FATE "\cmFa\ckte\cjLord\cj"
+#libdefine RA_FATELORD "\cmFa\ckte\cjLord\cj"
+
+// Retromaze version.
+// This is the same as the one in the PK3 filename.
+str Rver = "v1i";
+
+// Version of this libretro.acs.
+str RscriptVersion = "v1b";
+
+function str RVersion (void) {
+        return Rver;
+}
+
+function str RSVersion (void) {
+        return RscriptVersion;
+}
+
+/* // DEBUG STUFF
+Script 801 OPEN CLIENTSIDE{
+	bool centre = ( GetCvar("con_centernotify") > 0 );
+	int x = 1.5;
+	if(centre){ x = 0; }
+
+	HudMessage(s:"Retromaze ", s:RVersion(); HUDMSG_FADEOUT, 800, CR_RED, 0.5, 0, 5 << 16);
+    Log(s: "Retromaze (", s: RVersion(), s: ") libretro.acs ", s: RSVersion(), s: " is loaded");
+}
+*/
+
+function void RMapInfo (str name, str author, int difficulty, str fixer, int id){
+    SetFont("BIGFONT");
+    HudMessage(s: "\cj", s: name;
+                HUDMSG_FADEINOUT | HUDMSG_LOG, id + 0, CR_WHITE, 1.5, 0.7, 5 << 16);
+    SetFont("DOOMFONT");
+    HudMessage(s: "\cjby: ", s: author;
+                HUDMSG_FADEINOUT | HUDMSG_LOG, id + 1, CR_WHITE, 1.5, 0.71, 5 << 16);
+
+        if(! RNoFixer(fixer)) {
+                HudMessage(s: "\cjUpdates and fixes by ", s:fixer;
+                                        HUDMSG_FADEINOUT | HUDMSG_LOG, id + 2, CR_WHITE, 1.5, 0.72, 5 << 16);
+                HudMessage(s: "\cjDifficulty: ", s: RDifficultyString(difficulty);
+                                        HUDMSG_FADEINOUT | HUDMSG_LOG, id + 3, CR_WHITE, 1.5, 0.73, 5 << 16);
+        }else{
+                HudMessage(s: "\cjDifficulty: ", s: RDifficultyString(difficulty);
+                                        HUDMSG_FADEINOUT | HUDMSG_LOG, id + 2, CR_WHITE, 1.5, 0.72, 5 << 16);
+        }
+}
+
+function str RDifficultyString (int d){
+        str ret = "";
+        if(d == RD_VERYEASY){ ret = "\cdVery Easy"; }
+        else if(d == RD_EASY){ ret = "\cqEasy"; }
+        else if(d == RD_MODERATE){ ret = "\ciModerate"; }
+        else if(d == RD_HARD){ ret = "\cgHard"; }
+        else if(d == RD_VERYHARD){ ret = "\crVery Hard"; }
+        else if(d == RD_VARYING){ ret = "\cnVarying"; }
+        else { ret = "\cmUnset"; }
+        return ret;
+}
+
+function int RNoFixer (str fixer) {
+    return ( StrCmp(fixer, "0") );
+}

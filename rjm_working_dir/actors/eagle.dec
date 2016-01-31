@@ -1,0 +1,88 @@
+actor ZeldaDungeon1Statue1 9628 {
+	Radius 32
+	Height 64
+
+	+SOLID
+
+	States {
+		Spawn:
+			STAT A -1
+			Stop
+	}
+}
+
+actor ZeldaDungeon1Statue2 9629 {
+	Radius 32
+	Height 64
+
+	+SOLID
+
+	States {
+		Spawn:
+			STAT B -1
+			Stop
+	}
+}
+
+actor ZeldaDungeon1Statue3 9630 {
+	Radius 32
+	Height 64
+
+	+SOLID
+
+	States {
+		Spawn:
+			STAT C -1
+			Stop
+	}
+}
+
+actor ZeldaDungeon1Statue4 9631 {
+	Radius 32
+	Height 64
+
+	+SOLID
+
+	States {
+		Spawn:
+			STAT D -1
+			Stop
+	}
+}
+
+actor ZeldaOldMan 9632 {
+	Radius 26
+	Height 52
+
+	+SOLID
+
+	States {
+		Spawn:
+			NPC1 A -1
+			Stop
+	}
+}
+
+actor ZeldaFire 9633 {
+	Radius 26
+	Height 52
+
+	+SOLID
+
+	States {
+		Spawn:
+			FIRE AB 12 Bright
+			Loop
+	}
+}
+
+actor TriforcePiece 9634 {
+	Radius 1
+	Height 1
+
+	States {
+		Spawn:
+			TRIF AB 6 Bright
+			Loop
+	}
+}

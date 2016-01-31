@@ -1,0 +1,177 @@
+///////////////////////////////////////////////////////////////////////////////////
+//Red Blood Splash
+///////////////////////////////////////////////////////////////////////////////////
+
+splash Blood
+{
+	smallclass		NJBloodBase
+	smallclip		10
+	smallsound		world/sludgegloopsmall
+
+	baseclass		NJBloodBase
+	chunkclass		NJBloodChunk
+	chunkxvelshift	6
+	chunkyvelshift	6
+	chunkzvelshift	6
+	chunkbasezvel	2
+	sound			world/sludgegloop
+	NoAlert
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//Lava Splash
+///////////////////////////////////////////////////////////////////////////////////
+
+splash Lava
+{
+	smallclass		NJLavaBase
+	smallclip		12
+	smallsound		world/lavasizzlesmall
+
+	baseclass		NJLavaBase
+	chunkclass		NJLavaSmoke
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lavasizzle
+	NoAlert
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//Lava Smoke Only Splash
+///////////////////////////////////////////////////////////////////////////////////
+
+splash LavaSmoke
+{
+	smallclass		NJLavaSmokeOnly
+	smallclip		12
+	smallsound		world/lavsiz2
+
+	baseclass		NJLavaSmokeOnly
+	chunkclass		NJLavaSmokeOnly
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lavsiz2
+	NoAlert
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//Nukage Green and Smokey
+///////////////////////////////////////////////////////////////////////////////////
+
+splash Nuke
+{
+	smallclass		NJNukageBase
+	smallclip		6
+	smallsound		world/lavasizzlesmall
+
+	baseclass		NJNukageBase
+	chunkclass		NJNukageSmoke
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lavasizzle
+	NoAlert
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//Slime Brown Splash
+///////////////////////////////////////////////////////////////////////////////////
+
+splash SlimeBrown
+{
+	smallclass		NJSlimeBrownBase
+	smallclip		6
+	smallsound		world/sludgegloopsmall
+
+	baseclass		NJSlimeBrownBase
+	chunkclass		NJSlimeBrownChunk
+	chunkxvelshift	6
+	chunkyvelshift	6
+	chunkzvelshift	6
+	chunkbasezvel	2
+	sound			world/sludgegloop
+	NoAlert
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//Sludge Greeny-Brown Splash
+///////////////////////////////////////////////////////////////////////////////////
+
+splash SludgeGreenBrown
+{
+	smallclass		NJSludgeBase
+	smallclip		8
+	smallsound		world/sludgegloopsmall
+
+	baseclass		NJSludgeBase
+	chunkclass		NJSludgeChunk
+	chunkxvelshift	5
+	chunkyvelshift	5
+	chunkzvelshift	5
+	chunkbasezvel	2
+	sound			world/sludgegloop
+	NoAlert
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//Water Splash
+///////////////////////////////////////////////////////////////////////////////////
+
+splash Water
+{
+	smallclass		NJWaterSplashBase
+	smallclip		12
+	smallsound		world/watersplashsmall
+
+	baseclass		NJWaterSplashBase
+	chunkclass		NJWaterSplashChunk
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/watersplash
+	NoAlert
+}
+
+terrain water1{
+	splash		Water
+	footclip	2
+	liquid
+	friction	0.9
+}
+
+terrain nuke1{
+	splash		Nuke
+	footclip	5
+	liquid
+	friction	0.5
+}
+
+terrain blood1{
+	splash		Blood
+	footclip	10
+	liquid
+	friction	0.75
+}
+
+terrain lava1{
+	splash		Lava
+	footclip	10
+	liquid
+	friction	0.75
+	damagetype	Fire
+	damageamount	15
+}
+
+terrain hellslime{
+	footclip	5
+	friction	0.9
+}
+
+floor hywaters water1
+floor hynukes nuke1

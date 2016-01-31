@@ -1,0 +1,9 @@
+actor WindWakerLitFlame 29600 {
+	+NOGRAVITY
+	
+	States {
+		Spawn:
+			WWFL ABCDE 4 Bright
+			Loop
+	}
+}
