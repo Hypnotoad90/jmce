@@ -1,2 +1,9 @@
 *.o
 *.bak
+*.dbs 
+*.bak 
+*.backup1 
+*.backup2 
+*.backup3
+jmce_assets-dev.pk3
+jmce_maps-dev.pk3
