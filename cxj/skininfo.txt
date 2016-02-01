@@ -1,0 +1,14 @@
+{
+	name = "CXJ Link"
+	sprite = CXJL
+	dsplpain = dslinpai
+	dspldeth = dslindie
+	dsnoway = dslinno
+	dsjump = dslinjum
+	dsouch = dslinno
+	dsoof = dslinno
+	dspdiehi = dslindih
+	dstaunt = dslinta
+	dsradio = dslinta
+	scale = 1.1
+}

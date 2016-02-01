@@ -1,0 +1,19 @@
+warp2 flat icewater
+
+texture icefall1
+	pic icefall1 tics 8
+	pic icefall2 tics 8
+	pic icefall3 tics 8
+	pic icefall4 tics 8
+
+warp2 flat slime01
+
+warp2 flat iceh20
+warp flat ABLOOD09
+warp flat mbwater
+warp flat SMBWAT2
+warp2 flat HYWATERS
+warp2 flat HYNUKES
+warp2 flat RHYWATER
+warp2 flat RHYNUKE
+warp flat rwqlava

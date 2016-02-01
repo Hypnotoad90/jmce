@@ -1,0 +1,5 @@
+#include actors/rain.txt
+#include actors/sean.txt
+#include actors/doomfiend.txt
+#include actors/sound.txt
+#include actors/cx03.txt

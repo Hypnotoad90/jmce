@@ -1,0 +1,21 @@
+remap lapscr1 textures/lapscr1r.png
+remap labscr2 textures/labscr2r.png
+remap uactrsin textures/uactrsir.png
+remap uacstrsi textures/uacstrsr.png
+remap uacwpssi textures/uacwpssr.png
+remap uacrepsi textures/uacrepsr.png
+remap trsi01 textures/trsi01r.png
+
+remap CX02BKL textures/skies/CXJ02/CX02BK.jpg
+remap CX02DNL textures/skies/CXJ02/CX02DN.jpg
+remap CX02FTL textures/skies/CXJ02/CX02FT.jpg
+remap CX02LFL textures/skies/CXJ02/CX02LF.jpg
+remap CX02RTL textures/skies/CXJ02/CX02RT.jpg
+remap CX02UPL textures/skies/CXJ02/CX02UP.jpg
+
+remap CX03BK textures/skies/CXJ03/CX03BKH.png
+remap CX03DN textures/skies/CXJ03/CX03DNH.png
+remap CX03FT textures/skies/CXJ03/CX03FTH.png
+remap CX03LF textures/skies/CXJ03/CX03LFH.png
+remap CX03RT textures/skies/CXJ03/CX03RTH.png
+remap CX03UP textures/skies/CXJ03/CX03UPH.png
