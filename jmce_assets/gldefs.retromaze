@@ -1,14 +1,14 @@
-#include actors/deathknight.gl
+#include actors/retromaze/deathknight.gl
 
 glow {
 	flats {
 		rwqlava
 		mbwater
-		
+
 		// hywater // <-- hypnotoad complains about this :c
 		rhywater
 		hywaters
 		rhynuke
 		hynukes
 	}
-} 
+}
