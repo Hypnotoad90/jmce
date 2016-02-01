@@ -14,5 +14,6 @@ IF /I "%PROCESSOR_ARCHITECTURE%"=="x32" (
     SET ARCH=64
 )
 
+SET PATH=%CD%\utilities
 SET SEVENZAEXE=%CD%\utilities\7za%ARCH%.exe
 SET START=%CD%

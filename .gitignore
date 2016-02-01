@@ -1,9 +1,14 @@
-*.o
+# Application-generated backup files
 *.bak
-*.dbs 
-*.bak 
-*.backup1 
-*.backup2 
+*.dbs
+*.bak
+*.backup1
+*.backup2
 *.backup3
+
+# Compile PK3s
 jmce_assets-dev.pk3
 jmce_maps-dev.pk3
+
+# Compiled ACS
+*.o
