@@ -6,9 +6,11 @@
 *.backup2
 *.backup3
 
-# Compile PK3s
-jmce_assets-dev.pk3
-jmce_maps-dev.pk3
+# Compiled PK3s
+*.pk3
+
+# 7-Zip tempory files
+*.tmp
 
 # Compiled ACS
 *.o
