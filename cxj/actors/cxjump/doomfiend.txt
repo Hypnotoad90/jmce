@@ -1,0 +1,136 @@
+actor Doomfiend : ScriptedMarine 21101 {
+	//$Title Doomfiend
+	//$Sprite CXDFB3B7
+	//$Category CXJump Decoration
+
+	States {
+		Spawn:
+			CXDF A 4 A_MarineLook
+			CXDF A 4 A_MarineNoise
+			Loop
+		Idle:
+			CXDF A 4 A_MarineLook
+			CXDF A 4 A_MarineNoise
+			CXDF A 4 A_MarineLook
+			CXDF B 4 A_MarineNoise
+			CXDF B 4 A_MarineLook
+			CXDF B 4 A_MarineNoise
+			Loop
+		See:
+			CXDF ABCD 4 A_MarineChase
+			Loop
+
+		Melee.Fist:		
+			CXDF E 4 A_FaceTarget
+			CXDF F 4 A_M_Punch(1)
+			CXDF A 9
+			CXDF A 0 A_M_Refire
+			Loop
+			CXDF A 5 A_FaceTarget
+			Goto See
+		Melee.Berserk:
+			CXDF E 4 A_FaceTarget
+			CXDF F 4 A_M_Punch(10)
+			CXDF A 9
+			CXDF A 0 A_M_Refire
+			Loop
+			CXDF A 5 A_FaceTarget
+			Goto See
+		Melee.Chainsaw:
+			CXDF E 4 A_MarineNoise
+			CXDF F 4 BRIGHT A_M_Saw
+			CXDF F 0 A_M_SawRefire
+			goto Melee.Chainsaw+1
+			CXDF A 0
+			Goto See
+
+		Missile:
+		Missile.None:
+			CXDF E 12 A_FaceTarget
+			Goto Idle
+			CXDF F 6 BRIGHT
+			Loop
+		Missile.Pistol:
+			CXDF E 4 A_FaceTarget
+			CXDF F 6 BRIGHT A_M_FirePistol(1)
+			CXDF A 4 A_FaceTarget
+			CXDF A 0 A_M_Refire
+			CXDF A 5
+			Goto See
+		Fireloop.Pistol:
+			CXDF F 6 BRIGHT A_M_FirePistol(0)
+			CXDF A 4 A_FaceTarget
+			CXDF A 0 A_M_Refire
+			Goto Fireloop.Pistol
+			CXDF A 5
+			Goto See
+		Missile.Shotgun:
+			CXDF E 3 A_M_CheckAttack
+			CXDF F 7 BRIGHT A_M_FireShotgun
+			Goto See
+		Missile.SSG:
+			CXDF E 3 A_M_CheckAttack
+			CXDF F 7 BRIGHT A_M_FireShotgun2
+			Goto See
+		Missile.Chaingun:
+			CXDF E 4 A_FaceTarget
+			CXDF FF 4 BRIGHT A_M_FireCGun(1)
+			CXDF FF 4 BRIGHT A_M_FireCGun(0)
+			CXDF A 0 A_M_Refire
+			Goto Missile.Chaingun+3
+			CXDF A 0
+			Goto See
+		Missile.Rocket:
+			CXDF E 8
+			CXDF F 6 BRIGHT A_M_FireMissile
+			CXDF A 0 A_M_Refire
+			Loop
+			CXDF A 0
+			Goto See
+		Missile.Plasma:
+			CXDF E 2 A_FaceTarget
+			CXDF F 3 BRIGHT A_M_FirePlasma
+			CXDF A 0 A_M_Refire
+			Loop
+			CXDF A 0
+			Goto See
+		Missile.Railgun:
+			CXDF E 4 A_M_CheckAttack
+			CXDF F 6 A_M_FireRailgun
+			Goto See
+		Missile.BFG:
+			CXDF E 5 A_M_BFGSound
+			CXDF EEEEE 5 A_FaceTarget
+			CXDF F 6 A_M_FireBFG
+			CXDF A 4 A_FaceTarget
+			CXDF A 0 A_M_Refire
+			Loop
+			CXDF A 0
+			Goto See
+
+		SkipAttack:
+			CXDF A 1
+			Goto See
+		Pain:
+			CXDF G 4
+			CXDF G 4 A_Pain
+			Goto Idle
+		Death:
+			CXDF H 10
+			CXDF I 10 A_Scream
+			CXDF J 10 A_NoBlocking
+			CXDF KLM 10
+			CXDF N -1
+			Stop
+		XDeath:
+			CXDF O 5
+			CXDF P 5 A_XScream
+			CXDF Q 5 A_NoBlocking
+			CXDF RSTUV 5
+			CXDF W -1
+			Stop
+		Raise:
+			CXDF MLKJIH 5
+			Goto See
+	}
+}
