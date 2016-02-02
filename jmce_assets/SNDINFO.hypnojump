@@ -1,11 +1,11 @@
-hoot1 sounds/hoot1.ogg
-hoot2 sounds/hoot2.ogg
-hoot3 sounds/hoot3.ogg
-hoot4 sounds/hoot4.ogg
-hoot5 sounds/hoot5.ogg
-hoot6 sounds/hoot6.ogg
-hoot7 sounds/hoot7.ogg
-h_boing sounds/h_boing.wav
+hoot1 sounds/hypnojump/hoot1.ogg
+hoot2 sounds/hypnojump/hoot2.ogg
+hoot3 sounds/hypnojump/hoot3.ogg
+hoot4 sounds/hypnojump/hoot4.ogg
+hoot5 sounds/hypnojump/hoot5.ogg
+hoot6 sounds/hypnojump/hoot6.ogg
+hoot7 sounds/hypnojump/hoot7.ogg
+h_boing sounds/hypnojump/h_boing.wav
 
 $random 3PacTaunt { hoot1 hoot2 hoot3 hoot4 hoot5 hoot6 hoot7 }
 
