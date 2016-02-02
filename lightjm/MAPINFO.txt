@@ -1,0 +1,85 @@
+
+map GREEN "Green Jumpmaze"
+next MAP01
+music GREE1
+sky1 GRSK1 0.16
+
+map LJM01 "Poison"
+next LJM02
+music POISON
+sky1 SKY1 0.16
+
+map LJM02 "Cross The Islands"
+next LJM03
+music CTI1
+sky1 TNT_CL5 0.18
+
+map LJM03 "Gotcha!"
+next LJM04
+music GCH1
+sky1 SKY2 0
+
+map LJM04 "The Canyon"
+next LJM05
+music CANY
+sky1 CASK1 0
+sky2 SPSK1 0.30
+
+map LJM05 "Interplanetary Jumpmaze"
+next LJM06
+music DBM1
+sky1 SPSK1 0.30
+
+map LJM06 "Winter"
+next LJM07
+music FNM1
+sky1 TNT_CL5 0.18
+
+map LJM07 "The Lava Void"
+next LJM08
+music LAVD1
+
+map LJM08 "Plane of Fire"
+next LJM09
+music JFAII
+sky1 STSKY7 0.14
+
+map LJM09 "Land Of Misery"
+next LJM10
+music BATQ
+sky1 LMSK1 0.10
+
+map LJM10 "Mount Sewer"
+next LJM11
+music MOSE
+sky1 MOSKY 0
+
+map LJM11 "Cross The Islands II"
+next LJM12
+music CTI2
+sky1 TNT_CL5 0.18
+
+map LJM12 "Big River"
+next LJM13
+music BIRI
+sky1 JIF3 0
+
+map LJM13 "Cliffside Pass"
+next LJM14
+music CSP1
+sky1 RSK2 0
+
+map LJM14 "Hotlands"
+next LJM15
+music HOLA
+sky1 HOLASK1 0.18
+
+map LJM15 "Hoots Of A Platformer"
+next LJM16
+music HOJM
+sky1 HOOTSKY 0.50
+
+map LJM16 "Undergrounds"
+next MAP01
+music "UNGR"
+sky1 ugsk1 0.20

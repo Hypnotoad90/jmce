@@ -1,0 +1,339 @@
+
+actor bigbush 9545
+{
+  Game Doom
+  States
+  {
+  Spawn:
+    SHR5 A -1
+    Stop
+  }
+}
+actor bigjungle 9547
+{
+  Game Doom
+  States
+  {
+  Spawn:
+    SHR7 A -1
+    Stop
+  }
+}
+actor LJMsmalltree 9550
+{
+  Game Doom
+  States
+  {
+  Spawn:
+    SH10 A -1
+    Stop
+  }
+}
+
+actor jungletree 9552
+{
+  Game Doom
+  States
+  {
+  Spawn:
+    SH12 A -1
+    Stop
+  }
+}
+
+actor palmtree1 9553
+{
+  Game Doom
+  Height 75
+  Radius 12
+  Scale 0.6
+  +solid
+  States
+  {
+  Spawn:
+    TRT1 A -1
+    Stop
+  }
+}
+
+actor palmtree2 9554
+{
+  Game Doom
+  Height 80
+  Radius 8
+  Scale 0.6
+  +solid
+  States
+  {
+  Spawn:
+    TRT2 A -1
+    Stop
+  }
+}
+
+actor jungletree2 9557
+{
+  Game Doom
+  States
+  {
+  Spawn:
+    SH12 A -1
+    Stop
+  }
+}
+
+// More tropic actors
+
+actor Large_Palm1 21900
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 160
+  +SOLID
+  states
+  {
+  Spawn:
+    BTRA A -1
+    stop
+  }
+}
+ 
+actor Large_Tree2 21901
+{
+//$Category Stronghold_Vegetation
+  radius 32
+  height 128
+  +SOLID
+  states
+  {
+  Spawn:
+    BTRB A -1
+    stop
+  }
+}
+ 
+actor Medium_Tree5 21903
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 128
+  +SOLID
+  states
+  {
+  Spawn:
+    BTRC A -1
+    stop
+  }
+}
+ 
+actor Medium_Tree2 21904
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 128
+  +SOLID
+  states
+  {
+  Spawn:
+    BTRD A -1
+    stop
+  }
+}
+ 
+actor Medium_Tree1 21905
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 128
+  +SOLID
+  states
+  {
+  Spawn:
+    BTRE A -1
+    stop
+  }
+}
+ 
+actor Large_Tree3 21906
+{
+//$Category Stronghold_Vegetation
+  radius 32
+  height 128
+  +SOLID
+  states
+  {
+  Spawn:
+    BTRF A -1
+    stop
+  }
+}
+ 
+actor Small_Bush1 21907
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 16
+  states
+  {
+  Spawn:
+    BTRG A -1
+    stop
+  }
+}
+ 
+actor Small_Bush2 21908
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 16
+  states
+  {
+  Spawn:
+    BTRH A -1
+    stop
+  }
+}
+ 
+actor Small_Grass1 21909
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 16
+  states
+  {
+  Spawn:
+    BTRI A -1
+    stop
+  }
+}
+ 
+actor Small_Grass2 21910
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 16
+  states
+  {
+  Spawn:
+    BTRJ A -1
+    stop
+  }
+}
+ 
+actor Large_Bush1 21911
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 16
+  states
+  {
+  Spawn:
+    BTRK A -1
+    stop
+  }
+}
+ 
+actor Large_Palm2 21912
+{
+//$Category Stronghold_Vegetation
+  radius 16
+  height 160
+  +SOLID
+  states
+  {
+  Spawn:
+    BTRL Y -1
+    stop
+  }
+}
+ 
+actor Medium_Tree4 21913
+{
+//$Category Stronghold_Vegetation
+  radius 32
+  height 160
+  +SOLID
+  states
+  {
+  Spawn:
+    BTRM A -1
+    stop
+  }
+}
+ 
+actor Medium_Tree3 21914
+{
+//$Category Stronghold_Vegetation
+  radius 32
+  height 160
+  +SOLID
+  states
+  {
+  Spawn:
+    BTRN A -1
+    stop
+  }
+}
+
+// Rain
+
+Actor RainSpawner 9555
+{
+  Radius 1
+  Height 1
+  +NoClip
+  +ClientSideOnly
+  +SpawnCeiling
+  +NoGravity
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 0 A_SpawnItemEx("RainDrop", Random(-100, 100), Random(-100, 100), 0, 0, 0, 0, 0, 0, 0)
+
+    TNT1 A 3
+    TNT1 A 0 A_SpawnItemEx("RainDrop", Random(-100, 100), Random(-100, 100), 0, 0, 0, 0, 0, 0, 0)
+
+    TNT1 A 3
+    Loop
+  }
+}
+
+
+
+actor RAINDROP
+{
+
+Radius 0
+Height 0
++Missile
++NoBlockMap
++ClientSideOnly
+-NoGravity
+Renderstyle Add
+Scale 1
+states
+{
+spawn:
+RNDR A 1
+loop
+
+DEATH:
+RNDR ABCDEFGH 2
+stop
+}
+}
+
+actor afraidmarine 9556
+{
+  Game Doom
+  Height 24
+  Radius 12
+  +solid
+  States
+  {
+  Spawn:
+    AFMA A -1
+    Stop
+  }
+}

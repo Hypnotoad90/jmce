@@ -1,0 +1,10 @@
+actor LJMbigtree 9551
+{
+  Game Doom
+  States
+  {
+  Spawn:
+    SH11 A -1
+    Stop
+  }
+}

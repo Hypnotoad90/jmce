@@ -1,0 +1,14 @@
+Actor Thing_Thing_Character 9560 {
+	Height 45
+	Radius 16
+	Scale 0.6
+	
+	+SOLID
+	
+	States {
+		Spawn:
+			TTAC A -1
+			Stop
+	}
+}
+
