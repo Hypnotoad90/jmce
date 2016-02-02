@@ -1,8 +1,7 @@
 @ECHO OFF
 
-CALL "%CD%\utilities\variables.bat"
-CALL "%CD%\utilities\mkvers.bat"
-
+CALL "%CD%\utilities\variables.bat" %*
+CALL "%CD%\utilities\mkvers.bat" %*
 
 DEL /F /Q "%OUTDIR%\jmce_assets*.pk3"
 
