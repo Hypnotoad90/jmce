@@ -55,7 +55,7 @@ $playersound	mini	male	*usefail	dsmoof
 
 Pickups/TechArmor	TCHARMUS
 
-//Ambient sounds (water, lava, wind) 
+//Ambient sounds (water, lava, wind)
 
 WATERFLO1 WATERFLO
 $ambient 2 WATERFLO1 point continuous 0.4
@@ -131,3 +131,53 @@ $musicvolume J_PV4 1.8
 // Used in JPX53 (Dammit)
 GENER1 GENER1
 GENER2 GENER2
+
+// SKINS
+ac3deth	ac3deth
+$random ac3/taunt { ac3/tnt1 ac3/tnt2 }
+ac3/tnt1 ac3see1
+ac3/tnt2 ac3see2
+
+$random ac3/pain  { ac3pn1 ac3pn2 }
+ac3pn1 ac3pn1
+ac3pn2 ac3pn2
+
+$PlayerAlias ac3 male *pain100 ac3/pain
+$PlayerAlias ac3 male *pain75 ac3/pain
+$PlayerAlias ac3 male *pain50 ac3/pain
+$PlayerAlias ac3 male *pain25 ac3/pain
+$PlayerAlias ac3 male *taunt ac3/taunt
+
+ds1009 ds1009
+ds1022 ds1022
+ds1030 ds1030
+ds1035 ds1035
+ds1038 ds1038
+ds1048 ds1048
+ds1055 ds1055
+ds1059 ds1059
+BLOOD BLOOD
+ds3034 ds3034
+dshecalb dshecalb
+dsfart1 dsfart1
+$random caleb { dsfart1 ds1009 ds1022 ds1030 ds1035 ds1038 ds1048 ds1055 ds1059 BLOOD dshecalb ds3034 }
+$playeralias Caleb male *taunt caleb
+$playeralias Caleb2 male *taunt caleb
+
+ac3tnt ac3tnt
+ac3tnt2 ac3tnt2
+ac3tnt3 ac3tnt3
+ac3tnt4 ac3tnt4
+ac3tnt5 ac3tnt5
+ac3tnt6 ac3tnt6
+ac3tnt7 ac3tnt7
+$random acm { ac3tnt ac3tnt2 ac3taunt ac3tnt3 ac3tnt4 ac3tnt5 ac3tnt6 ac3tnt7 }
+$playeralias Duke male *taunt acm
+$playeralias Duke2 male *taunt acm
+
+mintaunt mintaunt
+mintaun2 mintaun2
+mintaun3 mintaun3
+$random mini { mintaunt mintaun2 mintaun3 }
+$playeralias minielle female *taunt mini
+$playeralias minielle2 female *taunt mini
