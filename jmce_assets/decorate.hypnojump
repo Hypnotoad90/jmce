@@ -1,0 +1,126 @@
+ACTOR PersonalTeleport : DoomWeapon
+{
+	Weapon.SelectionOrder 10
+	Weapon.SlotNumber 1
+	States
+	{
+		Spawn: // This state is entered when you drop the weapon.
+			PTPT A -1
+			Stop
+		Ready: // This state is entered when you have this weapon selected.
+			PTPT A 1 A_WeaponReady
+			Loop 
+		Deselect: // This state is entered when you deselect the current selected weapon.
+			PTPT A 1 A_Lower
+			Loop 
+		Select: // This state is entered when you select this weapon.
+			PTPT A 1 A_Raise
+			Loop 
+		Fire: // The firing state.
+			PTPT A 1
+			PTPT B 1 acs_executealways(833,0,0,0,0)
+			PTPT C 1 
+			PTPT D 1 
+			PTPT E 1
+			PTPT F 15 
+			PTPT A 15 
+			Goto Ready
+		Flash: // The weapons flash.
+			USGF F 1 
+			Stop
+		}
+}
+
+ACTOR ReButton : DoomWeapon //for custom behaviour
+{
+	Weapon.SelectionOrder 10
+	Weapon.SlotNumber 1
+	States
+	{
+		Spawn: // This state is entered when you drop the weapon.
+			PTPT A -1
+			Stop
+		Ready: // This state is entered when you have this weapon selected.
+			PTPT A 1 A_WeaponReady
+			Loop 
+		Deselect: // This state is entered when you deselect the current selected weapon.
+			PTPT A 1 A_Lower
+			Loop 
+		Select: // This state is entered when you select this weapon.
+			PTPT A 1 A_Raise
+			Loop 
+		Fire: // The firing state.
+			PTPT A 1
+			PTPT B 1 acs_executealways(832,0,0,0,0)
+			PTPT C 1 
+			PTPT D 1 
+			PTPT E 1
+			PTPT F 15 
+			PTPT A 15 
+			Goto Ready
+		Flash: // The weapons flash.
+			USGF F 1 
+			Stop
+		}
+}
+
+ACTOR 3PacMarine: MarineFist
+{
+	Health 300
+	  States
+	  {
+	  Spawn:
+		CHUB A 4 A_MarineLook
+		CHUB A 0 A_Jump(249, 2)
+		CHUB A 4 A_PlaySound("3PacTaunt")
+		CHUB A 4 
+		Loop
+	  Idle:
+		CHUB A 4 A_MarineLook
+		CHUB A 0 A_Jump(249, 2)
+		CHUB A 4 A_PlaySound("3PacTaunt")
+		CHUB A 4 A_MarineLook
+		CHUB B 4 
+		CHUB B 4 A_MarineLook
+		CHUB B 4 
+		Loop
+	  See:
+		CHUB ABCD 4 A_MarineChase
+		Loop
+
+	  Melee:
+		CHUB E 4 A_FaceTarget
+		CHUB E 4 A_M_Punch(1)
+		CHUB A 9 A_PlaySound("3PacTaunt")
+		CHUB A 0 A_M_Refire
+		Loop
+		CHUB A 5 A_FaceTarget
+		Goto See
+	  Missile:
+		Stop
+	  SkipAttack:
+		CHUB A 1 A_PlaySound("3PacTaunt")
+		Goto See
+	  Pain:
+		CHUB G 4 
+		CHUB G 4 A_PlaySound("3PacTaunt")
+		Goto Idle
+	  Death:
+		CHUB H 10
+		CHUB I 10 A_PlaySound("3PacTaunt")
+		CHUB J 10 A_NoBlocking
+		CHUB KLM 10
+		CHUB N -1
+		Stop
+	  XDeath:
+		CHUB O 5
+		CHUB P 5 A_PlaySound("3PacTaunt")
+		CHUB Q 5 A_NoBlocking
+		CHUB RSTUV 5
+		CHUB W -1
+		Stop
+	  Raise:
+		CHUB MLKJIH 5
+		Goto See
+	  }
+}
