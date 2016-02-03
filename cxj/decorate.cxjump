@@ -1,5 +1,5 @@
-#include actors/rain.txt
-#include actors/sean.txt
-#include actors/doomfiend.txt
-#include actors/sound.txt
-#include actors/cx03.txt
+#include "actors/cxjump/rain.txt"
+#include "actors/cxjump/sean.txt"
+#include "actors/cxjump/doomfiend.txt"
+#include "actors/cxjump/sound.txt"
+#include "actors/cxjump/cx03.txt"
