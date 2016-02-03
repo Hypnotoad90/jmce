@@ -1,0 +1,34 @@
+map HYP01 "Offshore Industrial Park" {
+	next = "HYP02"
+	music = "SIMC"
+	sky1 = "BSKY1", 0
+	intermusic = "D_SIMN"
+	par = 95
+}
+
+map HYP02 "Doom 2 Jumpmaze" {
+	music = "D_COUNTD"
+	sky1 = "sky1", 0
+	intermusic = "D_READ_M"
+	next = "HYP03"
+}
+
+map HYP03 "Snowccelerate!" {
+	music = "D_BBLUE"
+	sky1 = "BSKY1", 0
+	intermusic = "HURPDURP"
+	par = 60
+	next = "HYP04"
+}
+
+map HYP04 "Race around the production line" {
+	music = "D_FFACT"
+	sky1 = "sky1", 0
+	par = 23
+}
+
+map HYP05 "Adventures in bongland" {
+	sky1 = "SKY06"
+	music = "D_HYP05"
+	par = 90
+}

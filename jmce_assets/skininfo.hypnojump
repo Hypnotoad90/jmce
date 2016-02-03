@@ -1,0 +1,6 @@
+{
+    name = "3pac"
+    sprite = CHUB
+    dstaunt = 3PacTaunt
+    hidden = false
+}

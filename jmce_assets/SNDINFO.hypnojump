@@ -1,0 +1,16 @@
+hoot1 sounds/hypnojump/hoot1.ogg
+hoot2 sounds/hypnojump/hoot2.ogg
+hoot3 sounds/hypnojump/hoot3.ogg
+hoot4 sounds/hypnojump/hoot4.ogg
+hoot5 sounds/hypnojump/hoot5.ogg
+hoot6 sounds/hypnojump/hoot6.ogg
+hoot7 sounds/hypnojump/hoot7.ogg
+h_boing sounds/hypnojump/h_boing.wav
+
+$random 3PacTaunt { hoot1 hoot2 hoot3 hoot4 hoot5 hoot6 hoot7 }
+
+$playeralias	3pac	male	*death		hoot7
+$playeralias 	3pac	male	*taunt		3PacTaunt
+$playeralias	3pac	male	*gibbed		hoot3
+$playeralias	3pac	male	*xdeath		hoot5
+$playeralias	3pac	male	*usefail	hoot2

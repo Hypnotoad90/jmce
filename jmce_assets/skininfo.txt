@@ -1,0 +1,253 @@
+{
+	name = "ac3"
+	sprite = ply4
+	dspldeth = ac3deth
+	dspdiehi = ac3/die
+	dsplpain = ac3/pain
+	dstaunt = ac3/taunt
+	Gender = Male
+	game = doom
+	hidden = true
+	cheat = false
+}
+
+{
+	name = "Blonde Illucia"
+	sprite = SFLK
+	dsnoway = dsinoway
+	dsoof = dsioof
+	dspldeth = dsideth
+	dspdiehi = dsidiehi
+	dsplpain = dsipain
+	dstaunt = dsitaunt
+	gender = female
+}
+
+{
+	name = "Caleb"
+	sprite = blay
+	CrouchSprite = blyc
+	Scale = 0.80
+	dsnoway = dsstn
+	dsoof = dsdirt
+	dspldeth = ds1029
+	dspdiehi = ds1029
+	dsplpain = ppsnd
+	dspunch = -
+	dstaunt = "dsfart1; ds1009; ds1022; ds1030; ds1035; ds1038; ds1048; ds1055; ds1059; BLOOD; dshecalb; ds3034;"
+	color = "FF 90 40"
+	Gender = Male
+	game = doom
+}
+
+{
+	name = "Daisy"
+	sprite = dasy
+	cheat = true
+}
+
+{
+	name = "Duke"
+	sprite = duke
+	CrouchSprite = dukc
+	Scale = 0.73
+	dsnoway = ac3noway
+	dsoof = ac3noway
+	dspldeth = ac3death
+	dspdiehi = ac3diehi
+	dsplpain = ac3pain
+	dspunch = ac3hit
+	dstaunt = "ac3tnt2; ac3taunt; ac3tnt3; ac3tnt4; ac3tnt5"
+	Gender = Male
+	game = doom
+}
+
+{
+	name = "Former Human"
+	sprite = zbot
+	color = "FF 90 40"
+	Gender = Male
+	game = doom
+}
+
+{
+	name = "Massmouth"
+	sprite = mass
+	dsnoway = dsmmhump
+	dsoof = dsmmoof
+	dspldeth = dsmmdeth
+	dspdiehi = dsmmdihi
+	dsplpain = dsmmpain
+	dstaunt = dsmmtant
+}
+
+{
+	name = "Massmouth 2"
+	sprite = mas2
+	dsnoway = dsmmhump
+	dsoof = dsmmoof
+	dspldeth = dsmmdeth
+	dspdiehi = dsmmdihi
+	dsplpain = dsmmpain
+	dstaunt = dsmmtant
+	hidden = true
+	scale = 0.5
+}
+
+{
+	name = Minielle
+	sprite = mini
+	dsnoway = minnoway
+	dsoof = minoof
+	dspldeth = mindeth
+	dspdiehi = mindiehi
+	dsplpain = minpain
+	dsdtaunt = "mintaunt; mintaun2; mintaun3"
+	gender = female
+	game = doom
+}
+
+{
+	name = "SS Nazi"
+	sprite = wlf1
+	dsplpain = dspopain
+	dspdiehi = dsssdth
+	dspldeth = dsssdth
+	dstaunt = dssssit
+}
+
+{
+	name = "Nazi Guard"
+	sprite = wlf2
+	dsplpain = dspopain
+	dspldeth = dsnzdeth
+	dspdiehi = dsnzdihi
+	dstaunt = dsnztaun
+}
+
+{
+	name = "Nazi Chaingunner"
+	sprite = wlf3
+	dsplpain = dspopain
+	dspldeth = dscndeth
+	dspdiehi = dscndihi
+	dstaunt = dscntaun
+}
+
+{
+	name = "Oscar"
+	sprite = bald
+	Gender = Male
+	game = doom
+}
+
+{
+	name = "Soldier"
+	sprite = sold
+	Gender = Male
+	game = doom
+}
+
+{
+	name = "Strife Guy II"
+	sprite = go99
+	dsnoway = dswnowy
+	dsplpain = dswpain
+	dspldeth = dswdeth
+	dspdiehi = dswdiehi
+	dsoof = dswoof
+	dsjump = dswjump
+	dsslop = dswslop
+}
+
+{
+	name = "Tails"
+	sprite = tail
+}
+
+{
+	name = "Variant"
+	sprite = VAR5
+	dsplpain = AACPAIN
+	dsoof = AACNKOO
+	dspldeth = AACDETH
+	dspdiehi = AACDIEHI
+	dsjump = AACJUMP
+	dstaunt = AACTAUNT
+	gender = male
+}
+
+{
+	name = "Wolfenstein"
+	sprite = wlf1
+	dsplpain = dspopain
+	dspdiehi = dsssdth
+	dspldeth = dsssdth
+	dstaunt = dssssit
+}
+
+{
+	name = "Zombieman"
+	sprite = zomb
+	dsplpain = dspopain
+	dspldeth = dspodth2
+	dsoof = dsposact
+	dsnoway = dsposact
+	dstaunt = dsposit1
+	color = "bf 8f 5f"
+}
+
+{
+	name = "Zombie Marine"
+	sprite = UDM2
+	dsplpain = dspopain
+	dspldeth = dspodth2
+	dsoof = dsposact
+	dsnoway = dsposact
+	dstaunt = dsposit1
+	color = "bf 8f 5f"
+}
+
+// SKULLTAG
+{
+	name = Illucia
+	sprite = illp
+	dsnoway = dsinoway
+	dsoof = dsioof
+	dspldeth = dsideth
+	dspdiehi = dsidiehi
+	dsplpain = dsipain
+	dstaunt = dsitaunt
+	gender = female
+}
+
+{
+	name = "Phobos"
+	sprite = phob
+	dsnoway = dsphbnwy
+	dsplpain = dsphbpn
+	dspldeth = dsphbdth
+	dspdiehi = dsphbdhi
+	dsoof = dsphboof
+	dsjump = dsphbjmp
+	dstaunt = dsphbtnt
+	dsslop = dsphbslp
+}
+
+{
+	name = "Strife Guy"
+	sprite = gsol
+	dsnoway = dswnowy
+	dsplpain = dswpain
+	dspldeth = dswdeth
+	dspdiehi = dswdiehi
+	dsoof = dswoof
+	dsjump = dswjump
+	dsslop = dswslop
+	color = "bf 8f 5f"
+}
+
+{
+	name = "Synas"
+	sprite = syna
+}

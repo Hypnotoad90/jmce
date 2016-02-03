@@ -1,0 +1,36 @@
+actor treesmall 3678
+{
+  Game Doom
+  States
+  {
+  Spawn:
+    SHR9 A -1
+    Stop
+  }
+}
+
+actor bush2 3679
+{
+  Game Doom
+  States
+  {
+  Spawn:
+    SH10 A -1
+    Stop
+  }
+}
+
+ACTOR Pumpkin 9942 // Sprite ripped by Lightning.
+{
+  Game Doom
+  Radius 8
+  Height 10
+  Scale 0.1
+  +SOLID
+  States
+  {
+  Spawn:
+    PUMP A -1
+    Stop
+  }
+}
