@@ -8,6 +8,10 @@
 
 # Compiled PK3s
 *.pk3
+out/
+debug/
+release/
+release_beta/
 
 # 7-Zip tempory files
 *.tmp
