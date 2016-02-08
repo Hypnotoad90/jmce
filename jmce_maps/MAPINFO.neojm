@@ -1,0 +1,114 @@
+map neo01 "3, 2, 1, JUMP!"
+music D_Map01
+Par 30
+cluster 1
+intermusic D_Inter1
+exitpic "NeoInt01"
+next neo02
+
+map neo02 "Through the sewer"
+music D_Map02
+Par 80
+cluster 1
+intermusic D_Inter1
+exitpic "NeoInt02"
+next neo03
+
+map neo03 "The highway"
+music D_Map03
+sky1 stsky8 1
+Par 50
+cluster 1
+intermusic D_Inter1
+exitpic "NeoInt03"
+next neo04
+
+map neo04 "Storage facility"
+music D_Map04
+Par 90
+cluster 2
+intermusic D_Inter2
+exitpic "NeoInt04"
+next neo05
+
+map neo05 "Temple of darkness"
+music D_Map05
+Par 90
+sky1 stsky8 0.5
+cluster 2
+intermusic D_Inter2
+exitpic "NeoInt05"
+next neo06
+
+map neo06 "The mechanical tower"
+music D_Map06
+Par 120
+sky1 stsky9 0.2
+cluster 2
+intermusic D_Inter2
+exitpic "NeoInt06"
+next neo07
+
+map neo07 "Incoming flood"
+music D_Map07
+Par 150
+sky1 stsky9 0.2
+cluster 2
+intermusic D_Inter2
+exitpic "NeoInt07"
+next neo08
+
+map neo08 "Something to remember"
+music D_Map08
+Par 150
+sky1 stsky9 0.2
+cluster 2
+intermusic D_Inter2
+exitpic "NeoInt08"
+next neo09
+
+map neo09 "The core"
+music D_Map09
+Par 150
+cluster 2
+intermusic D_Inter2
+exitpic "NeoInt09"
+next neo10
+
+map neo10 "UAC complex"
+music D_Map10
+sky1 stsky11 0.0
+cluster 2
+intermusic D_Inter2
+exitpic "NeoInt10"
+next neo11
+
+map neo11 "Lava castle"
+music D_Map11
+cluster 3
+intermusic D_Inter3
+exitpic "NeoInt11"
+next neo12
+
+map neo12 "Tetris world"
+music D_Map12
+cluster 3
+intermusic D_Inter3
+exitpic "NeoInt12"
+next neo13
+
+map neo13 "Valley Island"
+music D_Map13
+cluster 3
+intermusic D_Inter3
+exitpic "NeoInt13"
+sky1 BSKY1 0.05
+next neo14
+
+map neo14 "Madness"
+music D_Map14
+cluster 3
+intermusic D_Inter3
+exitpic "NeoInt14"
+next neo15
+secretnext neo31
