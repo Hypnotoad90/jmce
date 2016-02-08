@@ -1,0 +1,17 @@
+map xneo06 "Water processing plant"
+music D_XNEO06
+sky1 stsky1 0.05
+next XNEO11
+
+map xneo02 "Waste processing plant"
+music D_XNEO02
+sky1 stsky7 0.05
+next XNEO06
+
+map xneo11 "Lava castle"
+music D_XNEO11
+next XNEO13
+
+map xneo13 "Valley Island"
+music D_XNEO13
+sky1 BSKY1 0.05
