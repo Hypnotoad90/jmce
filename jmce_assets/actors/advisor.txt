@@ -544,7 +544,7 @@ Actor advisor : DoomPlayer 25005
       TNT1 A 0 A_Jump (random(224, 256), 1)
       Goto Missile3+1
       TNT1 A 0 A_FaceTarget
-      TNT1 A 0 A_CustomMissile ("NewPlasmaBall", 32, 0, 0, 0)
+      TNT1 A 0 A_CustomMissile ("NewPlasmaBallB", 32, 0, 0, 0)
       TNT1 A 0 NoiseAlert (0, 0)
       NPLA E 1 A_Recoil (-0.61476)
       TNT1 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
@@ -699,7 +699,7 @@ Actor advisor : DoomPlayer 25005
       TNT1 A 0 A_Jump (random(224, 256), 1)
       Goto Missile2+1
       TNT1 A 0 A_FaceTarget
-      TNT1 A 0 A_CustomMissile ("NewPlasmaBall", 32, 0, 0, 0)
+      TNT1 A 0 A_CustomMissile ("NewPlasmaBallB", 32, 0, 0, 0)
       TNT1 A 0 NoiseAlert (0, 0)
       NPLA E 1 A_Recoil (-0.61476)
       TNT1 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)

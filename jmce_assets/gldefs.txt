@@ -26,15 +26,15 @@ pointlight SMALLGLOWSHROOM
     offset 0 6 0
 }
 
-object LargeGlowingMushroom
-{
-    frame GLOM { light LARGEGLOWSHROOM }
-}
-
-object SmallGlowingMushroom
-{
-    frame GLLM { light SMALLGLOWSHROOM }
-}
+//object LargeGlowingMushroom NON EXISTENT
+//{
+//    frame GLOM { light LARGEGLOWSHROOM }
+//}
+//
+//object SmallGlowingMushroom
+//{
+//    frame GLLM { light SMALLGLOWSHROOM }
+//} NON EXISTENT
 
 //========================================================================
 
