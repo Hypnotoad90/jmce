@@ -1,104 +1,108 @@
 ACTOR Deathknight 30114
 {
-Health 10000
-Radius 24
-Height 72
-Mass 700
-scale 2
-Speed 20
-PainChance 50
-MeleeDamage 10
-MONSTER
-+FLOORCLIP
-+NOTARGET
-+NORADIUSDMG
-+MISSILEMORE
-+BOSS
-+DEFLECT
-Obituary "%o was obliterated by the Deathknight."
-HitObituary "A Deathknight hacked %o into pieces."
-MeleeSound "monster/dknhit"
-SeeSound "monster/dknsit"
-PainSound "monster/dknpai"
-DeathSound "monster/dkndth"
-ActiveSound "monster/dknact"
-States
-   {
-   Spawn:
-       DKNT AB 10 A_Look
-       Loop
-   See:
-       DKNT A 0 A_Jump(32,10)
-       DKNT A 0 A_UnSetReflectiveInvulnerable
-       DKNT AABBCCDD 3 A_Chase
-       Goto See
-       DKNT P 0 A_SetReflectiveInvulnerable
-       DKNT PPQQRRSS 3 A_Chase
-       goto see+12
-   Melee:
-       DKNT E 0 A_UnSetReflectiveInvulnerable
-       DKNT E 6 A_FaceTarget
-       DKNT F 1 A_Playsound ("monster/dknswg")
-       DKNT F 6 A_FaceTarget
-       DKNT G 6 A_MeleeAttack
-       Goto See
-   Missile:
-       DKNT A 0 A_Jump(88,10)
-       DKNT A 0 A_Jump(88,17)
-       DKNT E 0 Bright A_UnSetReflectiveInvulnerable
-       DKNT E 6 Bright A_FaceTarget
-       DKNT F 6 Bright A_Playsound ("monster/kntswg")
-       DKNT G 0 Bright A_CustomMissile ("DKDart",32,0,-3,0)
-       DKNT G 0 Bright A_CustomMissile ("DKDart",32,0,-1,0)
-       DKNT G 0 Bright A_CustomMissile ("DKDart",32,0,1,0)
-       DKNT G 5 Bright A_CustomMissile ("DKDart",32,0,3,0)
-       DKNT A 0 A_Jump(64,9)
-       Goto See
-       DKNT T 0 Bright A_SetReflectiveInvulnerable
-       DKNT T 6 Bright A_FaceTarget
-       DKNT U 1 Bright A_FaceTarget
-       DKNT U 0 Bright A_CustomMissile("FHeadShot",44,-4,-12,0)
-       DKNT U 5 Bright A_CustomMissile("FHeadShot",44,-4,12,0)
-       DKNT U 0 Bright A_UnSetReflectiveInvulnerable
-       DKNT U 0 A_Jump(64,1)
-       Goto See
-       DKNT T 0 Bright A_SetReflectiveInvulnerable
-       DKNT T 3 Bright A_FaceTarget
-       DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
-       DKNT T 3 Bright A_FaceTarget
-       DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
-       DKNT T 3 Bright A_FaceTarget
-       DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
-       DKNT T 3 Bright A_FaceTarget
-       DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
-       DKNT T 3 Bright A_FaceTarget
-       DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
-       DKNT T 3 Bright A_FaceTarget
-       DKNT U 2 Bright A_CustomMissile("DKbolt",44,-4,0,0)
-       DKNT U 0 Bright A_UnSetReflectiveInvulnerable
-       Goto See
-   Pain:
-       DKNT H 2
-       DKNT H 2 A_Pain
-       DKNT T 105 A_SetReflectiveInvulnerable
-       DKNT T 0 A_UnSetReflectiveInvulnerable
-       DKNT P 0 A_Jump (16,1)
-       Goto See+12
-       DKNT H 1
-       Goto See
-   Death:
-       DKNT I 0 Bright A_CustomMissile("DKSword",44,32,-90,0)
-       DKNT I 8 Bright A_CustomMissile("DKShield",44,-32,90,0)
-       DKNT J 8 Bright A_Scream
-       DKNT K 8 Bright
-       DKNT L 8 Bright A_NoBlocking
-       DKNT MN 8 Bright
-       DKNT O -1
-       Stop
-   Raise:
-       DKNT ONMLKJI 8 Bright
-       Goto See
-   }
+    MONSTER
+    +FLOORCLIP
+    +NOTARGET
+    +NORADIUSDMG
+    +MISSILEMORE
+    +BOSS
+    +DEFLECT
+
+    Health 10000
+    Radius 24
+    Height 72
+    Mass 700
+    Scale 1.5
+    Speed 25
+    PainChance 75
+    MeleeDamage 10
+
+    Obituary "%o was obliterated by the Deathknight."
+    HitObituary "A Deathknight hacked %o into pieces."
+    MeleeSound "monster/dknhit"
+    SeeSound "monster/dknsit"
+    PainSound "monster/dknpai"
+    DeathSound "monster/dkndth"
+    ActiveSound "monster/dknact"
+
+    States
+    {
+        Spawn:
+            DKNT AB 10 A_Look
+            Loop
+
+        See:
+            DKNT AABBCCDD 3 A_Chase
+            DKNT PPQQRRSS 3 A_Chase
+            Goto See
+
+        Melee:
+            DKNT E 0 A_UnSetReflectiveInvulnerable
+            DKNT E 6 A_FaceTarget
+            DKNT F 1 A_Playsound ("monster/dknswg")
+            DKNT F 6 A_FaceTarget
+            DKNT G 6 A_MeleeAttack
+            Goto See
+
+        Missile:
+            DKNT A 0 A_Jump(88,10)
+            DKNT A 0 A_Jump(88,17)
+            DKNT E 0 Bright A_UnSetReflectiveInvulnerable
+            DKNT E 6 Bright A_FaceTarget
+            DKNT F 6 Bright A_Playsound ("monster/kntswg")
+            DKNT G 0 Bright A_CustomMissile ("DKDart",32,0,-3,0)
+            DKNT G 0 Bright A_CustomMissile ("DKDart",32,0,-1,0)
+            DKNT G 0 Bright A_CustomMissile ("DKDart",32,0,1,0)
+            DKNT G 5 Bright A_CustomMissile ("DKDart",32,0,3,0)
+            DKNT A 0 A_Jump(64,9)
+            Goto See
+            DKNT T 0 Bright A_SetReflectiveInvulnerable
+            DKNT T 6 Bright A_FaceTarget
+            DKNT U 1 Bright A_FaceTarget
+            DKNT U 0 Bright A_CustomMissile("FHeadShot",44,-4,-12,0)
+            DKNT U 5 Bright A_CustomMissile("FHeadShot",44,-4,12,0)
+            DKNT U 0 Bright A_UnSetReflectiveInvulnerable
+            DKNT U 0 A_Jump(64,1)
+            Goto See
+            DKNT T 0 Bright A_SetReflectiveInvulnerable
+            DKNT T 3 Bright A_FaceTarget
+            DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
+            DKNT T 3 Bright A_FaceTarget
+            DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
+            DKNT T 3 Bright A_FaceTarget
+            DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
+            DKNT T 3 Bright A_FaceTarget
+            DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
+            DKNT T 3 Bright A_FaceTarget
+            DKNT U 3 Bright A_CustomMissile("DKbolt",44,-4,0,0)
+            DKNT T 3 Bright A_FaceTarget
+            DKNT U 2 Bright A_CustomMissile("DKbolt",44,-4,0,0)
+            DKNT U 0 Bright A_UnSetReflectiveInvulnerable
+            Goto See
+
+        Pain:
+            TNT1 A 0 A_Log("Entity pained!")
+            DKNT H 2
+            DKNT H 2 A_Pain
+            DKNT P 0 A_Jump (16,1)
+            Goto See+12
+            DKNT H 1
+            Goto See
+
+        Death:
+            DKNT I 0 Bright A_CustomMissile("DKSword",44,32,-90,0)
+            DKNT I 8 Bright A_CustomMissile("DKShield",44,-32,90,0)
+            DKNT J 8 Bright A_Scream
+            DKNT K 8 Bright
+            DKNT L 8 Bright A_NoBlocking
+            DKNT MN 8 Bright
+            DKNT O -1
+            Stop
+
+        Raise:
+            DKNT ONMLKJI 8 Bright
+            Goto See
+    }
 }
 
 ACTOR DKDart
