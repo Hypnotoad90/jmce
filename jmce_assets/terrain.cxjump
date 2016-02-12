@@ -1,4 +1,6 @@
-terrain cxice{
+terrain CXice
+{
 	friction 2
 }
-floor icef1 cxice
+
+floor CXicef1 CXice
