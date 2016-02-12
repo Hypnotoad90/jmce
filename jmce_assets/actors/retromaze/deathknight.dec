@@ -15,7 +15,7 @@ MONSTER
 +MISSILEMORE
 +BOSS
 +DEFLECT
-Obituary "%o got thought he could kill a deathknight."
+Obituary "%o was obliterated by the Deathknight."
 HitObituary "A Deathknight hacked %o into pieces."
 MeleeSound "monster/dknhit"
 SeeSound "monster/dknsit"
