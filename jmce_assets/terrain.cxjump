@@ -1,0 +1,4 @@
+terrain cxice{
+	friction 2
+}
+floor icef1 cxice
