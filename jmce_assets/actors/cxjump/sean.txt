@@ -1,15 +1,18 @@
-actor Sean : ScriptedMarine 21100 {
+actor Sean : ScriptedMarine 21100
+{
 	//$Title Sean
 	//$Sprite CXJLB3B7
 	//$Category CXJump Decoration
-	
+
 	Translation "112:127=193:201"
 
-	States {
+	States
+	{
 		Spawn:
 			CXJL A 4 A_MarineLook
 			CXJL A 4 A_MarineNoise
 			Loop
+
 		Idle:
 			CXJL A 4 A_MarineLook
 			CXJL A 4 A_MarineNoise
@@ -18,11 +21,12 @@ actor Sean : ScriptedMarine 21100 {
 			CXJL B 4 A_MarineLook
 			CXJL B 4 A_MarineNoise
 			Loop
+
 		See:
 			CXJL ABCD 4 A_MarineChase
 			Loop
 
-		Melee.Fist:		
+		Melee.Fist:
 			CXJL E 4 A_FaceTarget
 			CXJL F 4 A_M_Punch(1)
 			CXJL A 9
@@ -30,6 +34,7 @@ actor Sean : ScriptedMarine 21100 {
 			Loop
 			CXJL A 5 A_FaceTarget
 			Goto See
+
 		Melee.Berserk:
 			CXJL E 4 A_FaceTarget
 			CXJL F 4 A_M_Punch(10)
@@ -38,6 +43,7 @@ actor Sean : ScriptedMarine 21100 {
 			Loop
 			CXJL A 5 A_FaceTarget
 			Goto See
+
 		Melee.Chainsaw:
 			CXJL E 4 A_MarineNoise
 			CXJL F 4 BRIGHT A_M_Saw
@@ -52,6 +58,7 @@ actor Sean : ScriptedMarine 21100 {
 			Goto Idle
 			CXJL F 6 BRIGHT
 			Loop
+
 		Missile.Pistol:
 			CXJL E 4 A_FaceTarget
 			CXJL F 6 BRIGHT A_M_FirePistol(1)
@@ -59,6 +66,7 @@ actor Sean : ScriptedMarine 21100 {
 			CXJL A 0 A_M_Refire
 			CXJL A 5
 			Goto See
+
 		Fireloop.Pistol:
 			CXJL F 6 BRIGHT A_M_FirePistol(0)
 			CXJL A 4 A_FaceTarget
@@ -66,14 +74,17 @@ actor Sean : ScriptedMarine 21100 {
 			Goto Fireloop.Pistol
 			CXJL A 5
 			Goto See
+
 		Missile.Shotgun:
 			CXJL E 3 A_M_CheckAttack
 			CXJL F 7 BRIGHT A_M_FireShotgun
 			Goto See
+
 		Missile.SSG:
 			CXJL E 3 A_M_CheckAttack
 			CXJL F 7 BRIGHT A_M_FireShotgun2
 			Goto See
+
 		Missile.Chaingun:
 			CXJL E 4 A_FaceTarget
 			CXJL FF 4 BRIGHT A_M_FireCGun(1)
@@ -82,6 +93,7 @@ actor Sean : ScriptedMarine 21100 {
 			Goto Missile.Chaingun+3
 			CXJL A 0
 			Goto See
+
 		Missile.Rocket:
 			CXJL E 8
 			CXJL F 6 BRIGHT A_M_FireMissile
@@ -89,6 +101,7 @@ actor Sean : ScriptedMarine 21100 {
 			Loop
 			CXJL A 0
 			Goto See
+
 		Missile.Plasma:
 			CXJL E 2 A_FaceTarget
 			CXJL F 3 BRIGHT A_M_FirePlasma
@@ -96,10 +109,12 @@ actor Sean : ScriptedMarine 21100 {
 			Loop
 			CXJL A 0
 			Goto See
+
 		Missile.Railgun:
 			CXJL E 4 A_M_CheckAttack
 			CXJL F 6 A_M_FireRailgun
 			Goto See
+
 		Missile.BFG:
 			CXJL E 5 A_M_BFGSound
 			CXJL EEEEE 5 A_FaceTarget
@@ -113,10 +128,12 @@ actor Sean : ScriptedMarine 21100 {
 		SkipAttack:
 			CXJL A 1
 			Goto See
+
 		Pain:
 			CXJL G 4
 			CXJL G 4 A_Pain
 			Goto Idle
+
 		Death:
 			CXJL H 10
 			CXJL I 10 A_Scream
@@ -124,6 +141,7 @@ actor Sean : ScriptedMarine 21100 {
 			CXJL KLM 10
 			CXJL N -1
 			Stop
+
 		XDeath:
 			CXJL O 5
 			CXJL P 5 A_XScream
@@ -131,6 +149,7 @@ actor Sean : ScriptedMarine 21100 {
 			CXJL RSTUV 5
 			CXJL W -1
 			Stop
+			
 		Raise:
 			CXJL MLKJIH 5
 			Goto See

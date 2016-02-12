@@ -1,9 +1,11 @@
-Actor RainDroplet{
+Actor RainDroplet
+{
 	+CLIENTSIDEONLY
-	
+
 	Scale 2
 
-	States{
+	States
+	{
 		Spawn:
 			RAIN A 1 A_CheckFloor("Death")
 			Loop
@@ -13,15 +15,21 @@ Actor RainDroplet{
 	}
 }
 
-Actor BaseRainSpawner{
+Actor BaseRainSpawner
+{
 	//$Category CXJump Effects
 	//$Sprite RAINA0
+	
 	+NOGRAVITY
+	+CLIENTSIDEONLY
 }
 
-Actor RainSpawner256 : BaseRainSpawner 20004{
+Actor RainSpawner256 : BaseRainSpawner 21004
+{
 	Radius 256
-	States{
+
+	States
+	{
 		Spawn:
 			TNT1 A 0 A_SpawnItemEx("RainDroplet", random(-256, 256), random(-256, 256))
 			TNT1 A 0 A_SpawnItemEx("RainDroplet", random(-256, 256), random(-256, 256))
@@ -34,9 +42,12 @@ Actor RainSpawner256 : BaseRainSpawner 20004{
 	}
 }
 
-Actor RainSpawner128 : BaseRainSpawner 20000{
+Actor RainSpawner128 : BaseRainSpawner 21000
+{
 	Radius 128
-	States{
+
+	States
+	{
 		Spawn:
 			TNT1 A 2 A_SpawnItemEx("RainDroplet", random(-128, 128), random(-128, 128))
 			Loop
@@ -44,36 +55,48 @@ Actor RainSpawner128 : BaseRainSpawner 20000{
 }
 
 
-Actor RainSpawner64 : BaseRainSpawner 20003{
+Actor RainSpawner64 : BaseRainSpawner 21003
+{
 	Radius 64
-	States{
+
+	States
+	{
 		Spawn:
 			TNT1 A 2 A_SpawnItemEx("RainDroplet", random(-64, 64), random(-64, 64))
 			Loop
 	}
 }
 
-Actor RainSpawner32 : BaseRainSpawner 20002{
+Actor RainSpawner32 : BaseRainSpawner 21002
+{
 	Radius 32
-	States{
+
+	States
+	{
 		Spawn:
 			TNT1 A 2 A_SpawnItemEx("RainDroplet", random(-32, 32), random(-32, 32))
 			Loop
 	}
 }
 
-Actor RainSpawner16 : BaseRainSpawner 20001{
+Actor RainSpawner16 : BaseRainSpawner 21001
+{
 	Radius 16
-	States{
+
+	States
+	{
 		Spawn:
 			TNT1 A 2 A_SpawnItemEx("RainDroplet", random(-16, 16), random(-16, 16))
 			Loop
 	}
 }
 
-Actor RainSpawner8 20005{
+Actor RainSpawner8 : BaseRainSpawner 21005
+{
 	Radius 8
-	States{
+
+	States
+	{
 		Spawn:
 			TNT1 A 2 A_SpawnItemEx("RainDroplet", random(-8, 8), random(-8, 8))
 			Loop
