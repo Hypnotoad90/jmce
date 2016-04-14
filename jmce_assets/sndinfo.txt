@@ -121,7 +121,6 @@ weapons/fathit		XMMANXPL
 
 //Music volume//
 
-$musicvolume J_MNSION 100
 $musicvolume J_THELAB 0.5
 $musicvolume J_8MAP 1.8
 $musicvolume J_PV4 1.8

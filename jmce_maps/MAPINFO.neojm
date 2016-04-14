@@ -1,5 +1,5 @@
 map neo01 "3, 2, 1, JUMP!"
-music D_Map01
+music D_RUNNIN
 Par 30
 cluster 1
 intermusic D_Inter1
@@ -7,7 +7,7 @@ exitpic "NeoInt01"
 next neo02
 
 map neo02 "Through the sewer"
-music D_Map02
+music D_HORROR
 Par 80
 cluster 1
 intermusic D_Inter1
