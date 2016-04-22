@@ -1,4 +1,4 @@
 map GMZ02 "New York City" {
-  music = "D_FRIEND"
+  music = "D_GMZ02"
   sky1 = "NG_SKY1", 0
 }
