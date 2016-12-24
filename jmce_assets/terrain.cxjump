@@ -1,6 +1,0 @@
-terrain CXice
-{
-	friction 2
-}
-
-floor CXicef1 CXice

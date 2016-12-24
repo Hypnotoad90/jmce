@@ -1,8 +1,0 @@
-cxjump/rain1 rain1
-cxjump/rain2 rain2
-cxjump/rain3 rain3
-cxjump/rain4 rain4
-
-$random cxjump/rain { cxjump/rain1 cxjump/rain2 cxjump/rain3 cxjump/rain4 }
-
-cxjump/thunder THNDR1
