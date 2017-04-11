@@ -6,7 +6,7 @@ sky1 GRSK1 0.16
 
 map LJM01 "Poison"
 next LJM02
-music POISON
+music PTBLRF
 sky1 SKY1 0.16
 
 map LJM02 "Cross The Islands"
