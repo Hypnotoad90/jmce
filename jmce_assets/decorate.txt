@@ -2,37 +2,8 @@
 
 //ELEMENTAL//
 
-actor Salvationsphere : CustomInventory 32579
+actor Salvationsphere : Megasphere 32579
 {
-  Inventory.PickupMessage "Salvationsphere!"
-  Inventory.Amount 1
-  Inventory.MaxAmount 1
-  Inventory.PickupSound "misc/p_pkup"
-  Inventory.UseSound "items/salvation"
-  Inventory.Icon ARTISALV
-  Renderstyle Add
-  +INVENTORY.FANCYPICKUPSOUND
-  +INVBAR
-  +COUNTITEM
-  +FLOATBOB
-  states
-  {
-  Spawn:
-	SALV ABCDE 3 Bright
-	loop
-  Use:
- 	TNT1 A 0 A_GiveInventory("Soulsphere")
-	TNT1 A 0 A_GiveInventory("Salvate")
-	Stop
-  }
-}
-
-//Alternate Salvation
-
-actor Salvate : ArtiTeleport
-{
-  +INVENTORY.AUTOACTIVATE
-  +INVENTORY.ALWAYSPICKUP
 }
 
 Actor BreakableVase1 32580
