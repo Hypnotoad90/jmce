@@ -19,24 +19,24 @@
 
 	//======== BACK TO THE BASICS
 	map RJM01 "Back to the Basics" {
-		next = "RJM02"
-		secretnext = "RJMSEC01"
 		music = "R_MARIO:0"
+		par = 900
 		interpic = "RJMINT01"
 		intermusic = "R_DKCINT"
-
-		par = 900
+		next = "RJM02"
+		secretnext = "RJMSEC01"
+		
 		evenlighting
 	}
 
 	//======== BLAST TO THE PAST
 	map RJM02 "Blast to the Past" {
 		music = "D_PACMAN"
-		next = "RJM04"
+		par = 90
 		interpic = "RJMINT02"
 		intermusic = "R_DKCINT"
-
-		par = 90
+		next = "RJM04"
+		
 		evenlighting
 	}
 
@@ -44,36 +44,36 @@
 	map RJM04 "Sendo Reaper's Resting Place" {
 		music = "GS2CAVE"
 		sky1 = "STSKY14", 0.2
-		
-		next = "RJMOLD01"
-
+		par = 180
 		interpic = "RJMINT04"
 		intermusic = "R_DKCINT"
-
-		par = 180
+		next = "RJMOLD01"
 	}
+
 // ==============================================
 //  OLD MAPS
 // ==============================================
 	//======== BLASTER MASTER PLATFORMER
 	map RJMOLD01 "Blaster Master Platformer" {
-		next = "RJMOLD02"
 		music = "MASTER:1"
 		sky1 = "STSKY14", 0.1
-		interpic = "RJMINO01"
-		intermusic = "R_DKCINT"
-
 		par = 900
+		interpic = "RJMINO01"
+		intermusic = "R_DKCINT
+		next = "RJMOLD02"
+		
+		evenlighting
 	}
 	
 	//======== THE EAGLE
 	map RJMOLD02 "The Eagle" {
-		sky1 = "VOID"
 		music = "R_EAGLE:3"
-		next = "RJM01"
-		par = "150"
+		sky1 = "VOID"
+		par = 150
 		interpic = "RJMINO02"
 		intermusic = "R_DKCINT"
-
+		next = "RJM01"
+		
 		allowrespawn
+		evenlighting
 	}
