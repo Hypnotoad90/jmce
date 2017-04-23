@@ -69,12 +69,11 @@
 	//======== THE EAGLE
 	map RJMOLD02 "The Eagle" {
 		sky1 = "VOID"
-		music = "R_EAGLE", 3
+		music = "R_EAGLE:3"
 		next = "RJM01"
 		par = "150"
 		interpic = "RJMINO02"
 		intermusic = "R_DKCINT"
 
 		allowrespawn
-		nocrouch
 	}
