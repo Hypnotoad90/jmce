@@ -53,6 +53,7 @@
 // ==============================================
 //  OLD MAPS
 // ==============================================
+
 	//======== BLASTER MASTER PLATFORMER
 	map RJMOLD01 "Blaster Master Platformer" {
 		music = "MASTER:1"
