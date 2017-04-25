@@ -60,7 +60,7 @@
 		sky1 = "STSKY14", 0.1
 		par = 900
 		interpic = "RJMINO01"
-		intermusic = "R_DKCINT
+		intermusic = "R_DKCINT"
 		next = "RJMOLD02"
 		
 		evenlighting
