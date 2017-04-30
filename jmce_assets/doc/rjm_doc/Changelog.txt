@@ -13,6 +13,13 @@ KEY:
 NAME KEY:
  [SB] - AOSP
  [FL] - FateLord
+ 
+JMCE v1d
+==============================
+ * Reworked the RJMOLD02 textures to be more faithful to the original
+   Zelda dungeon it's based upon. [SB]
+ * Some texture updates for RJMOLD02 [SB]
+ - Remove RJMDEMO01
 
 Retromaze v1j
 ==============================
