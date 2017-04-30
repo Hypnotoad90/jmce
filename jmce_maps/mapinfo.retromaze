@@ -35,8 +35,21 @@
 		par = 90
 		interpic = "RJMINT02"
 		intermusic = "R_DKCINT"
+		next = "RJM03"
+		
+		evenlighting
+	}
+	
+	//======== THE EAGLE
+	map RJM03 "The Eagle" {
+		music = "R_EAGLE:3"
+		sky1 = "VOID"
+		par = 150
+		interpic = "RJMINT03"
+		intermusic = "R_DKCINT"
 		next = "RJM04"
 		
+		allowrespawn
 		evenlighting
 	}
 
@@ -63,18 +76,5 @@
 		intermusic = "R_DKCINT"
 		next = "RJMOLD02"
 		
-		evenlighting
-	}
-	
-	//======== THE EAGLE
-	map RJMOLD02 "The Eagle" {
-		music = "R_EAGLE:3"
-		sky1 = "VOID"
-		par = 150
-		interpic = "RJMINO02"
-		intermusic = "R_DKCINT"
-		next = "RJM01"
-		
-		allowrespawn
 		evenlighting
 	}
