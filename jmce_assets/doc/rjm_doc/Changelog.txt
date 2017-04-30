@@ -16,10 +16,14 @@ NAME KEY:
  
 JMCE v1d
 ==============================
- * Reworked the RJMOLD02 textures to be more faithful to the original
-   Zelda dungeon it's based upon. [SB]
- * Some texture updates for RJMOLD02 [SB]
+ * Some texture updates for RJM02 [SB]
  - Remove RJMDEMO01
+ 
+ RJMOLD02 - The Eagle (Aerial)
+    * Reworked the RJMOLD02 textures to be more faithful to the original
+      Zelda dungeon it's based upon. [SB]
+    * You can now crouch in RJMOLD02 [Wirtualnosc]
+    * You don't lose keys on death anymore in RJMOLD02 [Wirtualnosc]
 
 Retromaze v1j
 ==============================
