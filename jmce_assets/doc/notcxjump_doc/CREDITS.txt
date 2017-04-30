@@ -1,2 +1,4 @@
 MUSIC:
 	D_NCJ01				Nine Inch Nails - 01 Ghosts I
+	
+	D_NCJINT			Nine Inch Nails - 16 Ghosts II
