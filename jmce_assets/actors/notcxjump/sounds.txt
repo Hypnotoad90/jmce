@@ -21,7 +21,7 @@ actor GhRain1: GhSnd 24001 {
 	States{
 		Spawn:
 			TNT1 A 0
-			DBSN D -1 A_PlaySound("ghosts/rain1", CHAN_BODY, 0.75, true)
+			TNT1 A -1 A_PlaySound("ghosts/rain1", CHAN_BODY, 0.75, true)
 			Stop
 	}
 }
