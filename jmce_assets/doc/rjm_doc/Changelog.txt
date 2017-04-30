@@ -19,7 +19,8 @@ JMCE v1d
  * Some texture updates for RJM02 [SB]
  - Remove RJMDEMO01
  
- RJMOLD02 - The Eagle (Aerial)
+ RJM03 - The Eagle (Aerial)
+	* Promoted to RJM03 from RJMOLD02
     * Reworked the RJMOLD02 textures to be more faithful to the original
       Zelda dungeon it's based upon. [SB]
     * You can now crouch in RJMOLD02 [Wirtualnosc]
