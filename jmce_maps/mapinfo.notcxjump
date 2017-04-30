@@ -3,4 +3,6 @@ map NCJ01 "Ghosts" {
 	
 	intermusic = "D_NCJINT"
 	interpic = "NCJINT01"
+	
+	par = 75
 }
