@@ -1,4 +1,10 @@
 ====================================================
+NOTE: THIS CHANGELOG IS NO LONGER USED, FOR MORE ACCURATE CHANGES VISIT THIS
+ADDRESS - https://github.com/Hypnotoad90/jmce/commits/master 
+====================================================
+
+
+====================================================
 A3
 ====================================================
 This is just a maintenance/bugfix release with no new maps or significant changes.

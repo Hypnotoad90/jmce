@@ -41,8 +41,8 @@ Additional Credits to   :   Nintendo: 			  for their Mario textures, sounds and 
 												  wouldn't exist!
                           	FateLord: 			  for taking over JM3 and leading
 												  RetroMaze, and updating maps
-                          	AOSP: 				  Updating RJM01, RJM02, RJM04, and RJM06
-												  making RJM03 and RJMSEC01
+                          	AOSP: 				  Updating RJM01, RJM02, RJM03, RJM04
+                          	Wirtualnosc: 			  Updating RJMOLD01, RJM03
                           	Enjay:				  For the liquid splashes
 ===========================================================================
 * What is included *

@@ -1,4 +1,10 @@
 ====================================================
+NOTE: THIS CHANGELOG IS NO LONGER USED, FOR MORE ACCURATE CHANGES VISIT THIS
+ADDRESS - https://github.com/Hypnotoad90/jmce/commits/master 
+====================================================
+
+
+====================================================
 14.01
 ====================================================
 -Added: Record holder name now displays in map info message
