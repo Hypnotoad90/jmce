@@ -11,7 +11,7 @@ KEY:
  - Removal
 
 NAME KEY:
- [SB] - AOSP
+ [SB] - csnxs
  [FL] - FateLord
  [W] - Wirtualnosc
  
