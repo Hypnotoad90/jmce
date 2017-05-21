@@ -11,20 +11,44 @@ KEY:
  - Removal
 
 NAME KEY:
- [SB] - AOSP
+ [SB] - csnxs
  [FL] - FateLord
+ [W] - Wirtualnosc
  
 JMCE v1d
 ==============================
  * Some texture updates for RJM02 [SB]
  - Remove RJMDEMO01
- 
+ - Remove libretro.acs
+
+ RJM02 - Blast to the Past (Metalhead)
+	* Difficulty has been changed to very hard [W]
+
  RJM03 - The Eagle (Aerial)
 	* Promoted to RJM03 from RJMOLD02
-    * Reworked the RJMOLD02 textures to be more faithful to the original
-      Zelda dungeon it's based upon. [SB]
-    * You can now crouch in RJMOLD02 [Wirtualnosc]
-    * You don't lose keys on death anymore in RJMOLD02 [Wirtualnosc]
+	* Reworked the RJMOLD02 textures to be more faithful to the original
+	  Zelda dungeon it's based upon. [SB]
+	* You can now crouch in RJMOLD02 [W]
+	* You don't lose keys on death anymore in RJMOLD02 [W]
+	* Buttons now properly give 1 point [W]
+	* Music file has been replaced since it was corrupted [W]
+	* Difficulty has been changed to very hard [W]
+
+ RJM04 - SendoReaper's Resting Place (Doomfiend)
+	* Difficulty has been changed to very hard [W]
+
+ RJMOLD02 - Blaster Master Platformer (Doomfiend)
+	+ Added ammo at start [W]
+	* Changed music in area 7 [W]
+	* Sloped platforms in area 4 sewers aren't sloped anymore like it was
+	  originially [W]
+	* All death floors outside boss fight replaced by teleport floors [W]
+	* Players aren't required to defeat boss anymore to acquire team
+	  time [W]
+	* Players shouldn't be able to telefrag boss anymore [W]
+	* Clipping fixes in area 1 [W]
+	* Invisible pits in area 3 are visible now [W]
+	* Added a way to skip the boss fight [W]
 
 Retromaze v1j
 ==============================
