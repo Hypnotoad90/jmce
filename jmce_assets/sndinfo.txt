@@ -180,3 +180,31 @@ mintaun3 mintaun3
 $random mini { mintaunt mintaun2 mintaun3 }
 $playeralias minielle female *taunt mini
 $playeralias minielle2 female *taunt mini
+
+ssgsnd01 ssgsnd01
+ssgsnd02 ssgsnd02
+ssgsnd03 ssgsnd03
+ssgsnd04 ssgsnd04
+ssgsnd05 ssgsnd05
+ssgsnd06 ssgsnd06
+ssgsnd07 ssgsnd07
+ssgsnd08 ssgsnd08
+ssgsnd09 ssgsnd09
+ssgsnd10 ssgsnd10
+ssgsnd11 ssgsnd11
+$random ssgsnd12 { ssgsnd01 ssgsnd04 }
+$random ssgsnd13 { ssgsnd09 ssgsnd03 }
+$random ssgsnd14 { ssgsnd02 ssgsnd10 ssgsnd11 }
+$playeralias "Super Shotgun" male *taunt ssgsnd12
+$playeralias "Super Shotgun" male *usefail ssgsnd13
+$playeralias "Super Shotgun" male *land ssgsnd05
+$playeralias "Super Shotgun" male *grunt ssgsnd05
+$playeralias "Super Shotgun" male *pain100 ssgsnd14
+$playeralias "Super Shotgun" male *pain75 ssgsnd14
+$playeralias "Super Shotgun" male *pain50 ssgsnd14
+$playeralias "Super Shotgun" male *pain25 ssgsnd14
+$playeralias "Super Shotgun" male *death ssgsnd06
+$playeralias "Super Shotgun" male *xdeath ssgsnd06
+$playeralias "Super Shotgun" male *gibbed ssgsnd07
+$playeralias "Super Shotgun" male *fist ssgsnd08
+
