@@ -6,13 +6,3 @@ map NCJ01 "Ghosts" {
 	
 	par = 75
 }
-
-map NCJ02 "Monohop" {
-	music = "D_NCJ02"
-	
-	intermusic = "D_NCJINT"
-	interpic = "NCJINT02"
-	
-	useplayerstartz
-	evenlighting
-}
