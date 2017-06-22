@@ -1,0 +1,5 @@
+MUSIC:
+	D_NCJ01				Nine Inch Nails - 01 Ghosts I
+	D_NCJ02				Sonic 3D Blast (Sonic 3D Flickies Island) - Green Grove Zone Act 2
+	
+	D_NCJINT			Nine Inch Nails - 16 Ghosts II

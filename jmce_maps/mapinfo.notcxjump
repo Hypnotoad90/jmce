@@ -1,0 +1,8 @@
+map NCJ01 "Ghosts" {
+	music = "D_NCJ01"
+	
+	intermusic = "D_NCJINT"
+	interpic = "NCJINT01"
+	
+	par = 75
+}

@@ -1,0 +1,14 @@
+actor Chair 24100
+{
+	+Solid
+	
+	Height 30
+	Radius 15
+	
+	States
+	{
+		Spawn:
+			CHAI A -1
+			Stop
+	}
+}
