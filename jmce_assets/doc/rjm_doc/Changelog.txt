@@ -28,8 +28,7 @@ JMCE v1d
 	* Promoted to RJM03 from RJMOLD02
 	* Reworked the RJMOLD02 textures to be more faithful to the original
 	  Zelda dungeon it's based upon. [SB]
-	* You can now crouch in RJMOLD02 [W]
-	* You don't lose keys on death anymore in RJMOLD02 [W]
+	* You can now crouch [W]
 	* Buttons now properly give 1 point [W]
 	* Music file has been replaced since it was corrupted [W]
 	* Difficulty has been changed to very hard [W]
@@ -37,7 +36,7 @@ JMCE v1d
  RJM04 - SendoReaper's Resting Place (Doomfiend)
 	* Difficulty has been changed to very hard [W]
 
- RJMOLD02 - Blaster Master Platformer (Doomfiend)
+ RJMOLD01 - Blaster Master Platformer (Doomfiend)
 	+ Added ammo at start [W]
 	* Changed music in area 7 [W]
 	* Sloped platforms in area 4 sewers aren't sloped anymore like it was
@@ -49,6 +48,10 @@ JMCE v1d
 	* Clipping fixes in area 1 [W]
 	* Invisible pits in area 3 are visible now [W]
 	* Added a way to skip the boss fight [W]
+	* Pipe sounds now don't play at full volume regardless of map
+	  position [W]
+	- Removed "Entity pained" message [W]
+	- Removed vines in last area [W]
 
 Retromaze v1j
 ==============================
