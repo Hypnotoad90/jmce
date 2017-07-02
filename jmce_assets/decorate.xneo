@@ -1,0 +1,23 @@
+actor CheckPoint1 : Inventory
+{
+	inventory.amount 1
+	inventory.maxamount 9999
+	States
+	{
+		Spawn:
+			TNT1 A 1
+			loop
+	}
+}
+
+actor CheckPoint2 : CheckPoint1
+{
+}
+
+actor CheckPoint3 : CheckPoint1
+{
+}
+
+actor CheckPoint4 : CheckPoint1
+{
+}
