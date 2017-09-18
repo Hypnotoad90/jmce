@@ -2,3 +2,8 @@ map TRASH01 "Nuclear toxin"
 {
    music = "NPSRMX"
 }
+map ZTEEL "Zteelworx 2"
+{
+   music = "PTBLRF"
+   sky1 = "STSKY1"
+}
