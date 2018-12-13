@@ -1,3 +1,5 @@
+addplayerclass "JumpingDoomguy"
+
 //============================================
 
 //ETERNAL//

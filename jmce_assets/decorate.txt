@@ -1,3 +1,33 @@
+actor JumpingDoomguy : DoomPlayer
+{
+	species "jumper"
+	+NOSKIN
+	Player.DisplayName "Jumping Marine"
+    States
+	{
+    Spawn:
+        PLAY AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_JumpIf(momz >> 0, "Jumping")
+        Loop
+    See:
+        PLAY AAAABBBBCCCCDDDD 1 A_JumpIf(momz >> 0, "Jumping")
+        Loop
+	Jumping:
+        PLAJ A 1
+        PLAJ A 0 A_CheckFloor("Spawn")
+        goto Jumping
+    Missile:
+        PLAY E 12 
+        Goto Spawn
+    Melee:
+        PLAY F 6 BRIGHT
+        Goto Missile
+    Pain:
+        PLAY G 4 
+        PLAY G 4 A_Pain
+        Goto Spawn
+	}
+}
+
 //======================================================================
 
 //ELEMENTAL//
