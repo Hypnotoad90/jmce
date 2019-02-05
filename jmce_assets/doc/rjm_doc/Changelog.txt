@@ -11,10 +11,15 @@ KEY:
  - Removal
 
 NAME KEY:
- [SB] - csnxs
+ [SB] - Sean
  [FL] - FateLord
  [W] - Wirtualnosc
  
+JMCE v1e
+==============================
+ * Minor adjustments to documentation
+
+
 JMCE v1d
 ==============================
  * Some texture updates for RJM02 [SB]
@@ -53,6 +58,7 @@ JMCE v1d
 	- Removed "Entity pained" message [W]
 	- Removed vines in last area [W]
 
+
 Retromaze v1j
 ==============================
  * Major rework of RJMOLD02. [SB]
@@ -63,7 +69,8 @@ Retromaze v1j
    for this map from your database.
  * libretro.acs source code is much prettier [SB]
  * Clean up the PK3, removing anything unused [SB]
-   
+
+
 Retromaze v1i
 ==============================
  * Master Blaster Platformer is now called Blaster Master Platformer [SB]
@@ -81,6 +88,7 @@ Retromaze v1i
 	  
  RJMOLD02 - The Eagle (Aerial)
 	* Redone textures [SB]
+
 
 Retromaze v1h
 ==============================
@@ -123,6 +131,7 @@ Retromaze v1h
    ==============================
     - Remove HYWATER glow from GLDEFS [SB]
 
+
 Retromaze v1g
 ==============================
  * Bug fixes. Mostly fixes texture conflicts [SB]
@@ -144,6 +153,7 @@ Retromaze v1g
    ==============================
     * Fix HOM on RJM01. [SB]
 
+
 Retromaze v1f
 ==============================
  * Fixed texture conflicts
@@ -151,8 +161,10 @@ Retromaze v1f
  RJMOLD01 (was RJM06) - Master Blaster Platformer (Doomfiend)
 	* Fix JM scripts [SB]
 	* Other fixes [SB]
+
  RJM01 - Back to the Basics (Doomfiend)
 	* Fixed HOM [SB]
+
 
 Retromaze v1e (Grandvoid release)
 ==============================
@@ -165,6 +177,7 @@ Retromaze v1e (Grandvoid release)
 	* Minor updates to Deathknight scripts. [SB]
 	* Grammatical fixes. [SB]
 	* Some other stuff. [SB]
+
 
 Retromaze v1e
 ==============================
@@ -179,6 +192,7 @@ Retromaze v1e
 	+ a bit of detail in the megaman x area [FL]
 	- removed a pillar in metroid area #2 [FL]
 
+
 RetroMaze v1d
 ==============================
  RJM01 - Back to the Basics (Doomfiend)
@@ -189,6 +203,7 @@ RetroMaze v1d
 	* Texture alignment fixes [SB]
 	* Player is given a fist [SB]
 
+
 RetroMaze v1c
 ==============================
  RJM01 - Back to the Basics (Doomfiend)
@@ -197,6 +212,7 @@ RetroMaze v1c
  RJM04 - SendoReaper's Resting Place (Doomfiend)
 	+ Going past the cyberdemon teleports back [SB]
 	  if all 3 keys aren't collected
+
 
 RetroMaze v1b
 ==============================
