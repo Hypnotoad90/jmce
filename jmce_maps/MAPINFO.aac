@@ -1,0 +1,27 @@
+episode AAC01
+name "AAC" 
+Key 1
+
+map AAC01 "Unknown Lab"
+sky1 STSKY7 0.1
+music D_UNKLAB
+Next AAC02
+intermusic d_aacint
+
+map AAC02 "Around the world"
+music D_ATW
+next AAC03
+sky1 STSKY10 0.1
+intermusic d_aacint
+
+map AAC03 "Turbo Tunnel"
+sky1 STSKY4 1
+music D_Turbo
+next AAC04
+intermusic d_aacint
+
+map AAC04 "Travincal"
+sky1 STSKY5 1
+music D_TRAVIN
+next AAC01
+intermusic d_aacint
