@@ -1,4 +1,4 @@
-Actor \cma\cuc\cj3 : DoomPlayer 25003
+Actor \cma\cuc\cj3 : ScriptedMarine 25003
 {
    translation "112:127=96:111"
    Obituary "%o was splattered accidentally by \cma\cuc\cj3\cf's supershotgun."

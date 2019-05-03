@@ -1,4 +1,4 @@
-Actor advisor : DoomPlayer 25005
+Actor advisor : ScriptedMarine 25005
 {
    translation "112:127=224:231"
    Obituary "%o was killed."

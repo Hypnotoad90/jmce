@@ -1,4 +1,4 @@
-Actor thepuppet : DoomPlayer 25002
+Actor thepuppet : ScriptedMarine 25002
 {
    translation "112:127=208:223", "112:127=96:111"
    Obituary "%o was melted by \cmT\cuH\cje \cmPu\cupp\cjet\cf's plasma rifle."
