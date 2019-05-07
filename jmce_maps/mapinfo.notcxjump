@@ -8,12 +8,11 @@ map NCJ01 "Ghosts" {
 	next = "NCJ02"
 }
 
-map NCJ02 "unnamed" {
+map NCJ02 "Vector" {
 	music = "D_NCJ02"
 	
 	intermusic = "D_NCJINT"
 	interpic = "NCJINT02"
-	sky1 = "STSKY2"
 	
 	par = 30
 	next = "NCJ03"
