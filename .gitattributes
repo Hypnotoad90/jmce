@@ -15,3 +15,30 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+# Images
+*.png binary
+*.jpg binary
+*.raw binary
+
+# Sounds
+*.ogg binary
+*.spc binary
+*.wav binary
+*.vgm binary
+*.nsf binary
+
+# Doom stuff
+*.lmp binary
+*.wad binary
+TEXTURE1* binary
+PNAMES* binary
+*.acs linguist-language=C
+
+# JM build stuff
+utilities/*.exe binary
+utilities/*.acs linguist-vendored
+
+# Other JM stuff
+*.aac text
+jmce_assets/doc/* linguist-documentation
