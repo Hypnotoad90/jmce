@@ -1,5 +1,6 @@
 MUSIC:
 	D_NCJ01				Nine Inch Nails - 01 Ghosts I
 	D_NCJ02				Sonic 3D Flickies Island - Gene Gadget Zone Act 1
+	D_NCJ03				Bobby Prince - Dave D Taylor Blues (Doom 2 D_DDTBLU)
 	
 	D_NCJINT			Nine Inch Nails - 16 Ghosts II
