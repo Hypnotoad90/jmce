@@ -23,5 +23,10 @@ intermusic d_aacint
 map AAC04 "Travincal"
 sky1 STSKY5 1
 music D_TRAVIN
-next AAC01
+next AAC05
 intermusic d_aacint
+
+map AAC05 "New Territories"
+sky1 REDSKY
+music D_NTRS
+next AAC01
