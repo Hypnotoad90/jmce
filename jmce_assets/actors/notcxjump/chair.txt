@@ -1,5 +1,7 @@
 actor Chair 24100
 {
+	//$Category NotCXJump Decoration
+	//$Title "Chair"
 	+Solid
 	
 	Height 30

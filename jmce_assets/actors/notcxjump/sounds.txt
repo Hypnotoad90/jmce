@@ -1,14 +1,12 @@
-actor GhSnd 
-{
-	//$Category Ghosts Sounds
+actor GhSnd {
+	//$Category NotCXJump Sounds
 	//$Sprite DBSND0
 	+NOGRAVITY
 	+NOINTERACTION
 	Height 16
 	Radius 8
 
-	States
-	{
+	States {
 		Death:
 			TNT1 A 0 A_StopSound(CHAN_BODY)
 			Stop
@@ -18,21 +16,10 @@ actor GhSnd
 actor GhRain1: GhSnd 24001 {
 	//$Title "Rain 1"
 
-	States{
+	States {
 		Spawn:
 			TNT1 A 0
 			TNT1 A -1 A_PlaySound("ghosts/rain1", CHAN_BODY, 0.75, true)
-			Stop
-	}
-}
-
-actor GhZeroSum: GhSnd 24002 {
-	//$Title "ZeroSum"
-
-	States{
-		Spawn:
-			TNT1 A 0
-			TNT1 A -1 A_PlaySound("ghosts/zerosum", CHAN_BODY, 1, true, ATTN_STATIC)
 			Stop
 	}
 }
