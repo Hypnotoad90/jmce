@@ -1,3 +1,8 @@
+episode NCJ01 {
+	name = "NotCXJump"
+	optional
+}
+
 map NCJ01 "Ghosts" {
 	music = "D_NCJ01"
 	
@@ -27,4 +32,32 @@ map NCJ03 "The Octagon" {
 	interpic = "NCJINT03"
 	
 	par = 180
+	next = "NCJ04"
+}
+
+map NCJ04 "The Cave" {
+	useplayerstartz
+	
+	sky1 = "STSKY8"
+	
+	music = "D_NCJ04"
+	
+	intermusic = "D_NCJINT"
+	interpic = "NCJINT04"
+	
+	par = 150
+	next = "NCJ01"
+	secretnext = "NCJSEC"
+}
+
+// secret map
+map NCJSEC "The Hoppening" {
+	useplayerstartz
+	
+	sky1 = "STSKY8", 0.01
+	
+	music = "D_NCJSEC"
+	
+	intermusic = "D_NCJINT"
+	interpic = "NCJINSEC"
 }
