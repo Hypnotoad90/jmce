@@ -256,3 +256,9 @@
 	name = "Super Shotgun"
 	sprite = sbxd
 }
+
+{
+    name = "Flandre Scarlet"
+    sprite = FLAN
+    scale = 0.5
+}
