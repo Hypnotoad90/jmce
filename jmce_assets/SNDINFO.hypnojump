@@ -6,6 +6,9 @@ hoot5 sounds/hypnojump/hoot5.ogg
 hoot6 sounds/hypnojump/hoot6.ogg
 hoot7 sounds/hypnojump/hoot7.ogg
 h_boing sounds/hypnojump/h_boing.wav
+s_hypno sounds/hypnojump/s_hypno.ogg
+s_vic   sounds/hypnojump/s_vic.wav
+s_haram sounds/hypnojump/s_haram.wav
 
 $random 3PacTaunt { hoot1 hoot2 hoot3 hoot4 hoot5 hoot6 hoot7 }
 

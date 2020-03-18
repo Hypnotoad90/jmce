@@ -1,0 +1,38 @@
+ACTOR BEEF 16667
+{
+floatspeed 10
+Speed 64
+MONSTER
+Health 500
+RENDERSTYLE TRANSLUCENT
+Alpha 0.5
+meleedamage 200
+Radius 30
+Height 45
+Mass 128
++FLOAT
++LOOKALLAROUND
++NOGRAVITY
++NOTELEOTHER
++NOCLIP
++NODAMAGE
+-Solid
+Bloodcolor Black
+Painchance 255
+Obituary "%o was led to eternal suffering"
+States
+{
+Spawn:
+BEEF AA 10 A_Look
+Loop
+See:
+BEEF AAAAAAAA 4 A_Chase
+Goto See
+
+Melee:
+BEEF A 0 A_FaceTarget
+BEEF A 0 A_MeleeAttack
+Goto See
+}
+}
+

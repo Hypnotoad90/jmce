@@ -58,3 +58,64 @@ ACTOR 3PacMarine: MarineFist
 		Goto See
 	  }
 }
+
+
+ACTOR Hypnotoad 9384
+{
+    radius 45
+    height 68
+    States
+    {
+        Spawn:
+        HYPN ABCDEFGHIJKLMNOP 2 A_PlaySound("s_hypno", 0, 1.0, true) 
+        Loop
+    }
+}
+
+ACTOR Haramaton 9385
+{
+  Health 999999
+  PainChance 180
+  Speed 100
+  Radius 30
+  Height 56
+  Mass 400
+  Monster
+  MeleeRange 100
+  +FLOORCLIP
+  SeeSound s_haram
+  AttackSound s_haram
+  PainSound s_haram
+  DeathSound s_haram
+  ActiveSound s_haram
+  Obituary "$OB_DEMONHIT" // "%o was haram'd."
+  States
+  {
+  Spawn:
+    POGG A 10 A_LookEx(0, 0, 0, 0, 360, "See")
+    Loop
+  See:
+    POGG A 2 Fast A_Chase
+    Loop
+  Melee:
+    POGG A 8 Fast A_FaceTarget
+    POGG A 8 A_CustomMeleeAttack(30)
+    Goto See
+  Pain:
+    POGG A 2 Fast
+    POGG A 2 Fast A_Pain
+    Goto See
+  Death:
+    POGG A 8
+    POGG A 8 A_Scream
+    POGG A 4
+    POGG A 4 A_NoBlocking
+    POGG A 4
+    POGG A -1
+    Stop
+  Raise:
+    POGG A 5
+    POGG A 5
+    Goto See
+  }
+}

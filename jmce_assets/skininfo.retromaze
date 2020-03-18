@@ -1,13 +1,6 @@
 {
-	name = "8-Bit Mario"
-	sprite = RMMA
-	dstaunt = mariorif
-	dsjump = mjump
-	dsplpain = mpain
-	dsnoway = mnoway
-	dsoof = mland
-	dspunch = mpain
-	dspldeth = death
+    name = "Better8BIT"
+    sprite = RMMA
 }
 
 {
