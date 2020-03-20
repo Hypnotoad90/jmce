@@ -210,24 +210,24 @@ $playeralias "Super Shotgun" male *fist ssgsnd08
 
 //==========================================================
 
-$playeralias	"FLANDRE"	male	*death		FLANDEAD
-$playeralias	"FLANDRE"	male	*xdeath		FLANXTRM
-$playeralias	"FLANDRE"	male	*gibbed		REALDEAD
-$playeralias	"FLANDRE"	male	*pain100	FLANPAIN
-$playeralias	"FLANDRE"	male	*pain75		FLANPAIN
-$playeralias	"FLANDRE"	male	*pain50		FLANPAIN
-$playeralias	"FLANDRE"	male	*pain25		FLANPAIN
-$playeralias	"FLANDRE"	male	*grunt		FLANPAIN
-$playeralias	"FLANDRE"	male	*land		FLANPAIN
-$playersound	"FLANDRE"	male	*usefail	FLANNWAY
-$playeralias	"FLANDRE"	male	*taunt		FLANTUNT
-$playersound    "FLANDRE"  	male	*fist		FLANSLAP
+$playeralias	"Flandre Scarlet"	male	*death		flandre/dead
+$playeralias	"Flandre Scarlet"	male	*xdeath		flandre/xdead
+$playeralias	"Flandre Scarlet"	male	*gibbed		flandre/rdead
+$playeralias	"Flandre Scarlet"	male	*pain100	flandre/pain
+$playeralias	"Flandre Scarlet"	male	*pain75		flandre/pain
+$playeralias	"Flandre Scarlet"	male	*pain50		flandre/pain
+$playeralias	"Flandre Scarlet"	male	*pain25		flandre/pain
+$playeralias	"Flandre Scarlet"	male	*grunt		flandre/pain
+$playeralias	"Flandre Scarlet"	male	*land		flandre/pain
+$playersound	"Flandre Scarlet"	male	*usefail	flandre/deny
+$playeralias	"Flandre Scarlet"	male	*taunt		flandre/taunt
+$playersound    "Flandre Scarlet"  	male	*fist		flandre/slap
 
 
-FLANDEAD					FLANDEAD
-FLANXTRM					FLANXTRM
-FLANTUNT					FLANTUNT
-REALDEAD					REALDEAD
-FLANPAIN					FLANPAIN
-FLANNWAY					FLANNWAY
-FLANSLAP					FLANSLAP
+flandre/dead					FLSCDEAD
+flandre/xdead					FLSCXTRM
+flandre/taunt					FLSCTUNT
+flandre/rdead					REALDEAD
+flandre/pain					FLSCPAIN
+flandre/deny					FLSCNWAY
+flandre/slap					FLSCSLAP
