@@ -25,10 +25,25 @@ map HYP04 "Race around the production line" {
 	music = "D_FFACT"
 	sky1 = "sky1", 0
 	par = 23
+    next = "HYP05"
 }
 
 map HYP05 "Adventures in bongland" {
 	sky1 = "SKY06"
 	music = "D_HYP05"
 	par = 90
+    next = "HYP06"
+}
+
+map HYP06 "Hypnotoad's castle of champions" {
+    music = "D_HAOE"
+    sky1 = "SKYFOG0", 0
+    par = 140
+    SecretNext = "SHIT"
+}
+
+
+map SHIT "The Key to Victory" {
+	sky1 = "sky1", 0.1
+    par = 135
 }

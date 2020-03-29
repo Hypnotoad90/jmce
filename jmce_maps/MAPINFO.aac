@@ -29,4 +29,15 @@ intermusic d_aacint
 map AAC05 "New Territories"
 sky1 REDSKY
 music D_NTRS
+next AAC06
+
+map AAC06 "Central de procesamiento"
+sky1 STSKY5
+music D_CENTPR
+next AAC07
+
+map AAC07 "Purgatory"
+sky1 STSKY3
+music D_PRGTRY
 next AAC01
+sky2 skyfog0
