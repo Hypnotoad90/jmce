@@ -1,5 +1,3 @@
-#include "actors/retromaze/splashes.dec"
-
 #include "actors/retromaze/hugecyberdemon.dec"
 #include "actors/retromaze/deathknight.dec"
 #include "actors/retromaze/eagle.dec"

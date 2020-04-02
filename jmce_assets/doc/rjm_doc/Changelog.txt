@@ -15,6 +15,10 @@ NAME KEY:
  [FL] - FateLord
  [W] - Wirtualnosc
  
+JMCE v1f
+==============================
+ * Removed splashes, and some other general cleanup [SB]
+ 
 JMCE v1e
 ==============================
  * Minor adjustments to documentation
