@@ -1,2 +1,8 @@
-ghosts/rain1 ghrain
-ghosts/rain1b ghrainb
+///////// NCJ01
+
+///// rain sounds
+// sound actor
+notcxjump/rain1 NCJRAIN
+
+// called by acs
+notcxjump/rain1b NCJRAINB

@@ -1,8 +1,10 @@
-actor GhSnd {
+actor NcjSnd {
 	//$Category NotCXJump Sounds
 	//$Sprite DBSND0
+    
 	+NOGRAVITY
 	+NOINTERACTION
+    
 	Height 16
 	Radius 8
 
@@ -13,13 +15,13 @@ actor GhSnd {
 	}
 }
 
-actor GhRain1: GhSnd 24001 {
+actor NcjRain1 : NcjSnd 24001 {
 	//$Title "Rain 1"
 
 	States {
 		Spawn:
 			TNT1 A 0
-			TNT1 A -1 A_PlaySound("ghosts/rain1", CHAN_BODY, 0.75, true)
+			TNT1 A -1 A_PlaySound("notcxjump/rain1", CHAN_BODY, 0.75, true)
 			Stop
 	}
 }

@@ -1,13 +1,11 @@
-actor NcjInfHighJump : CustomInventory 24050
-{
+actor NcjInfHighJump : CustomInventory 24050 {
 	//$Category NotCXJump Items
 	//$Title "Infinite High Jump"
 	
 	+NOGRAVITY
 	+INVENTORY.QUIET
 	
-	States
-	{
+	States {
 		Spawn:
 			HIJR ABCD 6
 			Loop

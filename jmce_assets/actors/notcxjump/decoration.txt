@@ -1,14 +1,13 @@
-actor Chair 24100
-{
+actor NcjChair 24100 {
 	//$Category NotCXJump Decoration
 	//$Title "Chair"
+    
 	+Solid
 	
 	Height 30
 	Radius 15
 	
-	States
-	{
+	States {
 		Spawn:
 			CHAI A -1
 			Stop
