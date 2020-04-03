@@ -231,3 +231,58 @@ flandre/rdead					REALDEAD
 flandre/pain					FLSCPAIN
 flandre/deny					FLSCNWAY
 flandre/slap					FLSCSLAP
+
+// snails rando russian skin
+
+JMDUL02 JMDUL02
+JMDUL03 JMDUL03
+JMDUL04 JMDUL04
+JMDUL05 JMDUL05
+JMDUL06 JMDUL06
+JMDUL07 JMDUL07
+JMDUL08 JMDUL08
+JMDUL09 JMDUL09
+JMDUL10 JMDUL10
+JMDUL11 JMDUL11
+JMDUL01 JMDUL01
+
+$playeralias	"abdulovskiovich"	male	*death		JMDUL04
+$playeralias	"abdulovskiovich"	male	*xdeath		JMDUL10
+$playeralias	"abdulovskiovich"	male	*gibbed		JMDUL09
+$playeralias	"abdulovskiovich"	male	*taunt		JMDUL0
+$playeralias 	"abdulovskiovich"	male    *pain100 	JMDUL09
+$playeralias 	"abdulovskiovich"	male    *pain75 	JMDUL09
+$playeralias 	"abdulovskiovich"	male    *pain50 	JMDUL09
+$playeralias 	"abdulovskiovich"	male    *pain25 	JMDUL09
+$playeralias 	"abdulovskiovich"	male    *grunt 		JMDUL01
+$playeralias 	"abdulovskiovich"	male    *land 		JMDUL01
+$playeralias 	"abdulovskiovich" 	male 	*usefail 	JMDUL11
+
+$playeralias	"abdulovskiovich"	female	*death		JMDUL04
+$playeralias	"abdulovskiovich"	female	*xdeath		JMDUL10
+$playeralias	"abdulovskiovich"	female	*gibbed		JMDUL09
+$playeralias	"abdulovskiovich"	female	*taunt		JMDUL0
+$playeralias 	"abdulovskiovich"	female  *pain100 	JMDUL09
+$playeralias 	"abdulovskiovich"	female  *pain75 	JMDUL09
+$playeralias 	"abdulovskiovich"	female  *pain50 	JMDUL09
+$playeralias 	"abdulovskiovich"	female  *pain25 	JMDUL09
+$playeralias 	"abdulovskiovich"	female  *grunt	    JMDUL01
+$playeralias 	"abdulovskiovich"	female  *land 	    JMDUL01
+$playeralias 	"abdulovskiovich" 	female 	*usefail 	JMDUL11
+
+$playeralias	"abdulovskiovich"	Other	*death		JMDUL04
+$playeralias	"abdulovskiovich"	Other	*xdeath		JMDUL10
+$playeralias	"abdulovskiovich"	Other	*gibbed		JMDUL09
+$playeralias	"abdulovskiovich"	Other	*taunt		JMDUL0x
+$playeralias 	"abdulovskiovich"	Other   *pain100 	JMDUL09
+$playeralias 	"abdulovskiovich"	Other   *pain75 	JMDUL09
+$playeralias 	"abdulovskiovich"	Other   *pain50 	JMDUL09
+$playeralias 	"abdulovskiovich"	Other   *pain25 	JMDUL09
+$playeralias 	"abdulovskiovich"	Other   *grunt 	    JMDUL01
+$playeralias 	"abdulovskiovich"	Other   *land 		JMDUL01
+$playeralias 	"abdulovskiovich" 	Other 	*usefail 	JMDUL11
+
+
+$random JMDUL0 { JMDUL03 JMDUL05 JMDUL06 JMDUL09 JMDUL10 JMDUL11 }
+
+$random	JMDUL0x { JMDUL02 JMDUL03 JMDUL05 JMDUL06 JMDUL07 JMDUL08 JMDUL09 JMDUL10 JMDUL11 }

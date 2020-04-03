@@ -175,8 +175,15 @@ map JPX54 "Siege of He Fei Castle"
 map JPX55 "UAC Base"
 {
     music = "D_UACB"
-    next = "JPX33"
+    next = "JPX56"
     sky1 = "STSKY9"
     intermusic = "JPX2CINT"
     par = 95
+}
+
+map JPX56 "Buildings and Pipes"
+{
+    music = "D_BULLS"
+    next = "JPX33"
+    par = 160
 }

@@ -262,3 +262,9 @@
     sprite = FLAN
     scale = 0.5
 }
+
+{
+    name = "abdulovskiovich"
+    Scale = 0.2
+    sprite = ABDL
+}
