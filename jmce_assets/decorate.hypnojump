@@ -88,7 +88,7 @@ ACTOR Haramaton 9385
   PainSound s_haram
   DeathSound s_haram
   ActiveSound s_haram
-  Obituary "$OB_DEMONHIT" // "%o was haram'd."
+  Obituary "%o was haram'd."
   States
   {
   Spawn:
