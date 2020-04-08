@@ -6,3 +6,369 @@ notcxjump/rain1 NCJRAIN
 
 // called by acs
 notcxjump/rain1b NCJRAINB
+
+///////// NCJ05
+notcxjump/crowd1 NCJCRWD1
+notcxjump/crowd2 NCJCRWD2
+
+
+///////// Skins
+notcxjump/splatoon/empty BLZEMPTY
+notcxjump/splatoon/land/0 BLZLAND0
+notcxjump/splatoon/land/1 BLZLAND1
+notcxjump/splatoon/land/2 BLZLAND2
+notcxjump/splatoon/land/3 BLZLAND3
+notcxjump/splatoon/land/far BLZLANDF
+
+$random notcxjump/splatoon/land {
+    notcxjump/splatoon/land/0
+    notcxjump/splatoon/land/1
+    notcxjump/splatoon/land/2
+    notcxjump/splatoon/land/3
+}
+
+//// Octoboy
+notcxjump/octoboy/taunt/00 8BOYTN00
+notcxjump/octoboy/taunt/01 8BOYTN01
+notcxjump/octoboy/taunt/02 8BOYTN02
+notcxjump/octoboy/taunt/03 8BOYTN03
+notcxjump/octoboy/taunt/04 8BOYTN04
+notcxjump/octoboy/taunt/05 8BOYTN05
+notcxjump/octoboy/taunt/06 8BOYTN06
+notcxjump/octoboy/taunt/07 8BOYTN07
+notcxjump/octoboy/taunt/08 8BOYTN08
+
+$random notcxjump/octoboy/taunt {
+    notcxjump/octoboy/taunt/00
+    notcxjump/octoboy/taunt/01
+    notcxjump/octoboy/taunt/02
+    notcxjump/octoboy/taunt/03
+    notcxjump/octoboy/taunt/04
+    notcxjump/octoboy/taunt/05
+    notcxjump/octoboy/taunt/06
+    notcxjump/octoboy/taunt/07
+    notcxjump/octoboy/taunt/08
+}
+
+notcxjump/octoboy/death/00 8BOYDE00
+notcxjump/octoboy/death/01 8BOYDE01
+notcxjump/octoboy/death/02 8BOYDE02
+notcxjump/octoboy/death/03 8BOYDE03
+notcxjump/octoboy/death/04 8BOYDE04
+notcxjump/octoboy/death/05 8BOYDE05
+notcxjump/octoboy/death/06 8BOYDE06
+notcxjump/octoboy/death/07 8BOYDE07
+
+$random notcxjump/octoboy/death {
+    notcxjump/octoboy/death/00
+    notcxjump/octoboy/death/01
+    notcxjump/octoboy/death/02
+    notcxjump/octoboy/death/03
+    notcxjump/octoboy/death/04
+    notcxjump/octoboy/death/05
+    notcxjump/octoboy/death/06
+    notcxjump/octoboy/death/07
+}
+
+notcxjump/octoboy/damage/00 8BOYDM00
+notcxjump/octoboy/damage/01 8BOYDM01
+notcxjump/octoboy/damage/02 8BOYDM02
+notcxjump/octoboy/damage/03 8BOYDM03
+notcxjump/octoboy/damage/04 8BOYDM04
+notcxjump/octoboy/damage/05 8BOYDM05
+notcxjump/octoboy/damage/06 8BOYDM06
+notcxjump/octoboy/damage/07 8BOYDM07
+
+$random notcxjump/octoboy/damage {
+    notcxjump/octoboy/damage/00
+    notcxjump/octoboy/damage/01
+    notcxjump/octoboy/damage/02
+    notcxjump/octoboy/damage/03
+    notcxjump/octoboy/damage/04
+    notcxjump/octoboy/damage/05
+    notcxjump/octoboy/damage/06
+    notcxjump/octoboy/damage/07
+}
+
+notcxjump/octoboy/damage2/00 8BOYDR00
+notcxjump/octoboy/damage2/01 8BOYDR01
+notcxjump/octoboy/damage2/02 8BOYDR02
+notcxjump/octoboy/damage2/03 8BOYDR03
+notcxjump/octoboy/damage2/04 8BOYDR04
+
+$random notcxjump/octoboy/damage2 {
+    notcxjump/octoboy/damage2/00
+    notcxjump/octoboy/damage2/01
+    notcxjump/octoboy/damage2/02
+    notcxjump/octoboy/damage2/03
+    notcxjump/octoboy/damage2/04
+}
+
+notcxjump/octoboy/soul/00 8BOYSO00
+notcxjump/octoboy/soul/02 8BOYSO02
+notcxjump/octoboy/soul/03 8BOYSO03
+notcxjump/octoboy/soul/04 8BOYSO04
+notcxjump/octoboy/soul/05 8BOYSO05
+notcxjump/octoboy/soul/06 8BOYSO06
+notcxjump/octoboy/soul/07 8BOYSO07
+notcxjump/octoboy/soul/08 8BOYSO08
+
+$random notcxjump/octoboy/soul {
+    notcxjump/octoboy/soul/00
+    notcxjump/octoboy/soul/02
+    notcxjump/octoboy/soul/03
+    notcxjump/octoboy/soul/04
+    notcxjump/octoboy/soul/05
+    notcxjump/octoboy/soul/06
+    notcxjump/octoboy/soul/07
+    notcxjump/octoboy/soul/08
+}
+
+$playeralias    "Agent 8"      male    *death      notcxjump/octoboy/soul
+$playeralias    "Agent 8"      male    *xdeath     notcxjump/octoboy/soul
+$playeralias    "Agent 8"      male    *taunt      notcxjump/octoboy/taunt
+$playeralias    "Agent 8"      male    *grunt      notcxjump/splatoon/land/far
+$playeralias    "Agent 8"      male    *land       notcxjump/splatoon/land
+$playeralias    "Agent 8"      male    *pain100    notcxjump/octoboy/death
+$playeralias    "Agent 8"      male    *pain75     notcxjump/octoboy/death
+$playeralias    "Agent 8"      male    *pain50     notcxjump/octoboy/damage2
+$playeralias    "Agent 8"      male    *pain25     notcxjump/octoboy/damage
+$playeralias    "Agent 8"      male    *usefail    notcxjump/splatoon/empty
+
+// Octogirl
+notcxjump/octogirl/taunt/00 8GRLTN00
+notcxjump/octogirl/taunt/01 8GRLTN01
+notcxjump/octogirl/taunt/02 8GRLTN02
+notcxjump/octogirl/taunt/03 8GRLTN03
+notcxjump/octogirl/taunt/04 8GRLTN04
+notcxjump/octogirl/taunt/05 8GRLTN05
+notcxjump/octogirl/taunt/06 8GRLTN06
+notcxjump/octogirl/taunt/07 8GRLTN07
+notcxjump/octogirl/taunt/08 8GRLTN08
+notcxjump/octogirl/taunt/09 8GRLTN09
+
+$random notcxjump/octogirl/taunt {
+    notcxjump/octogirl/taunt/00
+    notcxjump/octogirl/taunt/01
+    notcxjump/octogirl/taunt/02
+    notcxjump/octogirl/taunt/03
+    notcxjump/octogirl/taunt/04
+    notcxjump/octogirl/taunt/05
+    notcxjump/octogirl/taunt/06
+    notcxjump/octogirl/taunt/07
+    notcxjump/octogirl/taunt/08
+    notcxjump/octogirl/taunt/09
+}
+
+notcxjump/octogirl/death/00 8GRLDE00
+notcxjump/octogirl/death/01 8GRLDE01
+notcxjump/octogirl/death/02 8GRLDE02
+notcxjump/octogirl/death/04 8GRLDE04
+notcxjump/octogirl/death/05 8GRLDE05
+notcxjump/octogirl/death/06 8GRLDE06
+notcxjump/octogirl/death/07 8GRLDE07
+
+$random notcxjump/octogirl/death {
+    notcxjump/octogirl/death/00
+    notcxjump/octogirl/death/01
+    notcxjump/octogirl/death/02
+    notcxjump/octogirl/death/03
+    notcxjump/octogirl/death/05
+    notcxjump/octogirl/death/06
+    notcxjump/octogirl/death/07
+}
+
+notcxjump/octogirl/damage/00 8GRLDM00
+notcxjump/octogirl/damage/01 8GRLDM01
+notcxjump/octogirl/damage/02 8GRLDM02
+notcxjump/octogirl/damage/04 8GRLDM04
+notcxjump/octogirl/damage/05 8GRLDM05
+notcxjump/octogirl/damage/06 8GRLDM06
+notcxjump/octogirl/damage/08 8GRLDM08
+
+$random notcxjump/octogirl/damage {
+    notcxjump/octogirl/damage/00
+    notcxjump/octogirl/damage/01
+    notcxjump/octogirl/damage/02
+    notcxjump/octogirl/damage/04
+    notcxjump/octogirl/damage/05
+    notcxjump/octogirl/damage/06
+    notcxjump/octogirl/damage/08
+}
+
+notcxjump/octogirl/damage2/00 8GRLDR00
+notcxjump/octogirl/damage2/01 8GRLDR01
+notcxjump/octogirl/damage2/02 8GRLDR02
+notcxjump/octogirl/damage2/03 8GRLDR03
+notcxjump/octogirl/damage2/04 8GRLDR04
+
+$random notcxjump/octogirl/damage2 {
+    notcxjump/octogirl/damage2/00
+    notcxjump/octogirl/damage2/01
+    notcxjump/octogirl/damage2/02
+    notcxjump/octogirl/damage2/03
+    notcxjump/octogirl/damage2/04
+}
+
+notcxjump/octogirl/soul/00 8GRLSO00
+notcxjump/octogirl/soul/01 8GRLSO01
+notcxjump/octogirl/soul/02 8GRLSO02
+notcxjump/octogirl/soul/03 8GRLSO03
+
+$random notcxjump/octogirl/soul {
+    notcxjump/octogirl/soul/00
+    notcxjump/octogirl/soul/01
+    notcxjump/octogirl/soul/02
+    notcxjump/octogirl/soul/03
+}
+
+$playeralias    "Agent 8"      female    *death      notcxjump/octogirl/soul
+$playeralias    "Agent 8"      female    *xdeath     notcxjump/octogirl/soul
+$playeralias    "Agent 8"      female    *taunt      notcxjump/octogirl/taunt
+$playeralias    "Agent 8"      female    *grunt      notcxjump/splatoon/land/far
+$playeralias    "Agent 8"      female    *land       notcxjump/splatoon/land
+$playeralias    "Agent 8"      female    *pain100    notcxjump/octogirl/death
+$playeralias    "Agent 8"      female    *pain75     notcxjump/octogirl/death
+$playeralias    "Agent 8"      female    *pain50     notcxjump/octogirl/damage2
+$playeralias    "Agent 8"      female    *pain25     notcxjump/octogirl/damage
+$playeralias    "Agent 8"      female    *usefail    notcxjump/splatoon/empty
+
+//// NPC Octoling
+notcxjump/npcocto/damage/00 RVLSDM00
+notcxjump/npcocto/damage/01 RVLSDM01
+notcxjump/npcocto/damage/02 RVLSDM02
+
+$random notcxjump/npcocto/damage {
+    notcxjump/npcocto/damage/00
+    notcxjump/npcocto/damage/01
+    notcxjump/npcocto/damage/02
+}
+
+notcxjump/npcocto/death/00 RVLSDE00
+notcxjump/npcocto/death/01 RVLSDE01
+
+$random notcxjump/npcocto/death {
+    notcxjump/npcocto/death/00
+    notcxjump/npcocto/death/01
+}
+
+notcxjump/npcocto/soul/00 RVLSSO00
+notcxjump/npcocto/soul/01 RVLSSO01
+notcxjump/npcocto/soul/02 RVLSSO02
+
+$random notcxjump/npcocto/soul {
+    notcxjump/npcocto/soul/00
+    notcxjump/npcocto/soul/01
+    notcxjump/npcocto/soul/02
+}
+
+notcxjump/npcocto/attack/00 RVLSAT00
+notcxjump/npcocto/attack/01 RVLSAT01
+notcxjump/npcocto/attack/02 RVLSAT02
+
+$random notcxjump/npcocto/attack {
+    notcxjump/npcocto/attack/00
+    notcxjump/npcocto/attack/01
+    notcxjump/npcocto/attack/02
+}
+
+$playeralias    "Octoling Soldier"      male    *death      notcxjump/npcocto/soul
+$playeralias    "Octoling Soldier"      male    *xdeath     notcxjump/npcocto/soul
+$playeralias    "Octoling Soldier"      male    *taunt      notcxjump/npcocto/attack
+$playeralias    "Octoling Soldier"      male    *grunt      notcxjump/splatoon/land/far
+$playeralias    "Octoling Soldier"      male    *land       notcxjump/splatoon/land
+$playeralias    "Octoling Soldier"      male    *pain100    notcxjump/npcocto/death
+$playeralias    "Octoling Soldier"      male    *pain75     notcxjump/npcocto/death
+$playeralias    "Octoling Soldier"      male    *pain50     notcxjump/npcocto/death
+$playeralias    "Octoling Soldier"      male    *pain25     notcxjump/npcocto/damage
+$playeralias    "Octoling Soldier"      male    *usefail    notcxjump/splatoon/empty
+$playeralias    "Octoling Soldier"      female  *death      notcxjump/npcocto/soul
+$playeralias    "Octoling Soldier"      female  *xdeath     notcxjump/npcocto/soul
+$playeralias    "Octoling Soldier"      female  *taunt      notcxjump/npcocto/attack
+$playeralias    "Octoling Soldier"      female  *grunt      notcxjump/splatoon/land/far
+$playeralias    "Octoling Soldier"      female  *land       notcxjump/splatoon/land
+$playeralias    "Octoling Soldier"      female  *pain100    notcxjump/npcocto/death
+$playeralias    "Octoling Soldier"      female  *pain75     notcxjump/npcocto/death
+$playeralias    "Octoling Soldier"      female  *pain50     notcxjump/npcocto/death
+$playeralias    "Octoling Soldier"      female  *pain25     notcxjump/npcocto/damage
+$playeralias    "Octoling Soldier"      female  *usefail    notcxjump/splatoon/empty
+$playeralias    "Octoling Soldier"      other   *death      notcxjump/npcocto/soul
+$playeralias    "Octoling Soldier"      other   *xdeath     notcxjump/npcocto/soul
+$playeralias    "Octoling Soldier"      other   *taunt      notcxjump/npcocto/attack
+$playeralias    "Octoling Soldier"      other   *grunt      notcxjump/splatoon/land/far
+$playeralias    "Octoling Soldier"      other   *land       notcxjump/splatoon/land
+$playeralias    "Octoling Soldier"      other   *pain100    notcxjump/npcocto/death
+$playeralias    "Octoling Soldier"      other   *pain75     notcxjump/npcocto/death
+$playeralias    "Octoling Soldier"      other   *pain50     notcxjump/npcocto/death
+$playeralias    "Octoling Soldier"      other   *pain25     notcxjump/npcocto/damage
+$playeralias    "Octoling Soldier"      other   *usefail    notcxjump/splatoon/empty
+
+//// Elite Octoling
+notcxjump/eliteocto/damage/00 RVLSDM00
+notcxjump/eliteocto/damage/01 RVLSDM01
+notcxjump/eliteocto/damage/02 RVLSDM02
+
+$random notcxjump/eliteocto/damage {
+    notcxjump/eliteocto/damage/00
+    notcxjump/eliteocto/damage/01
+    notcxjump/eliteocto/damage/02
+}
+
+notcxjump/eliteocto/death/00 RVLSDE00
+notcxjump/eliteocto/death/01 RVLSDE01
+
+$random notcxjump/eliteocto/death {
+    notcxjump/eliteocto/death/00
+    notcxjump/eliteocto/death/01
+}
+
+notcxjump/eliteocto/soul/00 RVLSSO00
+notcxjump/eliteocto/soul/01 RVLSSO01
+notcxjump/eliteocto/soul/02 RVLSSO02
+
+$random notcxjump/eliteocto/soul {
+    notcxjump/eliteocto/soul/00
+    notcxjump/eliteocto/soul/01
+    notcxjump/eliteocto/soul/02
+}
+
+notcxjump/eliteocto/attack/00 RVLSAT00
+notcxjump/eliteocto/attack/01 RVLSAT01
+notcxjump/eliteocto/attack/02 RVLSAT02
+
+$random notcxjump/eliteocto/attack {
+    notcxjump/eliteocto/attack/00
+    notcxjump/eliteocto/attack/01
+    notcxjump/eliteocto/attack/02
+}
+
+$playeralias    "Octoling Elite"      male    *death      notcxjump/eliteocto/soul
+$playeralias    "Octoling Elite"      male    *xdeath     notcxjump/eliteocto/soul
+$playeralias    "Octoling Elite"      male    *taunt      notcxjump/eliteocto/attack
+$playeralias    "Octoling Elite"      male    *grunt      notcxjump/splatoon/land/far
+$playeralias    "Octoling Elite"      male    *land       notcxjump/splatoon/land
+$playeralias    "Octoling Elite"      male    *pain100    notcxjump/eliteocto/death
+$playeralias    "Octoling Elite"      male    *pain75     notcxjump/eliteocto/death
+$playeralias    "Octoling Elite"      male    *pain50     notcxjump/eliteocto/death
+$playeralias    "Octoling Elite"      male    *pain25     notcxjump/eliteocto/damage
+$playeralias    "Octoling Elite"      male    *usefail    notcxjump/splatoon/empty
+$playeralias    "Octoling Elite"      female  *death      notcxjump/eliteocto/soul
+$playeralias    "Octoling Elite"      female  *xdeath     notcxjump/eliteocto/soul
+$playeralias    "Octoling Elite"      female  *taunt      notcxjump/eliteocto/attack
+$playeralias    "Octoling Elite"      female  *grunt      notcxjump/splatoon/land/far
+$playeralias    "Octoling Elite"      female  *land       notcxjump/splatoon/land
+$playeralias    "Octoling Elite"      female  *pain100    notcxjump/eliteocto/death
+$playeralias    "Octoling Elite"      female  *pain75     notcxjump/eliteocto/death
+$playeralias    "Octoling Elite"      female  *pain50     notcxjump/eliteocto/death
+$playeralias    "Octoling Elite"      female  *pain25     notcxjump/eliteocto/damage
+$playeralias    "Octoling Elite"      female  *usefail    notcxjump/splatoon/empty
+$playeralias    "Octoling Elite"      other   *death      notcxjump/eliteocto/soul
+$playeralias    "Octoling Elite"      other   *xdeath     notcxjump/eliteocto/soul
+$playeralias    "Octoling Elite"      other   *taunt      notcxjump/eliteocto/attack
+$playeralias    "Octoling Elite"      other   *grunt      notcxjump/splatoon/land/far
+$playeralias    "Octoling Elite"      other   *land       notcxjump/splatoon/land
+$playeralias    "Octoling Elite"      other   *pain100    notcxjump/eliteocto/death
+$playeralias    "Octoling Elite"      other   *pain75     notcxjump/eliteocto/death
+$playeralias    "Octoling Elite"      other   *pain50     notcxjump/eliteocto/death
+$playeralias    "Octoling Elite"      other   *pain25     notcxjump/eliteocto/damage
+$playeralias    "Octoling Elite"      other   *usefail    notcxjump/splatoon/empty

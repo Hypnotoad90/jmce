@@ -1,0 +1,17 @@
+{
+    name = "Agent 8"
+    sprite = OESK
+    hidden = false
+}
+
+{
+    name = "Octoling Soldier"
+    sprite = OESK
+    hidden = false
+}
+
+{
+    name = "Octoling Elite"
+    sprite = OESK
+    hidden = false
+}
