@@ -163,7 +163,7 @@ $random notcxjump/octogirl/taunt {
 notcxjump/octogirl/death/00 8GRLDE00
 notcxjump/octogirl/death/01 8GRLDE01
 notcxjump/octogirl/death/02 8GRLDE02
-notcxjump/octogirl/death/04 8GRLDE04
+notcxjump/octogirl/death/03 8GRLDE03
 notcxjump/octogirl/death/05 8GRLDE05
 notcxjump/octogirl/death/06 8GRLDE06
 notcxjump/octogirl/death/07 8GRLDE07
@@ -178,7 +178,6 @@ $random notcxjump/octogirl/death {
     notcxjump/octogirl/death/07
 }
 
-notcxjump/octogirl/damage/00 8GRLDM00
 notcxjump/octogirl/damage/01 8GRLDM01
 notcxjump/octogirl/damage/02 8GRLDM02
 notcxjump/octogirl/damage/04 8GRLDM04
@@ -187,7 +186,6 @@ notcxjump/octogirl/damage/06 8GRLDM06
 notcxjump/octogirl/damage/08 8GRLDM08
 
 $random notcxjump/octogirl/damage {
-    notcxjump/octogirl/damage/00
     notcxjump/octogirl/damage/01
     notcxjump/octogirl/damage/02
     notcxjump/octogirl/damage/04
