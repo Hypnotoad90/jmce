@@ -4,6 +4,7 @@ actor NcjSnd {
     
 	+NOGRAVITY
 	+NOINTERACTION
+    +CLIENTSIDEONLY
     
 	Height 16
 	Radius 8

@@ -13,3 +13,52 @@ actor NcjChair 24100 {
 			Stop
 	}
 }
+
+actor NcjMarineSpawner : RandomSpawner 24101 {
+	//$Category NotCXJump Decoration
+	//$Title "Random Spectating Marine"
+    //$Sprite MRNWA0
+    
+    +CLIENTSIDEONLY
+    
+    Radius 20
+    Height 56
+    
+    DropItem "WaveMarine", 128
+    DropItem "FistMarine", 128
+    DropItem "HeadbangMarine", 128
+}
+
+actor Jimmothy 24102 {
+    //$Category NotCXJump Decoration
+	//$Title "Jimmothy"
+    
+    +SOLID
+    
+    Radius 32
+    Height 83
+    Speed 50
+    Health 999999
+    PainChance 255
+    Speed 50
+    Mass 400
+    Monster
+    
+    Obituary "%o was blasted by Jimmothy. What a geezer."
+    
+    PainSound "notcxjump/jimmothy/pain"
+    
+    States {
+        Spawn:
+            JIMM A 1
+            Loop
+            
+        Pain:
+            JIMM A 1 A_SetTranslucent(1.0, 2)
+            JIMM A 0 A_FaceTarget
+            JIMM AAAAAAAAAA 2 A_CustomRailgun(25, 0, "FF0000", "FF00FF")
+            JIMM A 1 A_SetTranslucent(1.0, 0)
+            JIMM A 1 A_Pain
+            Goto Spawn
+    }
+}
