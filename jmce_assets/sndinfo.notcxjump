@@ -304,9 +304,9 @@ $playeralias    "Octoling Soldier"      other   *pain25     notcxjump/npcocto/da
 $playeralias    "Octoling Soldier"      other   *usefail    notcxjump/splatoon/empty
 
 //// Elite Octoling
-notcxjump/eliteocto/damage/00 RVLSDM00
-notcxjump/eliteocto/damage/01 RVLSDM01
-notcxjump/eliteocto/damage/02 RVLSDM02
+notcxjump/eliteocto/damage/00 RVLEDM00
+notcxjump/eliteocto/damage/01 RVLEDM01
+notcxjump/eliteocto/damage/02 RVLEDM02
 
 $random notcxjump/eliteocto/damage {
     notcxjump/eliteocto/damage/00
@@ -314,17 +314,17 @@ $random notcxjump/eliteocto/damage {
     notcxjump/eliteocto/damage/02
 }
 
-notcxjump/eliteocto/death/00 RVLSDE00
-notcxjump/eliteocto/death/01 RVLSDE01
+notcxjump/eliteocto/death/00 RVLEDE00
+notcxjump/eliteocto/death/01 RVLEDE01
 
 $random notcxjump/eliteocto/death {
     notcxjump/eliteocto/death/00
     notcxjump/eliteocto/death/01
 }
 
-notcxjump/eliteocto/soul/00 RVLSSO00
-notcxjump/eliteocto/soul/01 RVLSSO01
-notcxjump/eliteocto/soul/02 RVLSSO02
+notcxjump/eliteocto/soul/00 RVLESO00
+notcxjump/eliteocto/soul/01 RVLESO01
+notcxjump/eliteocto/soul/02 RVLESO02
 
 $random notcxjump/eliteocto/soul {
     notcxjump/eliteocto/soul/00
@@ -332,9 +332,9 @@ $random notcxjump/eliteocto/soul {
     notcxjump/eliteocto/soul/02
 }
 
-notcxjump/eliteocto/attack/00 RVLSAT00
-notcxjump/eliteocto/attack/01 RVLSAT01
-notcxjump/eliteocto/attack/02 RVLSAT02
+notcxjump/eliteocto/attack/00 RVLEAT00
+notcxjump/eliteocto/attack/01 RVLEAT01
+notcxjump/eliteocto/attack/02 RVLEAT02
 
 $random notcxjump/eliteocto/attack {
     notcxjump/eliteocto/attack/00
