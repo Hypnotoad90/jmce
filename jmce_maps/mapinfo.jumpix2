@@ -186,4 +186,6 @@ map JPX56 "Buildings and Pipes"
     music = "D_BULLS"
     next = "JPX33"
     par = 160
+    exitpic = "I_JPX56"
+    intermusic = "JPXIIINT"
 }
