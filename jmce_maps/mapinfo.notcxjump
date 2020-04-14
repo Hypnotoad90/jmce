@@ -38,7 +38,7 @@ map NCJ03 "The Octagon" {
 map NCJ04 "The Cave" {
 	useplayerstartz
 	
-	sky1 = "STSKY8"
+	sky1 = "STSKY2"
 	
 	music = "D_NCJ04"
 	
@@ -46,8 +46,18 @@ map NCJ04 "The Cave" {
 	interpic = "NCJINT04"
 	
 	par = 150
-	next = "NCJ01"
+	next = "NCJ05"
 	secretnext = "NCJSEC"
+}
+
+map NCJ05 "(Not)CXJump Circuit" {
+    music = "D_NCJ05"
+	
+	intermusic = "D_NCJINT"
+	interpic = "NCJINT05"
+	
+	par = 25
+	next = "NCJ01"
 }
 
 // secret map
@@ -60,4 +70,7 @@ map NCJSEC "The Hoppening" {
 	
 	intermusic = "D_NCJINT"
 	interpic = "NCJINSEC"
+    
+    par = 12
+	next = "NCJ05"
 }
