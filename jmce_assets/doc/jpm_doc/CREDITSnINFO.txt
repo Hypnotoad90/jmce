@@ -1,0 +1,107 @@
+/*
+======================================
+=	J								 =
+=		U	A						 =
+=			M						 =
+=				P	A				 =
+=					M				 =
+=						A			 =
+=							Z		 =
+=								E	 =
+======================================
+
+Maplist:
+JPM01 - Swimmin the net (HUETRIX) - by Juanba
+Music: Night of Fire - Initial D
+ 
+JPM02 - A Winter's Nightmare - by Juanba 
+Music:  Cold Dreams - Juanba
+
+JPM03 - Protected Land - by Rumia
+Music: Taiko's Fury - SoundTeMP (Ragnarok Online OST)
+
+JPM04 - Erkastle (another erduke inspired map) - by Juanba
+Music: Ethnica - SoundTeMP (Ragnarok Online OST)
+
+JPM05 - The Dock - by Rumia (some editions by Juanba)
+Music: The Dock - Yume Nikki
+
+JPM06 - Heating Factory - by Juanba
+Music: Under the Ground - SoundTeMP (Ragnarok Online OST)
+
+JPM07 - Minish Woods - by Juanba
+Music: Dark World (The Legend of Zelda - A Link to The Past) (from VGMusic)
+
+JPM08 - Gazing at the stars - by Juanba
+Music:  Deep Sea - Megaman X5 (from VGMusic)
+
+JPM09 - Minish Woods - by Juanba
+Music: Remi (by Juanba)
+
+JPM10 - Betrayal - by Juanba (& one section from Rumia)
+Music: Poissons d'or - Claude Debussy
+
+JPM11 - A World in Gray... - by Juanba 
+Music: A World in Gray... - Juanba 
+
+JPM12 - Forest of Pain - by Juanba
+Music: Grand Krys'kajo - Crosscode OST (MIDI Rendition by Juanba)
+
+JPM13 - Copacabana - by Juanba
+Music: Copacabana - by Juanba
+
+JPM14 - Turbulent Zigzag - by Juanba
+Music: Technot - by Juanba
+
+D2M29 - The Living JUMPAZE - by d2ppl
+Music: Rearrangement of Map28 music by Juanba
+ 
+Secretmap1- Precision Run 2: The Revenge - by Juanba
+Music: MAXX UNLIMITED - Z (from VGMusic) // Running in the 90's REMIX - Initial D
+
+
+----------------
+
+Reversed Maps:
+
+13PJX - A Winter's Dream - Minielle 
+Music: Ice World (reversed) - Minielle
+
+----------------
+
+BHOP01 - Mountain B-HOP - by Juanba
+Music: Metal Shark Player - Megaman X6 (MID by King Meteor)
+
+BHOP02 - Into the Sewers - by Juanba
+Music: Deep into the Void (Indecision)- by Juanba
+
+BHOP03 - Speed BHOP - by Juanba
+Music: Speedy shit - by Juanba
+
+
+
+>>TEXTURES<<
+
+
+
+>>Sprites<<
+
+-Toys: by Stopsignal
+-Pendulum: by Stopsignal & Juanba
+-Key-Pillar 'pillave': by Juanba
+-Lamp 'sarpango" (from The Dock): from Yume Nikki
+-Poop: by o_0Zombie0_o
+
+
+
+>>> OTHER THANKS!!!!!!!!!!!! <<<
+-Hypnobong, Positron, Cyber: for JM
+-Siferah: for helping and actually making the bhop script real gud
+-Jupi, Otaru, Snail, ConTheFal for magnificent testing and speedrunning at all costs
+-Hypnobong, Positron and Cyber again for laggy-testing too and giving gameplay ideas
+-AC3, Minielle, Cyber and Erduke, whose maps inspired me to JM map too
+-Rumia for mapping and testing shit as usual
+-Badz for the majestic Time Pendulum from Ragestacle Course
+-Stopsignal for helping with most sprites and stuff
+-Tigerfist for 7/11 movie (soon :tm:)
+*/
