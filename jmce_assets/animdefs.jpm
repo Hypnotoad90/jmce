@@ -1,0 +1,56 @@
+texture SPSIGN01
+pic 01 tics 10 
+pic 02 tics 10
+
+texture JSLMFAL1
+pic 1 tics 4 
+pic 2 tics 4
+pic 3 tics 4
+
+Texture PUFALL1
+	Pic PUFALL1 tics 5
+	Pic PUFALL2 tics 5
+	Pic PUFALL3 tics 5
+	Pic PUFALL4 tics 5
+	
+Texture PUFALL5
+	Pic PUFALL5 tics 5
+	Pic PUFALL6 tics 5
+	Pic PUFALL7 tics 5
+	Pic PUFALL8 tics 5
+	
+Texture PUWATER1
+	Pic PUWATER1 tics 5
+	Pic PUWATER2 tics 5
+	Pic PUWATER3 tics 5
+	Pic PUWATER4 tics 5
+	
+Texture buffer01
+	Pic buffer01 tics 5
+	Pic buffer02 tics 5
+	Pic buffer03 tics 5
+	Pic buffer04 tics 5
+	Pic buffer05 tics 5
+	Pic buffer06 tics 5
+	Pic buffer07 tics 5
+	
+	
+texture LASE01
+pic 1 tics 5
+pic 3 tics 5
+pic 2 tics 5
+
+texture LASEA01
+pic 1 tics 5
+pic 2 tics 5
+pic 3 tics 5
+
+texture LASEB01
+pic 1 tics 5
+pic 2 tics 5
+pic 3 tics 5
+
+texture LASEC01
+pic 1 tics 5
+pic 2 tics 5
+pic 3 tics 5

@@ -1,0 +1,14 @@
+ACTOR Sarpango 8239
+{
+//$Category JPMProps
+  Radius 16
+  Height 30
+  SCALE 1.5
+  +SOLID
+  States
+  {
+  Spawn:
+    QETH A -1 Bright
+    Stop
+  }
+}

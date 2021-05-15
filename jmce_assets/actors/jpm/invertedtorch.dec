@@ -1,0 +1,79 @@
+ACTOR InvertedGreenTorch 2779
+{
+//$Category Euphoria/Lights
+  Radius 16
+  Height 72
+  ProjectilePassHeight -16
+  +SOLID
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    RGRN ABCD 4 Bright
+    Loop
+  }
+}
+
+ACTOR InvertedBlueTorch 2780
+{
+//$Category Euphoria/Lights
+  Radius 16
+  Height 72
+  ProjectilePassHeight -16
+  +SOLID
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    RBLU ABCD 4 Bright
+    Loop
+  }
+}
+
+ACTOR InvertedShortRedTorch 2781
+{
+//$Category Euphoria/Lights
+  Radius 16
+  Height 37
+  ProjectilePassHeight -16
+  +SOLID
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    RMRT ABCD 4 Bright
+    Loop
+  }
+}
+
+ACTOR InvertedShortBlueTorch 2782
+{
+//$Category Euphoria/Lights
+  Radius 16
+  Height 37
+  ProjectilePassHeight -16
+  +SOLID
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    RMBT ABCD 4 Bright
+    Loop
+  }
+}
+
+ACTOR InvertedShortGreenTorch 2783
+{
+//$Category Euphoria/Lights
+  Radius 16
+  Height 37
+  ProjectilePassHeight -16
+  +SOLID
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    RMGT ABCD 4 Bright
+    Loop
+  }
+}

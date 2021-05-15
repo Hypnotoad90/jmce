@@ -1,0 +1,260 @@
+Actor FirePitsOfHell 1276
+{
+//$Category Holocas
+height 32
+radius 32
++NOCLIP
++NOBLOCKMAP
++LOOKALLAROUND
++CLIENTSIDEONLY
+Renderstyle Add
+Scale 1.5
+states
+	{
+	Spawn:
+	    TNT1 A 0
+        TNT1 A 0 A_Playsound("props/redfire")
+  		FIRE ABCDEFGH 2 bright
+		Loop
+	}
+}
+
+
+
+Actor Detonator
+{
+//$Category Holocas
+height 64
+radius 64
++SOLID
++SHOOTABLE
++NOBLOOD
++NOGRAVITY
+mass 999999
+Health 99999
+Scale 0.8
+states
+	{
+	Spawn:
+	    TNT1 A 4
+		Stop
+}
+}
+
+Actor FireStinguisher 1281
+{
+//$Category Holocas
+height 22
+radius 6
++SOLID
++SHOOTABLE
++NOBLOOD
+Health 10
+Scale 0.5
+states
+	{
+	Spawn:
+	    UFEX A 1
+		UFEX A -1
+		Stop
+	Death:
+	    TNT1 A 0
+		THRF A 0 A_SpawnItemEx ("Rocket",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
+		THRF A 0 A_SpawnItemEx ("Detonator",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
+		Stop
+	}
+}
+
+
+Actor Hidrant 1306
+{
++solid
+Radius 12
+Height 12
+//$Category Holocas
+states
+	{
+	Spawn:
+	    UHDR A 1
+		UHDR A -1
+		Stop
+	}
+}
+
+Actor Cone: Hidrant 1307
+{
+//$Category Holocas
+states
+	{
+	Spawn:
+	    UCON A 1
+		UCON A -1
+		Stop
+	}
+}
+
+Actor Pandela1: Hidrant 1309
+{
+//$Category Holocas
+states
+	{
+	Spawn:
+	    UKTC F 1
+		UKTC F -1
+		Stop
+	}
+}
+
+Actor Pandela2: Hidrant 1310
+{
+//$Category Holocas
+states
+	{
+	Spawn:
+	    UKTC G 1
+		UKTC G -1
+		Stop
+	}
+}
+
+
+Actor Tires: Hidrant 1311
+{
+//$Category Holocas
+states
+	{
+	Spawn:
+	    UTIR A 1
+		UTIR A -1
+		Stop
+	}
+}
+
+
+Actor Trashcan1: Hidrant 1312
+{
+//$Category Holocas
+Radius 8
+Height 16
+Scale 0.6
+states
+	{
+	Spawn:
+	    UTRS A 1
+		UTRS A -1
+		Stop
+	}
+}
+
+
+
+Actor Trashcan2: Trashcan1 1313
+{
+//$Category Holocas
+states
+	{
+	Spawn:
+	    UTRS B 1
+		UTRS B -1
+		Stop
+	}
+}
+
+
+Actor Trashcan3: Trashcan1 1314
+{
+//$Category Holocas
+states
+	{
+	Spawn:
+	    UTRS D 1
+		UTRS D -1
+		Stop
+	}
+}
+
+
+Actor TrashBag: Trashcan1 1315
+{
+//$Category Holocas
+Radius 12
+Height 16
+Scale 0.4
+states
+	{
+	Spawn:
+	    UTRS C 1
+		UTRS C -1
+		Stop
+	}
+}
+
+
+Actor Toilet: Trashcan1 1321
+{
+//$Category Holocas
+Scale 1.0
+states
+	{
+	Spawn:
+	    TOLT A 1
+		TOLT A -1
+		Stop
+	}
+}
+
+Actor AttSign: Hidrant 1322
+{
+//$Category Holocas
+states
+	{
+	Spawn:
+	    USGN A 1
+		USGN A -1
+		Stop
+	}
+}
+
+
+Actor AttSign2: Hidrant 1323
+{
+//$Category Holocas
+states
+	{
+	Spawn:
+	    USGN B 1
+		USGN B -1
+		Stop
+	}
+}
+
+
+
+
+Actor SignBusStop: Hidrant 1334
+{
+Radius 4
+Height 92
+states
+	{
+	Spawn:
+	    RUBL E 1
+		RUBL E -1
+		Stop
+	}
+}
+
+
+Actor SignStop: Hidrant 1335
+{
+//$Category Holocas
+Radius 4
+Height 92
+states
+	{
+	Spawn:
+	    RUBL F 1
+		RUBL F -1
+		Stop
+	}
+}

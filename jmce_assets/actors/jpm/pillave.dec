@@ -1,0 +1,72 @@
+actor SuperMegaTorch 2778 {
+//$Category JPMProps
+	Radius 16
+	Height 48
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		TRCN ABCDEF 2
+		TRCN G 2
+		TRCN F 2 
+		TRCN E 2 
+		TRCN D 2 
+		TRCN C 2
+		TRCN B 2 
+		Loop
+	RedTorch:
+		TRCR AA 3
+		TRCR BB 3
+		TRCR BB 3 Bright
+		TRCR BB 3
+		Loop
+	RedTorch2:
+		TRCR AA 3 
+		Loop
+	BlueTorch:
+		TRCB A 3
+		TRCB B 3 Bright
+		TRCB A 3
+		TRCB C 3
+		Loop
+	BlueTorch2:
+		TRCB A 3
+		Loop
+	YellowTorch:
+		TRCY AA 5
+		TRCY BB 5 Bright 
+		TRCY AA 3
+		TRCY CC 3
+		Loop
+	YellowTorch2:
+		TRCY A 3
+		Loop
+	GreenTorch:
+		TRCG AA 3
+		TRCG BB 3
+		TRCG BB 3 Bright
+		TRCG BB 3
+		Loop
+	GreenTorch2:
+		TRCG AA 3 
+		Loop
+	BlackTorch:
+		TRCK AA 3
+		TRCK BB 3
+		TRCK BB 3 Bright
+		TRCk BB 3
+		Loop
+	BlackTorch2:
+		TRCK AA 3 
+		Loop
+	WhiteTorch:
+		TRCW AA 3
+		TRCW BB 3
+		TRCW BB 3 Bright
+		TRCW BB 3
+		Loop
+	WhiteTorch2:
+		TRCW AA 3 
+		Loop
+	}
+}

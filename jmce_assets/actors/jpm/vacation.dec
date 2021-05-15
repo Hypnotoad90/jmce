@@ -1,0 +1,152 @@
+ACTOR Ball : ShortGreenColumn 10435
+{
+//$Category Vacation
+	Skip_Super
+	HEALTH 9999999999
+	PAINCHANCE 255
+	MASS 1
+	Radius 16
+	Height 32
+	SCALE 0.5
+	renderstyle Translucent
+	alpha 0.9
+	+SOLID
+	+SHOOTABLE
+	+FLOAT
+	+WINDTHRUST
+	+NOBLOOD
+	+TELESTOMP
+	+PUSHABLE
+	+SLIDESONWALLS
+	+CANPASS
+	+doombounce
+	//+UPDATEPOSITION
+	States
+	{
+	Spawn:
+		COLU A 1
+		Loop
+	Pain:
+		COLU B 5
+		COLU CDEFGH 5 
+		Goto Spawn
+    }
+}
+
+actor BitchTable : ShortGreenColumn 10436
+{
+//$Category Vacation
+	+SOLID
+	radius 42
+	height 12
+	States 
+	{
+	Spawn: 
+		PMIT A 1
+		Loop	
+	}
+}
+
+actor Hidrant2 : ShortGreenColumn 10437
+{
+//$Category Vacation
+	-SOLID
+	Radius 12
+	Height 64
+	States
+	{
+	Spawn: 
+		TLMP ABCD 2 
+		Loop
+	}
+}
+
+actor Copa1 10438
+{
+//$Category Vacation
+	-SOLID
+	Radius 8
+	Height 12
+	States
+	{
+	Spawn:
+		POL1 A 1
+		Loop
+	}
+}
+
+actor Copa2 : Copa1 10439
+{
+//$Category Vacation
+	States
+	{
+	Spawn:
+		POL1 B 1 
+		Loop
+	}
+}
+
+actor Copa3 : Copa1 10440
+{
+//$Category Vacation
+	States
+	{
+	Spawn:
+		POL2 A 1 
+		Loop
+	}
+}
+
+actor Umbrella : TallGreenColumn 10446
+{
+//$Category Vacation
+	Radius 32
+	Height 128
+	+SOLID
+
+	States
+	{
+		Spawn:
+			TOL1 A 1
+			Loop
+	}
+}
+
+actor Lunch  10448
+{
+//$Category Vacation
+	Radius 12
+	Height 12
+	-SOLID
+	States
+	{
+		Spawn:
+			TOL2 A 1
+			Loop
+	}
+}
+
+actor Radio : Lunch 10449
+{
+//$Category Vacation
+	States
+	{
+		Spawn:
+			TOL3 A 1
+			Loop
+	}
+}
+
+
+actor Chair : TallGreenColumn 10443
+{
+//$Category Vacation
+	Radius 32
+	Height 64
+	+SOLID
+	States
+	{
+	Spawn:
+		TOL4 A -1
+	}
+}
