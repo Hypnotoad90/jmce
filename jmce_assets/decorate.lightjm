@@ -1,8 +1,0 @@
-#include actors/lightjm/GREEN.dec
-#include actors/lightjm/LJM05.dec
-#include actors/lightjm/LJM06.dec
-#include actors/lightjm/LJM09.dec
-//#include actors/lightjm/LJM10.dec
-#include actors/lightjm/LJM11.dec
-#include actors/lightjm/LJM12.dec
-#include actors/lightjm/LJM13.dec
