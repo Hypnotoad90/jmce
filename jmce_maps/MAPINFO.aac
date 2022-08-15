@@ -41,3 +41,9 @@ sky1 STSKY3
 music D_PRGTRY
 next AAC01
 sky2 skyfog0
+
+map AAC08 "Mystery within the rocks"
+sky1 STSKY7
+music D_AAC08
+next AAC08
+intermusic d_aacint
