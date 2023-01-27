@@ -57,6 +57,17 @@ map NCJ05 "(Not)CXJump Circuit" {
 	interpic = "NCJINT05"
 	
 	par = 25
+	next = "NCJ06"
+}
+
+map NCJ06 "Facility" {
+	sky1 = "STSKY1"
+	music = "D_NCJ06"
+	
+	intermusic = "D_NCJINT"
+	interpic = "NCJINT06"
+	
+	par = 90
 	next = "NCJ01"
 }
 
