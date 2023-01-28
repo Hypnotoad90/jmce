@@ -3,4 +3,12 @@ map SPD01 "Haram"
     music = "D_HNBA"
     sky1 = "stsky9", 1.5
     Par = 30
+    next = "SPD02"
+}
+
+map SPD02 "Path to the Neon Heaven" 
+{
+    music = "D_PreRun"
+    sky1 = "zcx_06"
+    Par = 300
 }
