@@ -22,9 +22,16 @@ map SPD03 "Race to the Bottom!"
     next = "SPD04"
 }
 
-MAP SPD04 "Silverflow"
+map SPD04 "Silverflow"
 {
     sky1 = FWATER2
     music = D_SPD04
     allowcrouch
+}
+
+map SPD05 "Evileye Revenge"
+{
+    sky1 = "STSKY2"
+    music = "LSDM_97"
+    par = 120
 }
