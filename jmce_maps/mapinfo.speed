@@ -10,7 +10,7 @@ map SPD02 "Path to the Neon Heaven"
 {
     music = "D_PreRun"
     sky1 = "zcx_06"
-    Par = 300
+    Par = 120
     next = "SPD03"
 }
 
@@ -19,6 +19,7 @@ map SPD03 "Race to the Bottom!"
     music = "ECAR_D"
     sky1 = "STSKY2"
     par = 16
+    next = "SPD04"
 }
 
 MAP SPD04 "Silverflow"
