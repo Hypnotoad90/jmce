@@ -20,3 +20,10 @@ map SPD03 "Race to the Bottom!"
     sky1 = "STSKY2"
     par = 16
 }
+
+MAP SPD04 "Silverflow"
+{
+    sky1 = FWATER2
+    music = D_SPD04
+    allowcrouch
+}
