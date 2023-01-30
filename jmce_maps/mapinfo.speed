@@ -26,6 +26,7 @@ map SPD04 "Silverflow"
 {
     sky1 = FWATER2
     music = D_SPD04
+    next = "SPD05"
     allowcrouch
 }
 
@@ -33,5 +34,10 @@ map SPD05 "Evileye Revenge"
 {
     sky1 = "STSKY2"
     music = "LSDM_97"
+    next = "SPD06"
     par = 120
+}
+
+map SPD06 "Down to the River" {
+    sky1 = "STSKY2"
 }
