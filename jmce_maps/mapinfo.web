@@ -1,0 +1,6 @@
+map WEB01 "Desert Heist"
+{
+	sky1 = clearsky 
+	music = EGYPT
+	next = map00
+}
