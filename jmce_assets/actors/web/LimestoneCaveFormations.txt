@@ -1,0 +1,220 @@
+/*
+Submitted: Captain Toenail
+Decorate: Captain Toenail
+Gldefs: None
+Sprites: DaggerFall
+SpriteEdit: Captain Toenail
+*/
+ACTOR LimestoneFloorBig1 10600
+{
+  Radius 12
+  Height 32
+  +SOLID
+  States
+  {
+  Spawn:
+    LIMF A -1
+    Stop
+  }
+}
+
+ACTOR LimestoneFloorBig2 10601
+{
+  Radius 12
+  Height 32
+  +SOLID
+  States
+  {
+  Spawn:
+    LIMF B -1
+    Stop
+  }
+}
+
+ACTOR LimestoneFloorBig3 10602
+{
+  Radius 12
+  Height 32
+  +SOLID
+  States
+  {
+  Spawn:
+    LIMF C -1
+    Stop
+  }
+}
+
+ACTOR LimestoneFloorSmallLong 10603
+{
+  Radius 4
+  Height 32
+  +SOLID
+  States
+  {
+  Spawn:
+    LIMF D -1
+    Stop
+  }
+}
+
+ACTOR LimestoneFloorSmall1 10604
+{
+  Radius 4
+  Height 16
+  States
+  {
+  Spawn:
+    LIMF E -1
+    Stop
+  }
+}
+
+ACTOR LimestoneFloorSmall2 10605
+{
+  Radius 4
+  Height 16
+  States
+  {
+  Spawn:
+    LIMF F -1
+    Stop
+  }
+}
+
+ACTOR LimestoneFloorSmall3 10606
+{
+  Radius 4
+  Height 16
+  States
+  {
+  Spawn:
+    LIMF G -1
+    Stop
+  }
+}
+
+ACTOR LimestoneFloorKnobblyBig 10607
+{
+  Radius 12
+  Height 48
+  +SOLID
+  States
+  {
+  Spawn:
+    LIMK A -1
+    Stop
+  }
+}
+
+ACTOR LimestoneFloorKnobblyMedium 10608
+{
+  Radius 12
+  Height 32
+  +SOLID
+  States
+  {
+  Spawn:
+    LIMK B -1
+    Stop
+  }
+}
+
+ACTOR LimestoneFloorKnobblySmall 10609
+{
+  Radius 8
+  Height 16
+  States
+  {
+  Spawn:
+    LIMK C -1
+    Stop
+  }
+}
+
+ACTOR LimestoneCeilingBig1 10610
+{
+  Radius 12
+  Height 32
+  +SOLID
+  +SPAWNCEILING
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    LIMC A -1
+    Stop
+  }
+}
+
+ACTOR LimestoneCeilingBig2 10611
+{
+  Radius 12
+  Height 32
+  +SOLID
+  +SPAWNCEILING
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    LIMC B -1
+    Stop
+  }
+}
+
+ACTOR LimestoneCeilingSmallLong 10612
+{
+  Radius 4
+  Height 32
+  +SOLID
+  +SPAWNCEILING
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    LIMC C -1
+    Stop
+  }
+}
+
+ACTOR LimestoneCeilingSmall1 10613
+{
+  Radius 4
+  Height 16
+  +SPAWNCEILING
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    LIMC D -1
+    Stop
+  }
+}
+
+ACTOR LimestoneCeilingSmall2 10614
+{
+  Radius 4
+  Height 16
+  +SPAWNCEILING
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    LIMC E -1
+    Stop
+  }
+}
+
+ACTOR LimestoneCeilingSmall3 10615
+{
+  Radius 4
+  Height 16
+  +SPAWNCEILING
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    LIMC F -1
+    Stop
+  }
+}
+

@@ -1,0 +1,7 @@
+terrain quicksand
+{
+	splash			sand
+	footclip		20
+	friction		0.5
+}
+floor DESTEX02 quicksand

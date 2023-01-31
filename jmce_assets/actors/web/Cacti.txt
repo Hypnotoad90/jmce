@@ -1,0 +1,71 @@
+ACTOR HCactus 356
+{
+  Tag "Cactus"
+  Radius 16
+  Height 56
+  Scale 0.7
+    +SOLID
+	+NOGRAVITY
+  States
+  {
+  Spawn:
+    TREE M -1
+    Stop
+  }
+}
+/*
+Submitted: CaptainToenail
+Decorate: CaptainToenail
+Sprites: Necrodome
+*/
+ACTOR Cactus1 10500
+{
+  Radius 16
+  Height 112
+  +SOLID
+  States
+  {
+  Spawn:
+    CACN A -1
+    Stop
+  }
+}
+
+ACTOR Cactus2 10501
+{
+  Radius 16
+  Height 112
+  +SOLID
+  States
+  {
+  Spawn:
+    CACN B -1
+    Stop
+  }
+}
+
+ACTOR Cactus3 10502
+{
+  Radius 16
+  Height 88
+  +SOLID
+  States
+  {
+  Spawn:
+    CACN C -1
+    Stop
+  }
+}
+
+ACTOR Cactus4 10503
+{
+  Radius 16
+  Height 88
+  +SOLID
+  States
+  {
+  Spawn:
+    CACN D -1
+    Stop
+  }
+}
