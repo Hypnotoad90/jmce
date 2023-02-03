@@ -40,6 +40,16 @@ map SPD05 "Evileye Revenge"
 
 map SPD06 "Down to the River" {
     sky1 = "STSKY2"
+    next = "SPD07"
+}
+
+map SPD07 "k no"
+{
+    sky1 = STSKY7
+	music = D_SPD07
+	allowcrouch
+    par = 90
+    next = "SPD08"
 }
 
 map SPD08 "Los Duosh Puntosh" 
