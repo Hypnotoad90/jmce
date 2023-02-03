@@ -41,3 +41,9 @@ map SPD05 "Evileye Revenge"
 map SPD06 "Down to the River" {
     sky1 = "STSKY2"
 }
+
+map SPD08 "Los Duosh Puntosh" 
+{
+    music = "D_SPD08"
+    Par = 150
+}
