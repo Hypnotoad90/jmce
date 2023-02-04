@@ -55,4 +55,11 @@ map SPD08 "Los Duosh Puntosh"
 {
     music = "D_SPD08"
     Par = 150
+    next = "SPD09"
+}
+
+map SPD09 "Metal"
+{
+	music = "D_METAL"
+    par = 180
 }
