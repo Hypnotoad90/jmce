@@ -1,6 +1,7 @@
 actor NcjSnd {
 	//$Category NotCXJump Sounds
 	//$Sprite DBSND0
+    //$NotAngled
     
 	+NOGRAVITY
 	+NOINTERACTION

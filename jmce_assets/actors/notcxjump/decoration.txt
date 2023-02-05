@@ -66,6 +66,7 @@ actor Jimmothy 24102 {
 actor NcjStaticBarrel 24103 {
     //$Category NotCXJump Decoration
     //$Title "Static Barrel"
+    //$NotAngled
 
     +SOLID
 

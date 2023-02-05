@@ -1,6 +1,7 @@
 actor NcjInfHighJump : CustomInventory 24050 {
 	//$Category NotCXJump Items
 	//$Title "Infinite High Jump"
+    //$NotAngled
 	
 	+NOGRAVITY
 	+INVENTORY.QUIET
