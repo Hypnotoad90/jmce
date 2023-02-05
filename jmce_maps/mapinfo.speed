@@ -62,4 +62,12 @@ map SPD09 "Metal"
 {
 	music = "D_METAL"
     par = 180
+    next = "SPD10"
+}
+
+map SPD10 "MORE=BETTER"
+{
+    sky1= "STSKY2"
+    par = 120
+    music = "LSDM_86"
 }
