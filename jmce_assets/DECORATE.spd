@@ -1,0 +1,43 @@
+ACTOR TurbospherePerm : PowerupGiver 32116
+{
+	Game Doom
+	Game Heretic
+	Game Hexen
+	SpawnID 169
+	+COUNTITEM
+	+NOGRAVITY
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.MaxAmount 0
+	Powerup.Type Turbo
+	Powerup.Duration 9999999
+	Inventory.PickupMessage "$PICKUP_TURBOSPHERE"
+	Inventory.PickupAnnouncerEntry "turbosphere"
+	States
+	{
+	Spawn:
+		TURB ABCD 3 Bright
+		Loop
+	}
+}
+
+ACTOR Turboqueer2 : CustomInventory 32117
+{
+	+NOGRAVITY
+	-INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "$PICKUP_TURBOSPHERE"
+	Inventory.PickupAnnouncerEntry "turbosphere"
+	States
+	{
+  Spawn:
+	TURB ABCD 3 Bright
+	Loop
+  Pickup:
+    TNT1 A 0 A_JumpIfInventory ("PowerTurbo", 1, "Nope")
+    TNT1 A 1 A_SpawnItem ("TurbospherePerm", 1)
+    fail
+  Nope:
+    TNT1 A 1 
+	fail
+  }
+}

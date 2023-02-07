@@ -71,3 +71,10 @@ map SPD10 "MORE=BETTER"
     par = 120
     music = "LSDM_86"
 }
+
+map SPD11 "Gotta go fast tbh"
+{
+    sky1 = "BSKY1", 0
+    par = 30
+    music = "D_SPD11:2"
+}
