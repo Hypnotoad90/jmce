@@ -78,3 +78,10 @@ map SPD11 "Gotta go fast tbh"
     par = 30
     music = "D_SPD11:2"
 }
+
+map SPD12 "New Kakariko Village"
+{
+    sky1 = "BSKY1"
+    par = 120
+    music = "D_SPD12"
+}
