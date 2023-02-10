@@ -2,7 +2,7 @@ map SPD01 "Haram"
 {
     music = "D_HNBA"
     sky1 = "stsky9", 1.5
-    Par = 30
+    par = 30
     next = "SPD02"
 }
 
@@ -10,7 +10,7 @@ map SPD02 "Path to the Neon Heaven"
 {
     music = "D_PreRun"
     sky1 = "zcx_06"
-    Par = 120
+    par = 120
     next = "SPD03"
 }
 
@@ -30,14 +30,15 @@ map SPD04 "Silverflow"
     allowcrouch
 }
 
-MAP SPD05 "Evileye Revenge"
+map SPD05 "Evileye Revenge"
 {
     sky1= "STSKY2"
     par = 80
     music = "LSDM_97"
 }
 
-map SPD06 "Down to the River" {
+map SPD06 "Down to the River"
+{
     sky1 = "STSKY2"
     next = "SPD07"
 }
@@ -54,7 +55,7 @@ map SPD07 "k no"
 map SPD08 "Los Duosh Puntosh" 
 {
     music = "D_SPD08"
-    Par = 150
+    par = 150
     next = "SPD09"
 }
 
@@ -70,6 +71,7 @@ map SPD10 "MORE=BETTER"
     sky1= "STSKY2"
     par = 120
     music = "LSDM_86"
+    next = "SPD11"
 }
 
 map SPD11 "Gotta go fast tbh"
@@ -77,6 +79,7 @@ map SPD11 "Gotta go fast tbh"
     sky1 = "BSKY1", 0
     par = 30
     music = "D_SPD11:2"
+    next = "SPD12"
 }
 
 map SPD12 "New Kakariko Village"
