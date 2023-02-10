@@ -87,4 +87,11 @@ map SPD12 "New Kakariko Village"
     sky1 = "BSKY1"
     par = 120
     music = "D_SPD12"
+    next = "SPD13"
+}
+
+map SPD13 "Cancer" 
+{
+    music = "D_SPD13"
+    par = 95
 }
