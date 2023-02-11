@@ -35,6 +35,7 @@ map SPD05 "Evileye Revenge"
     sky1= "STSKY2"
     par = 80
     music = "LSDM_97"
+    next = "SPD06"
 }
 
 map SPD06 "Down to the River"
@@ -46,8 +47,8 @@ map SPD06 "Down to the River"
 map SPD07 "k no"
 {
     sky1 = STSKY7
-	music = D_SPD07
-	allowcrouch
+    music = D_SPD07
+    allowcrouch
     par = 90
     next = "SPD08"
 }
@@ -61,7 +62,7 @@ map SPD08 "Los Duosh Puntosh"
 
 map SPD09 "Metal"
 {
-	music = "D_METAL"
+    music = "D_METAL"
     par = 180
     next = "SPD10"
 }
@@ -94,4 +95,13 @@ map SPD13 "Cancer"
 {
     music = "D_SPD13"
     par = 95
+    next = "SPD14"
+}
+
+
+MAP SPD14 "Startan"
+{
+    sky1= "STSKY2"
+    par = 180
+    music = "LSDM_78"
 }
