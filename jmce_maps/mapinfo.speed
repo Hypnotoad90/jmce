@@ -98,10 +98,17 @@ map SPD13 "Cancer"
     next = "SPD14"
 }
 
-
-MAP SPD14 "Startan"
+map SPD14 "Startan"
 {
-    sky1= "STSKY2"
+    sky1 = "STSKY2"
     par = 180
     music = "LSDM_78"
+    next = "SPD15"
+}
+
+map SPD15 "floor"
+{
+    sky1 = "SKY1"
+    par = 60
+    music = "D_SPD15"
 }
