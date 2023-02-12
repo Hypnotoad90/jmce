@@ -111,4 +111,12 @@ map SPD15 "floor"
     sky1 = "SKY1"
     par = 60
     music = "D_SPD15"
+    next = "SPD16"
+}
+
+map SPD16 "Femboy's Spooge Domain"
+{
+    music = "D_SPD16"
+    par = 110
+    noinfighting
 }
