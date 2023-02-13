@@ -118,8 +118,16 @@ map SPD16 "Femboy's Spooge Domain"
 {
     music = "D_SPD16"
     par = 110
-    next = "SPD18"
+    next = "SPD17"
     noinfighting
+}
+
+map SPD17 "Brine Cave"
+{
+    sky1 = "BSKY1"
+    par = 210
+    music = "D_BRINE"
+    next = "SPD18"
 }
 
 map SPD18 "Sky"
