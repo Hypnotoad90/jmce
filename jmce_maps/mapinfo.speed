@@ -135,4 +135,12 @@ map SPD18 "Sky"
     sky1 = "STSKY2"
     par = 120
     music = "LSDM_98"
+    next = "SPD19"
+}
+
+map SPD19 "Jump"
+{
+    sky1 = "STSKY2"
+    par = 180
+    music = "Unatco"
 }
