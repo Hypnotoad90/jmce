@@ -144,3 +144,10 @@ map SPD19 "Jump"
     par = 180
     music = "Unatco"
 }
+
+map SPD20 "Poto's dark forest(with context)"
+{
+	sky1 = "STSKY8", 0
+    par = 75
+	music = "D_POTOF"
+}

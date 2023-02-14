@@ -1,0 +1,6 @@
+Texture "HFANTASY", 2944, 2208
+{
+	XScale 11.500
+	YScale 17.200
+	Patch "HFANTAS", 0, 0
+}
