@@ -143,6 +143,7 @@ map SPD19 "Jump"
     sky1 = "STSKY2"
     par = 180
     music = "Unatco"
+    next = "SPD20"
 }
 
 map SPD20 "Poto's dark forest(with context)"
@@ -150,4 +151,12 @@ map SPD20 "Poto's dark forest(with context)"
 	sky1 = "STSKY8", 0
     par = 75
 	music = "D_POTOF"
+    next = "SPD21"
+}
+
+map SPD21 "Temple"
+{
+    sky1 = "STSKY2"
+    par = 40
+    music = D_BETWEE
 }
