@@ -159,4 +159,12 @@ map SPD21 "Temple"
     sky1 = "STSKY2"
     par = 40
     music = D_BETWEE
+    next = "SPD22"
+}
+
+map SPD22 "Heightiens"
+{
+    sky1 = "STSKY2"
+    par = 180
+    music = D_COUNT2
 }
