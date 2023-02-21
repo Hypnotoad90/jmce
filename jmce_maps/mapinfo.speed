@@ -167,4 +167,12 @@ map SPD22 "Heightiens"
     sky1 = "STSKY2"
     par = 180
     music = D_COUNT2
+    next = "SPD23"
+}
+
+map SPD23 "Surface One"
+{
+    music = "D_SPD23"
+    sky1 = "NJSKY13"
+    par = 150
 }
