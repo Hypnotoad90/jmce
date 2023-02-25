@@ -175,4 +175,12 @@ map SPD23 "Surface One"
     music = "D_SPD23"
     sky1 = "NJSKY13"
     par = 150
+    next = "SPD24"
+}
+
+map SPD24 "Dim Embers"
+{
+	sky1 = "STSKY8", 0
+	music = "D_DIMEMB"
+    par = 60
 }
