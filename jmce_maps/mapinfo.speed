@@ -183,4 +183,12 @@ map SPD24 "Dim Embers"
 	sky1 = "STSKY8", 0
 	music = "D_DIMEMB"
     par = 60
+    next = "SPD25"
+}
+
+map SPD25 "Techbase Supreme"
+{
+    music = "D_SPD25"
+    sky1 = "STSKY2"
+    par = 90
 }
