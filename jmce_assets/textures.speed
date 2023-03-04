@@ -4,3 +4,10 @@ Texture "HFANTASY", 2944, 2208
 	YScale 17.200
 	Patch "HFANTAS", 0, 0
 }
+
+Texture "BUGBURG", 165, 140
+{
+	XScale 5.100
+	YScale 5.100
+	Patch "BUGBURG", 0, 0
+}

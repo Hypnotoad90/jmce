@@ -30,11 +30,11 @@ map SPD04 "Silverflow"
     allowcrouch
 }
 
-map SPD05 "Evileye Revenge"
+map SPD05 "The Great Rest"
 {
-    sky1= "STSKY2"
-    par = 80
-    music = "LSDM_97"
+	sky1 = "STSKY8", 0
+	music = "D_GREATR"
+    par = 25
     next = "SPD06"
 }
 
