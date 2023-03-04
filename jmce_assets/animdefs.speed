@@ -1,0 +1,3 @@
+texture SSS_06 range SSS_09 tics 12
+texture SSS_01 range SSS_04 tics 12
+warp texture SSS_05
