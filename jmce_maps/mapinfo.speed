@@ -190,4 +190,12 @@ map SPD25 "Techbase Supreme"
     music = "D_SPD25"
     sky1 = "STSKY2"
     par = 90
+    next = "SPD26"
+}
+
+map SPD26 "estate"
+{
+    music = "D_SPD26"
+    par = 70
+    sky1 = "SKY1"
 }
