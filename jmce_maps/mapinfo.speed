@@ -129,11 +129,11 @@ map SPD17 "Brine Cave"
     next = "SPD18"
 }
 
-map SPD18 "Sky"
+map SPD18 "The Great Escape"
 {
     sky1 = "STSKY2"
-    par = 120
-    music = "LSDM_98"
+    par = 50
+    music = "D_DIZZ"
     next = "SPD19"
 }
 
