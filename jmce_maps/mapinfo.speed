@@ -198,4 +198,12 @@ map SPD26 "estate"
     music = "D_SPD26"
     par = 70
     sky1 = "SKY1"
+    next = "SPD27"
+}
+
+map SPD27 "Ad Inferos"
+{
+    sky1 = "STSKY10"
+    par = 270
+    music = "D_SPD27"
 }
