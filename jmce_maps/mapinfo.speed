@@ -206,4 +206,12 @@ map SPD27 "Ad Inferos"
     sky1 = "STSKY10"
     par = 270
     music = "D_SPD27"
+    next = "SPD28"
+}
+
+MAP SPD28 "Klaus' Dark Swamp"
+{
+    sky1= "PCBSKY2"
+    par = 48
+    music = BIRI
 }
