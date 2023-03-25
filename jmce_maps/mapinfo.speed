@@ -209,9 +209,17 @@ map SPD27 "Ad Inferos"
     next = "SPD28"
 }
 
-MAP SPD28 "Klaus' Dark Swamp"
+map SPD28 "Klaus' Dark Swamp"
 {
-    sky1= "PCBSKY2"
+    sky1 = "PCBSKY2"
     par = 48
-    music = BIRI
+    music = "BIRI"
+    next = "SPD29"
+}
+
+map SPD29 "Foregone Destruction"
+{
+    sky1 = "STSKY8"
+	music = "D_SPD29"
+	allowcrouch
 }
