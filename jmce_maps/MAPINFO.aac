@@ -47,3 +47,20 @@ sky1 STSKY7
 music D_AAC08
 next AAC08
 intermusic d_aacint
+
+map AAC09 "Sewers"
+sky1 STSKY1
+music D_SWERS
+Next AAC10
+intermusic d_aacint
+
+map AAC10 "FIREFIELD X"
+next AAC11
+music D_FFIELX
+sky1 "STSKY3" 0.0
+intermusic d_aacint
+
+map AAC11 "Jumpin on da ship"
+music D_SPACE
+next AAC08
+intermusic d_aacint

@@ -71,3 +71,71 @@ ACTOR SECTARIOS 25108
 			Loop
 	}
 }
+
+ACTOR DoomPlayer1 25109
+{
+  Speed 12
+  Health 100
+  Radius 16
+  Height 56
+  Mass 100
+  PainChance 255
+  MONSTER
+-COUNTKILL
++FLOORCLIP
++SHOOTABLE
++SOLID
+
+  States
+  {
+  Spawn:
+    PLAY A 4 A_Look
+    Loop
+  See:
+    PLAY ABCD 4 A_Chase
+    Loop
+  Missile:
+    PLAY E 12 A_FaceTarget
+    Goto Spawn
+  Melee:
+    PLAY F 6 BRIGHT
+    Goto Missile
+  Pain:
+    PLAY G 4 
+    PLAY G 4 A_Pain
+    Goto Spawn
+  Death:
+    PLAY H 0 A_PlayerSkinCheck("AltSkinDeath")
+  Death1:
+    PLAY H 10
+    PLAY I 10 A_PlayerScream
+    PLAY J 10 A_NoBlocking
+    PLAY KLM 10
+    PLAY N -1
+    Stop
+  XDeath:
+    PLAY O 0 A_PlayerSkinCheck("AltSkinXDeath")
+  XDeath1:
+    PLAY O 5
+    PLAY P 5 A_XScream
+    PLAY Q 5 A_NoBlocking
+    PLAY RSTUV 5
+    PLAY W -1
+    Stop
+  AltSkinDeath:
+    PLAY H 6
+    PLAY I 6 A_PlayerScream
+    PLAY JK 6
+    PLAY L 6 A_NoBlocking
+    PLAY MNO 6
+    PLAY P -1
+    Stop
+  AltSkinXDeath:
+    PLAY Q 5 A_PlayerScream
+    PLAY R 0 A_NoBlocking
+    PLAY R 5 A_SkullPop
+    PLAY STUVWX 5
+    PLAY Y -1
+    Stop
+  }
+}
