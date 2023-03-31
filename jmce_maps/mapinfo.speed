@@ -220,6 +220,13 @@ map SPD28 "Klaus' Dark Swamp"
 map SPD29 "Foregone Destruction"
 {
     sky1 = "STSKY8"
-	music = "D_SPD29"
-	allowcrouch
+    music = "D_SPD29"
+    allowcrouch
+    next = "SPD30"
+}
+
+map SPD30 "You Will Own Nothing And You Will Be Happy :)" 
+{
+    music = "D_SPD30"
+    Par = 360
 }
