@@ -225,7 +225,7 @@ map SPD29 "Foregone Destruction"
     next = "SPD30"
 }
 
-map SPD30 "You Will Own Nothing And You Will Be Happy :)" 
+map SPD30 "Taking down a 200kg GRIZZLY" 
 {
     music = "D_SPD30"
     Par = 360
