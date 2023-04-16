@@ -260,7 +260,7 @@ map JPX29 "New Mojave"
 map JPX30 "Itaipu"
 {
     next = "JPX31"
-    par = 600
+    par = 520
     intermusic = "JPXDIFVH"
 }
 

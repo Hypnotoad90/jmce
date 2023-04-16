@@ -1,0 +1,4 @@
+server string irx_chat1 = "";
+server string irx_chat2 = "";
+server string irx_chat3 = "";
+server string irx_chat_last_emisor = "";
