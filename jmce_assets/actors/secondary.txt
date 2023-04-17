@@ -1,9 +1,3 @@
-actor graycard : yellowcard 25001{
-	Translation "160:167=80:95", "64:79=96:111"
-	inventory.pickupmessage "Picked up a white keycard."
-	inventory.icon "JPXKEY1"
-}
-
 //Initial for DM Bots
 Actor JPX30DoomPlayerBot: Actor{
    Health 100
