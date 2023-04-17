@@ -1349,11 +1349,9 @@ ACTOR ShrinkFX7
 
 //==JPX30==
 
-#include "actors/ac3.txt"
-#include "actors/ac3bot.txt"
-#include "actors/puppet.txt"
-#include "actors/advisor.txt"
 #include "actors/secondary.txt"
+#include "actors/botjack.txt"
+#include "actors/botpuppet.txt"
 
 //==KEYS==
 

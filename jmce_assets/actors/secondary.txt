@@ -1,118 +1,115 @@
-ACTOR JPX_Phobos 25006
-{
-  	translation "112:127=5:8"
-	SpawnID 207
-    	Health 999999
-   	Radius 16
-    	Height 64
-    	Speed 15
-	Mass 200
-    	PainChance 10
-    	MONSTER
- 	+FLOORCLIP
-  	+FRIENDLY
-  	-SHOOTABLE
-    	AttackSound "weapons/sshotf"
-    	PainSound "player/male/pain100_1"
-    	DeathSound "player/male/death1"
-    	Obituary "%o was killed."
-    	DropItem SuperShotgun
-    	Decal BulletChip
-    	States
-    	{
-	Spawn:
-		PHOB AB 10 A_Look
-		Loop
-    	See:
-        	PHOB AAAABBBBCCCCDDDD 1 A_Chase
-        	Loop
-    	Missile:
-        	PHOB E 2 A_FaceTarget
-        	PHOB E 5 A_FaceTarget
-        	PHOB E 0 A_PlaySound ("weapons/sshotf")
-        	PHOB F 7 Bright A_CustomBulletAttack (11, 7, 15, 5, "BulletPuff")
-        	PHOB E 14
-        	PHOB E 14 A_PlaySound ("weapons/sshoto")
-        	PHOB E 13 A_PlaySound ("weapons/sshotl")
-        	PHOB E 11 A_PlaySound ("weapons/sshotc")
-		Goto See
-    	Pain:
-        	PHOB G 3
-        	PHOB G 3 A_Pain
-        	Goto See
-    	Death:
-        	PHOB H 5
-        	PHOB I 5 A_Scream
-        	PHOB J 5 A_Fall
-        	PHOB K 5
-        	PHOB L 5
-        	PHOB M 5
-        	PHOB N -1
-		Stop
-    	XDeath:
-        	PHOB O 5
-        	PHOB P 5 A_XScream
-        	PHOB Q 5 A_Fall
-        	PHOB RSTUV 5
-        	PHOB W -1
-        	Stop
-    	Raise:
-        	PHOB MLKJIH 5
-        	Goto See
-    	}
+actor graycard : yellowcard 25001{
+	Translation "160:167=80:95", "64:79=96:111"
+	inventory.pickupmessage "Picked up a white keycard."
+	inventory.icon "JPXKEY1"
+}
+
+//Initial for DM Bots
+Actor JPX30DoomPlayerBot: Actor{
+   Health 100
+   Radius 16
+   Height 56
+   Mass 100
+   Painchance 255
+   Speed 1
+   Species "DoomPlayer"
+   
+   MONSTER
+   -SOLID
+   +SHOOTABLE
+   +DROPOFF
+   //+PICKUP
+   //+NOTDMATCH
+   -PICKUP
+   +FRIENDLY
+   +SLIDESONWALLS
+   +CANPASS
+   +CANPUSHWALLS
+   +FLOORCLIP
+   +WINDTHRUST
+   //+TELESTOMP
+   //+NOBLOCKMONST
+   +THRUSPECIES
+
+   +ACTIVATEMCROSS
+   +LOOKALLAROUND
+   //+DONTHARMSPECIES
+   //+NOTELEFRAG
+   +QUICKTORETALIATE
+   +NOSKIN
+
+    Obituary "$OB_MPDEFAULT"
+}
+
+Actor JPX_Phobos: JPX30DoomPlayerBot 25006 {
+   Translation "112:127=0:0"
+   Health 999999
+   Speed 1
+   
+   -SHOOTABLE
+
+   States {
+      Spawn:
+         PHOB AAAABBBBCCCCDDDD 1
+         Loop
+   }
+}
+
+Actor BotJack: JPX_Phobos 25000{
+   translation "112:127=208:223", "112:127=96:111"
+   States{
+      Spawn:
+         PLA9 AAAABBBBCCCCDDDD 1 
+         Loop
+   }
+}
+
+Actor BotBKPeligro: JPX_Phobos 25005{
+   Translation "112:127=224:231"
+   States{
+      Spawn:
+         NPLA AAAABBBBCCCCDDDD 1
+         Loop
+   }
+}
+
+Actor JPX_Synas: JPX_Phobos 25007{
+   Translation "112:127=42:47"
+
+   States{
+      Spawn:
+         SYNA AAAABBBBCCCCDDDD 1
+         Loop
+   }
+}
+
+Actor JPX_Strife: JPX_Phobos 25008{
+   Translation "112:127=11:12"
+   States{
+      Spawn:
+         GSOL AAAABBBBCCCCDDDD 1
+         Loop
+   }
+}
+
+Actor JPX_Illucia : JPX_Phobos 25009{
+   Translation "112:127=80:95"
+  
+   States{
+      Spawn:
+         ILLP AAAABBBBCCCCDDDD 1
+         Loop
+   }
 }
 
 
-actor JPX_Synas : JPX_Phobos 25007
-{
- translation "112:127=184:191"
- MONSTER
- +FLOORCLIP
- +FRIENDLY
- -SHOOTABLE
- states
- {
- Spawn:
-   SYNA A 1 A_Look2
-   loop
- See:
-   SYNA ABCD 8 A_Wander
-   loop
- }
-}
+//Ending explosion rocket
+Actor JPX30Explosion: Rocket { 
+    +FULLVOLDEATH
 
-actor JPX_Strife : JPX_Phobos 25008
-{
- translation "112:127=9:12"
-  MONSTER
-  +FLOORCLIP
-  +FRIENDLY
-  -SHOOTABLE
-  states
-  {
-  Spawn:
-    GSOL A 1 A_Look2
-    loop
-  See:
-    GSOL ABCD 8 A_Wander
-    loop
-  }
-}
-
-actor JPX_Minielle : JPX_Phobos 25009
-{
- translation "112:127=80:95", "9:12=96:99"
-  MONSTER
-  +FLOORCLIP
-  +FRIENDLY
-  -SHOOTABLE
-  states
-  {
-  Spawn:
-    MINI A 1 A_Look2
-    loop
-  See:
-    MINI ABCD 8 A_Wander
-    loop
-  }
+    States{
+        Spawn:
+            TNT1 A 0
+            Goto Death
+    }
 }
