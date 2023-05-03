@@ -853,9 +853,3 @@ Actor BotPuppet: JPX30DoomPlayerBot 25002
       Goto Missile3
    }
 }
-
-Actor NewPlasmaBall : PlasmaBall
-{
-
-  DamageType "FriendlyFire"
-}
