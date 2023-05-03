@@ -1,20 +1,3 @@
-Actor Poop 6789
-{
-//$Category JPMProps
-height 32
-radius 32
-+NOCLIP
-+NOBLOCKMAP
-+LOOKALLAROUND
-+CLIENTSIDEONLY
-states
-	{
-	Spawn:
-	    CACC A 0
-		Loop
-	}
-}
-
 Actor Cointeleport1 : Inventory
 {
  Inventory.maxamount 1
