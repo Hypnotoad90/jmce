@@ -1006,10 +1006,6 @@ Melee:
    }
 }
 
-Actor NoPlayerInSightTimer: Inventory {
-   Inventory.Amount 1
-}
-
 ACTOR NewBulletPuff {
    +NOBLOCKMAP
    +NOGRAVITY
