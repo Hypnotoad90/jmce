@@ -228,12 +228,18 @@ map SPD29 "Foregone Destruction"
 map SPD30 "Taking down a 200kg GRIZZLY" 
 {
     music = "D_SPD30"
-    Par = 360
+    par = 360
     next = "SPD31"
 }
 
 map SPD31 "The One Second Dungeon" 
 {
     music = "D_LELZ"
-    Par = 3
+    par = 3
+}
+
+map SPDSEC "RIP TBH" 
+{
+    music = "D_SPDSEC"
+    par = 120
 }
