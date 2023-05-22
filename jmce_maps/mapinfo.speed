@@ -242,6 +242,7 @@ map SPD31 "The One Second Dungeon"
 map SPD32 "Space-Time Overflow" 
 {
     music = "D_SPD32"
+	sky1 = "STSKY8"
     par = 360
     next = "SPD01"
 }
@@ -249,6 +250,5 @@ map SPD32 "Space-Time Overflow"
 map SPDSEC "RIP TBH" 
 {
     music = "D_SPDSEC"
-	sky1 = "STSKY8"
     par = 120
 }
