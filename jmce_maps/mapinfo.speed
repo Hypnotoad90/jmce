@@ -1,9 +1,17 @@
+episode SPD01 {
+	name = "Speedmapping"
+	optional
+}
+
 map SPD01 "Haram" 
 {
     music = "D_HNBA"
     sky1 = "stsky9", 1.5
     par = 30
     next = "SPD02"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD02 "Path to the Neon Heaven" 
@@ -12,6 +20,9 @@ map SPD02 "Path to the Neon Heaven"
     sky1 = "zcx_06"
     par = 120
     next = "SPD03"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD03 "Race to the Bottom!" 
@@ -20,6 +31,9 @@ map SPD03 "Race to the Bottom!"
     sky1 = "STSKY2"
     par = 16
     next = "SPD04"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD04 "Silverflow"
@@ -28,6 +42,9 @@ map SPD04 "Silverflow"
     music = D_SPD04
     next = "SPD05"
     allowcrouch
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD05 "The Great Rest"
@@ -36,12 +53,18 @@ map SPD05 "The Great Rest"
 	music = "D_GREATR"
     par = 25
     next = "SPD06"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD06 "Down to the River"
 {
     sky1 = "STSKY2"
     next = "SPD07"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD07 "k no"
@@ -51,6 +74,9 @@ map SPD07 "k no"
     allowcrouch
     par = 90
     next = "SPD08"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD08 "Los Duosh Puntosh" 
@@ -58,6 +84,9 @@ map SPD08 "Los Duosh Puntosh"
     music = "D_SPD08"
     par = 150
     next = "SPD09"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD09 "Metal"
@@ -65,6 +94,9 @@ map SPD09 "Metal"
     music = "D_METAL"
     par = 180
     next = "SPD10"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD10 "MORE=BETTER"
@@ -73,6 +105,9 @@ map SPD10 "MORE=BETTER"
     par = 120
     music = "LSDM_86"
     next = "SPD11"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD11 "Gotta go fast tbh"
@@ -81,6 +116,9 @@ map SPD11 "Gotta go fast tbh"
     par = 30
     music = "D_SPD11:2"
     next = "SPD12"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD12 "New Kakariko Village"
@@ -89,6 +127,9 @@ map SPD12 "New Kakariko Village"
     par = 120
     music = "D_SPD12"
     next = "SPD13"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD13 "Cancer" 
@@ -96,6 +137,9 @@ map SPD13 "Cancer"
     music = "D_SPD13"
     par = 95
     next = "SPD14"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD14 "007"
@@ -103,6 +147,9 @@ map SPD14 "007"
     music = "D_VOMIT"
     par = 105
     next = "SPD15"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD15 "floor"
@@ -111,6 +158,9 @@ map SPD15 "floor"
     par = 60
     music = "D_SPD15"
     next = "SPD16"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD16 "Femboy's Spooge Domain"
@@ -119,6 +169,9 @@ map SPD16 "Femboy's Spooge Domain"
     par = 110
     next = "SPD17"
     noinfighting
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD17 "Brine Cave"
@@ -127,6 +180,9 @@ map SPD17 "Brine Cave"
     par = 210
     music = "D_BRINE"
     next = "SPD18"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD18 "The Great Escape"
@@ -135,6 +191,9 @@ map SPD18 "The Great Escape"
     par = 50
     music = "D_DIZZ"
     next = "SPD19"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD19 "Jump"
@@ -143,6 +202,9 @@ map SPD19 "Jump"
     par = 180
     music = "Unatco"
     next = "SPD20"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD20 "Poto's dark forest(with context)"
@@ -151,6 +213,9 @@ map SPD20 "Poto's dark forest(with context)"
     par = 75
 	music = "D_POTOF"
     next = "SPD21"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD21 "Temple"
@@ -159,6 +224,9 @@ map SPD21 "Temple"
     par = 40
     music = D_BETWEE
     next = "SPD22"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD22 "Heightiens"
@@ -167,6 +235,9 @@ map SPD22 "Heightiens"
     par = 180
     music = D_COUNT2
     next = "SPD23"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD23 "Surface One"
@@ -175,6 +246,9 @@ map SPD23 "Surface One"
     sky1 = "NJSKY13"
     par = 150
     next = "SPD24"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD24 "Dim Embers"
@@ -183,6 +257,9 @@ map SPD24 "Dim Embers"
 	music = "D_DIMEMB"
     par = 60
     next = "SPD25"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD25 "Techbase Supreme"
@@ -191,6 +268,9 @@ map SPD25 "Techbase Supreme"
     sky1 = "STSKY2"
     par = 90
     next = "SPD26"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD26 "estate"
@@ -199,6 +279,9 @@ map SPD26 "estate"
     par = 70
     sky1 = "SKY1"
     next = "SPD27"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD27 "Ad Inferos"
@@ -207,6 +290,9 @@ map SPD27 "Ad Inferos"
     par = 270
     music = "D_SPD27"
     next = "SPD28"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD28 "Klaus' Dark Swamp"
@@ -215,6 +301,9 @@ map SPD28 "Klaus' Dark Swamp"
     par = 48
     music = "BIRI"
     next = "SPD29"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD29 "Foregone Destruction"
@@ -223,6 +312,9 @@ map SPD29 "Foregone Destruction"
     music = "D_SPD29"
     allowcrouch
     next = "SPD30"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD30 "Taking down a 200kg GRIZZLY" 
@@ -230,6 +322,9 @@ map SPD30 "Taking down a 200kg GRIZZLY"
     music = "D_SPD30"
     par = 360
     next = "SPD31"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD31 "The One Second Dungeon" 
@@ -237,6 +332,9 @@ map SPD31 "The One Second Dungeon"
     music = "D_LELZ"
     par = 3
     next = "SPD32"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPD32 "Space-Time Overflow" 
@@ -245,10 +343,16 @@ map SPD32 "Space-Time Overflow"
 	sky1 = "STSKY8"
     par = 360
     next = "SPD01"
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
 
 map SPDSEC "RIP TBH" 
 {
     music = "D_SPDSEC"
     par = 120
+
+    interpic = "SPDINT"
+    intermusic = "D_SPDINT"
 }
