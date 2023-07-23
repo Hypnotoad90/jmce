@@ -1,0 +1,6 @@
+map JMMC01 "Path to the JumpMaze Masochist Club" 
+{
+    music = "D_ABANDO"
+    sky1 = "zcx_06"
+    par = 120
+}
