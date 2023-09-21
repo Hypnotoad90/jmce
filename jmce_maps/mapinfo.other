@@ -8,5 +8,11 @@ map ZTEEL "Zteelworx 2"
 map AABF "The Abandoned Factory"
 {
 	music = "D_RDS1"
-	sky1 = TNT_CL1, 0.1
+	sky1 = "TNT_CL1", 0.1
+}
+
+map KAVIL "Kakariko Village"
+{
+	music = "KAVILS"
+	sky1 = "TNT_CL1", 0.1
 }
