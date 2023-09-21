@@ -4,3 +4,9 @@ map ZTEEL "Zteelworx 2"
    music = "PTBLRF"
    sky1 = "STSKY1"
 }
+
+map AABF "The Abandoned Factory"
+{
+	music = "D_RDS1"
+	sky1 = TNT_CL1, 0.1
+}
