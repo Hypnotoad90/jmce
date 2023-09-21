@@ -268,3 +268,19 @@
     Scale = 0.2
     sprite = ABDL
 }
+
+// AABF
+{
+	name = Link
+	sprite = LINK
+	dsplpain = DSLINPAI
+	dspldeth = DSLINDIE
+	dsnoway = DSLINNO
+	dsjump = DSLINJUM
+	dsouch = DSLINNO
+	dsoof = DSLINNO
+	dspdiehi = DSLINDIH
+	dstaunt = DSLINTA
+	dsradio = DSLINTA
+	scale = 1.1
+}
