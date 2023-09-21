@@ -16,3 +16,8 @@ map KAVIL "Kakariko Village"
 	music = "KAVILS"
 	sky1 = "TNT_CL1", 0.1
 }
+
+map TXS "Somewhere only we know"
+{
+	music = "C_MINOR"
+}
