@@ -284,3 +284,13 @@
 	dsradio = DSLINTA
 	scale = 1.1
 }
+
+{
+	name = "Dog"
+	sprite = ROTD
+	dsplpain = DSDOGPAN
+	dspdiehi = DSDOGBLW
+	dspldeth = DSDOGDED
+	dstaunt = DSDOGSEE
+	dsnoway = DSDOGNWAY
+}
