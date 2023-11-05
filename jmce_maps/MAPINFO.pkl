@@ -1,0 +1,7 @@
+MAP PKL01 "A normal day"
+
+{
+    sky1 = BSKY1
+	music = D_MAP13
+	allowcrouch
+}
