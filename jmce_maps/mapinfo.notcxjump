@@ -85,3 +85,10 @@ map NCJSEC "The Hoppening" {
     par = 12
 	next = "NCJ05"
 }
+
+map NCJWTF "An Exercise in Patience" {
+	sky1 = "STSKY8", 0.001
+	music = "D_NCJWTF"
+	intermusic = "D_NCJINT"
+}
+
