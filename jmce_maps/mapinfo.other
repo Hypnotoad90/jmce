@@ -21,3 +21,12 @@ map TXS "Somewhere only we know"
 {
 	music = "C_MINOR"
 }
+
+map ION01 "Guideless Glide"
+{
+   sky1 = "F_SKY1"
+   music = "CIRCUSOF"
+   next = HSM01
+}
+
+
