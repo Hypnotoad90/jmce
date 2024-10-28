@@ -1,3 +1,4 @@
+#include actors/notcxjump/rain.txt
 #include actors/notcxjump/decoration.txt
 #include actors/notcxjump/items.txt
 #include actors/notcxjump/sounds.txt

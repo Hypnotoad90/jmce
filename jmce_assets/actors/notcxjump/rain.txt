@@ -1,0 +1,69 @@
+actor NcjRainSpawner 24060 {
+	//$Category "NotCXJump/Decoration"
+	//$Title "Rain spawner 16"
+    //$Color 4
+    //$NotAngled
+    //$Sprite CXRNA0
+    
+    Radius 16
+	
+    +CLIENTSIDEONLY
+	+NOGRAVITY
+	
+	States {
+		Spawn:
+			TNT1 A 0
+            TNT1 A 0 A_JumpIf(CallACS("CheckRainSpawn") == 1, "Rain")
+            TNT1 A 1
+			Loop
+            
+        Rain:
+			TNT1 A 0 A_SpawnItemEx("NcjRain", random(-16, 16), random(-16, 16), 0)
+            TNT1 A random(3, 50)
+            Goto Spawn
+	}
+}
+
+actor NcjRainSpawner64 24061 {
+	//$Category "NotCXJump/Decoration"
+	//$Title "Rain spawner 128"
+    //$Color 4
+    //$NotAngled
+    //$Sprite CXRNA0
+
+    Radius 64
+
+    +CLIENTSIDEONLY
+	+NOGRAVITY
+
+	States {
+		Spawn:
+			TNT1 A 0
+            TNT1 A 0 A_JumpIf(CallACS("CheckRainSpawn") == 1, "Rain")
+            TNT1 A 1
+			Loop
+
+        Rain:
+			TNT1 A 0 A_SpawnItemEx("NcjRain", random(-64, 64), random(-64, 64), 0)
+            TNT1 A random(3, 10)
+            Goto Spawn
+	}
+}
+
+actor NcjRain {
+    +CLIENTSIDEONLY
+    
+    Alpha 0.0
+    
+    States {
+        Spawn:
+            CXRN A 0
+            CXRN A 0 A_FadeIn(0.1)
+            CXRN A 1 A_CheckFloor("Death")
+            Loop
+
+        Death:
+            TNT1 A 0
+            Stop
+    }
+}

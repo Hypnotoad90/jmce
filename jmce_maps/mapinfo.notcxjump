@@ -82,6 +82,17 @@ map NCJ06 "Facility" {
 	next = "NCJ01"
 }
 
+map NCJ07 "Central Pump" {
+    sky1 = "STSKY2"
+    music = "D_NCJ07"
+
+	intermusic = "D_NCJINT"
+	interpic = "NCJINT07"
+
+	par = 180
+	next = "NCJ08"
+}
+
 // secret map
 map NCJSEC "The Hoppening" {
 	useplayerstartz
