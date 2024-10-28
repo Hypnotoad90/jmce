@@ -1,6 +1,17 @@
-episode NCJ01 {
+episode NCJ00 {
 	name = "NotCXJump"
 	optional
+}
+
+map NCJ00 "Very Important Lore" {
+    music = "D_NCJNUL"
+
+    sky1 = "STSKY11"
+
+	intermusic = "D_NCJINT"
+	interpic = "NCJINT00"
+
+	next = "NCJ01"
 }
 
 map NCJ01 "Ghosts" {
