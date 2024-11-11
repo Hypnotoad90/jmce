@@ -5,6 +5,7 @@
 *.backup1
 *.backup2
 *.backup3
+*.autosave*
 
 # Compiled PK3s
 *.pk3
