@@ -1,0 +1,24 @@
+jm script info
+
+Lith: "\cmL\cgi\cmt\cgh"
+Nemesis: "\cuNemesis"
+Konda: "\cdK\cjo\cdn\cjd\cda"
+Vinyl: "\cjVin\cvy\cjl"
+Lightning: "\ccLi\cfghtni\ccng"
+Mr Fiat: "\cmMr \ciFiat"
+
+jpar01 civilization ruins - lith - 0:45
+jpar02 teleportation station - lith - 1:30 -> team map w/ 4 points
+jpar03 eazycaved - nemesis - 2:00 -> team map w/ 4 points
+jpar04 konda's magma cave - konda - 6:00 -> team map w/ 3 points
+jpar05 mr fiat's nightmare pit - mr fiat - 1:45
+jpar06 Hot Headed Bop 2 - nemesis - 1:00
+jpar07 boxed madness - nemesis - 2:15
+jpar08 spacejump - vinyl - 2:00
+jpar09 nukage pump station - lightning - 1:00
+jpar10 the fate lord's outpost - nemesis - 1:30
+jpar11 mountain - nemesis - 0:45
+jpar12 sudden death - nemesis - 2:30
+jpar13 civilization ruins - lith - 0:45
+
+jparold1 toxic lab - snail - 5:00

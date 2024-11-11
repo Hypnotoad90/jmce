@@ -1,0 +1,73 @@
+map JPAR01 "Civilization Ruins"
+{
+	music = "D_LITH2"
+}
+
+map JPAR02 "Teleportation Station"
+{
+	music = "D_LITH1"
+}
+
+map JPAR03 "Eazycaved"
+{
+	music = "D_EAST"
+	allowrespawn
+}
+
+map JPAR04 "Konda's Magma Cave"
+{
+	music = "D_EPIC"
+	allowrespawn
+}
+
+map JPAR05 "Mr Fiat's Nightmare Pit"
+{
+	music = "D_FIAT"
+}
+
+map JPAR06 "Hot Headed Bop 2"
+{ 
+	music = "D_HHB"
+	allowrespawn
+}
+
+map JPAR07 "Boxed Madness"
+{
+	music = "D_MAYO"
+}
+
+map JPAR08 "Spacejump"
+{
+	music = "MDK2"
+	sky1 = "SKY1", 0.1
+}
+
+map JPAR09 "Nukage Pump-Station"
+{
+	music = "D_NUPU"
+	sky1 = "SKY1", 0
+}
+
+map JPAR10 "The Fate Lord's Outpost"
+{
+	music = "D_CAS"
+	sky1 = "stsky14"
+}
+
+map JPAR11 "Mountain"
+{
+	music = "D_MERSIV"
+	sky1 = "stsky2"
+}
+
+map JPAR12 "Sudden Death"
+{
+	music = "D_DISOLV"
+	sky1 = "DIM1"
+}	
+
+map JPAROLD1 "Toxic Lab"
+{
+	music = "D_TOXIC"
+}
+
