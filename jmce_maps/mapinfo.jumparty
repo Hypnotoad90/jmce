@@ -1,11 +1,13 @@
 map JPAR01 "Civilization Ruins"
 {
 	music = "D_LITH2"
+	sky1 = "stsky9"
 }
 
 map JPAR02 "Teleportation Station"
 {
 	music = "D_LITH1"
+	sky1 = "stsky2"
 }
 
 map JPAR03 "Eazycaved"
