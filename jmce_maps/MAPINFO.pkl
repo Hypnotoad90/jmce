@@ -1,7 +1,13 @@
 MAP PKL01 "A normal day"
-
 {
     sky1 = BSKY1
 	music = D_MAP13
+	allowcrouch
+}
+
+MAP PKL02 "Areal Frost"
+{
+    sky1 = STSKY2
+	music = D_M02
 	allowcrouch
 }
